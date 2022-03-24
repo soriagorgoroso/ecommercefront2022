@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <img
-        src="/img/facebook_profile_image.png"
+        src="/img/logos/facebook_profile_image.png"
         className="img-fluid"
         alt="logo"
       ></img>
