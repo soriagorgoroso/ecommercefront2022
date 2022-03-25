@@ -14,7 +14,7 @@ function SingleArticle() {
       const response = await axios.get(
         `http://localhost:8000/articles/${params.id}`
       );
-      console.log(params.id);
+
       setArticle(response.data);
     };
     getArticle();
@@ -22,7 +22,7 @@ function SingleArticle() {
 
   return (
     article && (
-      <Row xs={1} md={2} className="justify-content-center space g-5">
+      <Row xs={1} sm={1} lg={2} className="justify-content-center space g-5">
         <Col className="pt-4">
           <img
             src={`/img/photos/${article.category}/${article.image}`}
