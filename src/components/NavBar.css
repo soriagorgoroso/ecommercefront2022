@@ -1,63 +1,37 @@
-.navBarContiainer {
-  min-width: 1300px;
-  height: 88px;
-  position: fixed;
-  width: 100%;
-  z-index: 999;
-}
-
-.headerOptions {
-  text-decoration: line-through;
-  float: left;
-  width: fit-content;
-  position: relative;
-  overflow: hidden;
-  margin-top: 25px;
-  font-size: 25px;
-  margin-bottom: 30px;
-  margin-left: 50px;
-  height: 50px;
+.navContainer {
+  background-color: rgb(236, 235, 234);
 }
 .navBarImg {
-  width: 300px;
-}
-/* @media (min-width: 768px) {
-  .headerOptions {
-    margin-left: 35px;
-  }
-}*/
-@media (max-width: 768px) {
-  .navBarContiainer {
-    display: block;
-    position: fixed;
-    z-index: 999;
-    height: 60px;
-  }
-}
-.navBarLogo {
-  display: block;
-  position: fixed;
-}
-@media (min-width: 768px) {
-  .hideButtonMenu {
-    display: none;
-  }
-}
-@media (max-width: 768px) {
-  .hidelinkMenu {
-    display: none;
-  }
-}
-@media (max-width: 768px) {
-  .headerOptions {
-    margin-left: 200px;
-  }
+  width: 210px;
 }
 
-.containerRight {
-  float: right;
-  width: fit-content;
-  font-size: 25px;
-  margin-bottom: 30px;
-  margin-left: 50px;
+@media (min-width: 1200px) {
+  .ButtonMenu {
+    display: none;
+  }
+}
+@media (max-width: 1200px) {
+  .linkMenu {
+    display: none;
+  }
+}
+.linkMenu {
+  color: black;
+  font-size: 20px;
+  padding: 0px;
+}
+.carrito {
+  color: black;
+  font-size: 20px;
+  padding: 0px;
+}
+.linkOffcanvas {
+  background-color: rgb(109, 107, 107);
+  margin-top: 5px;
+  border-radius: 25px;
+  text-align: center;
+  color: antiquewhite;
+}
+.linkMenu:hover {
+  color: black;
 }

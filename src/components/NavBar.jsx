@@ -5,125 +5,92 @@ import {
   Nav,
   Image,
   Offcanvas,
-  NavDropdown,
-  Form,
-  FormControl,
-  Button,
+  ListGroup,
 } from "react-bootstrap";
 import "./NavBar.css";
+import { useState } from "react";
 
 function NavBar() {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   return (
     <>
-      <Container fluid className="navBarContiainer">
-        <Navbar variant="light" fixed="top">
-          {/* <img
-            src="/img/logos/logosinfondo.png"
-            alt="LogoHackBier"
-            className="navBarImg"
-          /> */}
-          {/* <Nav className="me-auto headerOptions ">
-            <Nav.Link className="linknavBar mx-4 hidelinkMenu" href="#home">
-              CERVEZAS
-            </Nav.Link>
-            <Nav.Link className="linknavBar mx-4 hidelinkMenu" href="#features">
-              LOCALES
-            </Nav.Link>
-            <Nav.Link className="linknavBar mx-4 hidelinkMenu" href="#pricing">
-              NOSOTROS
-            </Nav.Link>
-            <Nav.Link className="linknavBar mx-4 hidelinkMenu" href="#pricing">
-              RESERVAS
-            </Nav.Link>
-            <div className="containerRight">
-              <Nav.Link className="linknavBarRight ms-5 mx-1 " href="#pricing">
-                CARRITO (0)
-              </Nav.Link>
-            </div>
-            <div>
-              {" "}
-              <Nav.Link
-                className="linknavBarRight mx-1 hidelinkMenu"
-                href="#pricing"
-              >
-                UNITE | INICIA SESION
-              </Nav.Link>
-            </div>
-          </Nav> */}
+      {/* <Container fluid className="navBarContiainer"> */}
+      <Navbar expand={false} className="navContainer sticky-top">
+        <Container className=" ">
           <Navbar.Toggle
             aria-controls="offcanvasNavbar"
-            className="hideButtonMenu"
+            className="ButtonMenu"
           />
           <Navbar.Offcanvas
             id="offcanvasNavbar"
             aria-labelledby="offcanvasNavbarLabel"
-            placement="end"
+            placement="start"
           >
             <Offcanvas.Header closeButton>
-              <Offcanvas.Title id="offcanvasNavbarLabel">
-                Offcanvas
-              </Offcanvas.Title>
+              <Offcanvas.Title id="offcanvasNavbarLabel"></Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body>
               <Nav className="justify-content-end flex-grow-1 pe-3">
-                <Nav.Link href="#action1">Home</Nav.Link>
-                <Nav.Link href="#action2">Link</Nav.Link>
-                <NavDropdown title="Dropdown" id="offcanvasNavbarDropdown">
-                  <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                  <NavDropdown.Item href="#action4">
-                    Another action
-                  </NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item href="#action5">
-                    Something else here
-                  </NavDropdown.Item>
-                </NavDropdown>
+                <Nav.Link className="linkOffcanvas mx-1 " href="#pricing">
+                  CARRITO (0)
+                </Nav.Link>
+                <Nav.Link className="linkOffcanvas mx-1 " href="/">
+                  CERVEZAS
+                </Nav.Link>
+                <Nav.Link className="linkOffcanvas mx-1 " href="/locales">
+                  LOCALES
+                </Nav.Link>
+                <Nav.Link className="linkOffcanvas mx-1 " href="#pricing">
+                  NOSOTROS
+                </Nav.Link>
+                <Nav.Link className="linkOffcanvas mx-1 " href="#pricing">
+                  RESERVAS
+                </Nav.Link>
+                <div className="">
+                  <Nav.Link className="linkOffcanvas mx-1 " href="#pricing">
+                    UNITE | INICIA SESION
+                  </Nav.Link>
+                </div>
               </Nav>
-              <Form className="d-flex">
-                <FormControl
-                  type="search"
-                  placeholder="Search"
-                  className="me-2"
-                  aria-label="Search"
-                />
-                <Button variant="outline-success">Search</Button>
-              </Form>
-            </Offcanvas.Body>
+            </Offcanvas.Body>{" "}
           </Navbar.Offcanvas>
-        </Navbar>
-      </Container>
-
-      {/* <Container ">
-        <Navbar variant="light" fixed="top">
-        
-
-          <Nav className="me-auto headerOptions">
-            <Nav.Link className="linknavBar mx-4" href="#home">
-              CERVEZAS
-            </Nav.Link>
-            <Nav.Link className="linknavBar mx-4" href="#features">
-              LOCALES
-            </Nav.Link>
-            <Nav.Link className="linknavBar mx-4" href="#pricing">
-              NOSOTROS
-            </Nav.Link>
-            <Nav.Link className="linknavBar mx-4" href="#pricing">
-              RESERVAS
-            </Nav.Link>
-            <div className="containerRight">
-              <Nav.Link className="linknavBarRight ms-5 mx-1" href="#pricing">
-                CARRITO (0)
-              </Nav.Link>
+          <Navbar.Brand href="#">
+            {" "}
+            <div className="containerLogo">
+              <img
+                src="/img/logos/logosinfondo.png"
+                alt="LogoHackBier"
+                className="navBarImg"
+              />
             </div>
-            <div>
-              {" "}
-              <Nav.Link className="linknavBarRight mx-1" href="#pricing">
-                UNITE | INICIA SESION
-              </Nav.Link>
-            </div>
-          </Nav>
-        </Navbar>
-      </Container> */}
+          </Navbar.Brand>{" "}
+          <Nav.Link className=" ms-1 linkMenu" href="/">
+            CERVEZAS
+          </Nav.Link>
+          <Nav.Link className=" mx-2 linkMenu" href="/locales">
+            LOCALES
+          </Nav.Link>
+          <Nav.Link className=" mx-2 linkMenu" href="#pricing">
+            NOSOTROS
+          </Nav.Link>
+          <Nav.Link className=" mx-2 linkMenu" href="#pricing">
+            RESERVAS
+          </Nav.Link>
+          <Nav.Link className="linkMenu mx-1 " href="#pricing">
+            UNITE
+          </Nav.Link>
+          <Nav.Link className="linkMenu mx-1 " href="#pricing">
+            INICIA SESION
+          </Nav.Link>
+          <Nav.Link className="carrito mx-1 " href="#pricing">
+            CARRITO (0)
+          </Nav.Link>
+        </Container>
+      </Navbar>
     </>
   );
 }
