@@ -3,6 +3,7 @@ import SingleArticle from "../components/SingleArticle";
 import NavBar from "../components/NavBar";
 import TopSeller from "../components/TopSeller";
 import Footer from "../components/Footer";
+import { Container } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import axios from "axios";
@@ -31,12 +32,12 @@ function Article() {
     getArticle();
   }, [dispatch]);
   return (
-    <div>
+    <Container>
       <NavBar />
       <SingleArticle article={article} />
       <TopSeller />
       <Footer />
-    </div>
+    </Container>
   );
 }
 
