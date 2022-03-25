@@ -17,10 +17,13 @@ function ProductList() {
   return (
     articles && (
       <Container>
-        <h2>TIENDA</h2>
-        <div className="d-flex align-items-center">
+        <h1 className="mt-5 mb-3">TIENDA</h1>
+        <div className="d-flex align-items-center fs-4 mb-5">
           <label htmlFor="category">Filtrar por tipo:</label>
-          <Form.Select className="w-25 ms-3" aria-label="filter">
+          <Form.Select
+            className="w-25 ms-3 fs-4 form_color"
+            aria-label="filter"
+          >
             <option>Sin filtro</option>
             <option value="1">IPA</option>
             <option value="2">APA</option>
@@ -29,26 +32,30 @@ function ProductList() {
             <option value="5">SOUR</option>
           </Form.Select>
         </div>
-        <p>Prohibida venta menores de 18 años</p>
-        <p>Llevando 16 latas o más: 20% descuento</p>
-        <p>Envío sin cargo a partir de $1500</p>
+        <div className="fs-5 mb-5">
+          <p>Prohibida venta menores de 18 años</p>
+          <p>Llevando 16 latas o más: 20% descuento</p>
+          <p>Envío sin cargo a partir de $1500</p>
+        </div>
         <Row>
           {articles.map((article) => (
-            <Col md={6} lg={4} xl={3}>
+            <Col md={6} lg={4} xl={3} className="">
               <img
                 className="img-fluid"
                 src={`/img/photos/${article.category}/${article.image}`}
                 alt="imagen del producto"
               />
-              <div className="d-flex justify-content-between">
-                <h3>{article.name}</h3>
-                <h3>US$ {article.price}</h3>
+              <div className="d-flex justify-content-between mt-3">
+                <h2 className="fs-5">{article.name}</h2>
+                <h2 className="fs-5">US$ {article.price}</h2>
               </div>
               <div className="d-flex">
-                <p>{article.category}</p>|<p>{article.ibus} ABV</p>
+                <p>{article.category}</p>
+                <p>|</p>
+                <p>{article.ibus} ABV</p>
               </div>
-              <div className="d-flex">
-                <p>tipo?</p>|<p>{article.sizecc} ABV</p>
+              <div className="d-flex mb-4">
+                <p>{article.sizecc} ABV</p>
               </div>
             </Col>
           ))}
