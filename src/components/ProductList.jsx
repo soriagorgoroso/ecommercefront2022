@@ -36,7 +36,8 @@ function ProductList() {
           {articles.map((article) => (
             <Col md={6} lg={4} xl={3}>
               <img
-                src={`/img/photos/${article.image}`}
+                className="img-fluid"
+                src={`/img/photos/${article.category}/${article.image}`}
                 alt="imagen del producto"
               />
               <div className="d-flex justify-content-between">
