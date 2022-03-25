@@ -1,3 +1,11 @@
+.navBarContiainer {
+  min-width: 1300px;
+  height: 88px;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+
 .headerOptions {
   text-decoration: line-through;
   float: left;
@@ -17,18 +25,35 @@
   .headerOptions {
     margin-left: 35px;
   }
-}
+}*/
 @media (max-width: 768px) {
-  .headerOptions {
-    margin-left: 35px;
+  .navBarContiainer {
+    display: block;
+    position: fixed;
+    z-index: 999;
+    height: 60px;
   }
-} */
+}
 .navBarLogo {
   display: block;
   position: fixed;
 }
-.linknavBarRight {
+@media (min-width: 768px) {
+  .hideButtonMenu {
+    display: none;
+  }
 }
+@media (max-width: 768px) {
+  .hidelinkMenu {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .headerOptions {
+    margin-left: 200px;
+  }
+}
+
 .containerRight {
   float: right;
   width: fit-content;
