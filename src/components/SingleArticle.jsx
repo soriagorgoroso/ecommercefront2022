@@ -1,18 +1,19 @@
 import React from "react";
 import ButtonToCart from "./ButtonToCart";
 import { Row, Col } from "react-bootstrap";
+import "./singleArticle.css";
 
 function SingleArticle({ article }) {
   return (
-    <Row xs={1} md={2} className="justify-content-center ">
-      <Col className="pe-4 pt-5">
+    <Row xs={1} md={2} className="justify-content-center space g-4">
+      <Col className="pt-5">
         <img
           src="https://cervezamalafama.com/files/tmp/compressed/normal/qg8j5bt64domn95utrs0.jpg"
           alt="Cerveza IPA"
-          className="w-100"
+          className="articleImage float-end shadow-sm"
         />
       </Col>
-      <Col className="ps-4 pt-5">
+      <Col className="pt-5 ps-5">
         <div className="d-flex flex-column justify-content-center">
           <div className="text-left pt-4">
             <h1>FLOR DE LÍO</h1>
