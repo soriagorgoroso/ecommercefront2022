@@ -1,18 +1,24 @@
 import React from "react";
-import Header from "../components/Header";
+
 import NavBar from "../components/NavBar";
 import { Container, Row, Col } from "react-bootstrap";
 
 function AboutUs() {
   return (
-    <div>
+    <>
       <NavBar />
-      <Header />
+      <header className="mb-5">
+        <img
+          className="img-fluid w-100"
+          src="https://cervezamalafama.com/files/nosotros1.jpg"
+          alt="Nosotros"
+        />
+      </header>
       <Container>
         <Row className="justify-content-center">
           <Col lg={10}>
             <div className="text-left">
-              <h1>HISTORIA</h1>
+              <h1 className="mb-5">HISTORIA</h1>
               <p>
                 El nombre Malafama surge a raíz del logo, el charrúa. Es un
                 reconocimiento hacia los indígenas que lucharon en la creación
@@ -36,7 +42,7 @@ function AboutUs() {
           </Col>
         </Row>
       </Container>
-    </div>
+    </>
   );
 }
 
