@@ -1,0 +1,33 @@
+p {
+  margin-bottom: 0%;
+  margin-right: 0.5rem;
+}
+
+.form_color {
+  background-color: rgb(236, 235, 234);
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: black;
+}
+
+/* The animation code */
+@keyframes float {
+  from {
+    margin-bottom: 0px;
+  }
+  to {
+    margin-bottom: 5px;
+  }
+}
+
+/* The element to apply the animation to */
+.float {
+  animation-name: float;
+  /* animation-duration: 4s; */
+}

@@ -1,6 +1,6 @@
 import React from "react";
 import NavBar from "../components/NavBar";
-import ProductList from "../components/ProductList";
+import ArticleList from "../components/ArticleList";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 
@@ -9,7 +9,7 @@ function Home() {
     <>
       <NavBar />
       <Header />
-      <ProductList />
+      <ArticleList />
       <Footer />
     </>
   );
