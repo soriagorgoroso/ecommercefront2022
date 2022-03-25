@@ -1,12 +1,15 @@
 import React from "react";
+import NavBar from "../components/NavBar";
+import ProductList from "../components/ProductList";
+import Footer from "../components/Footer";
 
 function Home() {
   return (
-    <img
-      src="./img/logos/facebook_profile_image.png"
-      className="img-fluid"
-      alt="logo"
-    ></img>
+    <>
+      <NavBar />
+      <ProductList />
+      <Footer />
+    </>
   );
 }
 
