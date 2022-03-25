@@ -2,6 +2,39 @@
   margin-top: 150px;
 }
 
-.articleImage {
+.article-image {
   width: 85%;
+}
+
+.article-info-container {
+  width: 75%;
+}
+.product-name-container {
+  width: 60%;
+}
+
+.product-name {
+  font-size: 3rem;
+  letter-spacing: 0.3rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .article-image {
+    width: 100%;
+  }
+
+  .article-info-container {
+    width: 100%;
+  }
+  .product-name-container {
+    width: 100%;
+  }
+
+  .product-name {
+    font-size: 2rem;
+  }
+}
+
+.separator {
+  opacity: 1;
 }
