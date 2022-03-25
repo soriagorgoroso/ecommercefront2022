@@ -39,7 +39,7 @@ function ProductList() {
         </div>
         <Row>
           {articles.map((article) => (
-            <Col md={6} lg={4} xl={3} className="">
+            <Col md={6} lg={4} xl={3} className="float">
               <img
                 className="img-fluid"
                 src={`/img/photos/${article.category}/${article.image}`}
@@ -55,7 +55,7 @@ function ProductList() {
                 <p>{article.ibus} ABV</p>
               </div>
               <div className="d-flex mb-4">
-                <p>{article.sizecc} ABV</p>
+                <p>{article.sizecc}ml</p>
               </div>
             </Col>
           ))}
