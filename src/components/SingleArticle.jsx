@@ -22,7 +22,7 @@ function SingleArticle() {
 
   return (
     article && (
-      <Row xs={1} sm={1} lg={2} className="justify-content-center space g-5">
+      <Row xs={1} sm={1} lg={2} className="justify-content-center g-5">
         <Col className="pt-4">
           <img
             src={`/img/photos/${article.category}/${article.image}`}
@@ -30,7 +30,7 @@ function SingleArticle() {
             className="article-image float-end shadow-sm"
           />
         </Col>
-        <Col className="pt-4 ps-4">
+        <Col className="pt-4 ps-4 ">
           <div className="d-flex flex-column justify-content-center">
             <div className="text-left article-info-container pt-2">
               <div className="product-name-container">
