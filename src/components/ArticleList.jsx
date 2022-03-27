@@ -43,33 +43,56 @@ function ArticleList() {
           <p>Envío sin cargo a partir de $1500</p>
         </div>
         <Row>
-          {categoryValue === "Sin filtro" ? (
-            articles.map((article) => (
-              <Col md={6} lg={4} xl={3} key={article.id} className="float">
-                <a href={`/articulos/${article.id}`}>
-                  <img
-                    className="img-fluid"
-                    src={`/img/photos/${article.category}/${article.image}`}
-                    alt="imagen del producto"
-                  />
-                  <div className="d-flex justify-content-between mt-3">
-                    <h2 className="fs-5">{article.name}</h2>
-                    <h2 className="fs-5">US$ {article.price}</h2>
-                  </div>
-                  <div className="d-flex">
-                    <p>{article.category}</p>
-                    <p>|</p>
-                    <p>{article.ibus} ABV</p>
-                  </div>
-                  <div className="d-flex mb-4">
-                    <p>{article.sizecc}ml</p>
-                  </div>
-                </a>
-              </Col>
-            ))
-          ) : (
-            <h2 style={{ color: "red" }}>Sin resultados</h2>
-          )}
+          {categoryValue === "Sin filtro"
+            ? articles.map((article) => (
+                <Col md={6} lg={4} xl={3} key={article.id} className="float">
+                  <a href={`/articulos/${article.id}`}>
+                    <img
+                      className="img-fluid"
+                      src={`/img/photos/${article.category}/${article.image}`}
+                      alt="imagen del producto"
+                    />
+                    <div className="d-flex justify-content-between mt-3">
+                      <h2 className="fs-5">{article.name}</h2>
+                      <h2 className="fs-5">US$ {article.price}</h2>
+                    </div>
+                    <div className="d-flex">
+                      <p>{article.category}</p>
+                      <p>|</p>
+                      <p>{article.ibus} ABV</p>
+                    </div>
+                    <div className="d-flex mb-4">
+                      <p>{article.sizecc}ml</p>
+                    </div>
+                  </a>
+                </Col>
+              ))
+            : //pilots.filter(pilot => pilot.faction === "Rebels");
+              articles
+                .filter((article) => article.category === categoryValue)
+                .map((article) => (
+                  <Col md={6} lg={4} xl={3} key={article.id} className="float">
+                    <a href={`/articulos/${article.id}`}>
+                      <img
+                        className="img-fluid"
+                        src={`/img/photos/${article.category}/${article.image}`}
+                        alt="imagen del producto"
+                      />
+                      <div className="d-flex justify-content-between mt-3">
+                        <h2 className="fs-5">{article.name}</h2>
+                        <h2 className="fs-5">US$ {article.price}</h2>
+                      </div>
+                      <div className="d-flex">
+                        <p>{article.category}</p>
+                        <p>|</p>
+                        <p>{article.ibus} ABV</p>
+                      </div>
+                      <div className="d-flex mb-4">
+                        <p>{article.sizecc}ml</p>
+                      </div>
+                    </a>
+                  </Col>
+                ))}
         </Row>
       </Container>
     )
