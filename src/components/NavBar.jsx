@@ -2,13 +2,10 @@ import React from "react";
 import { Navbar, Container, Nav, Offcanvas } from "react-bootstrap";
 import "./NavBar.css";
 import "./UserForm.css";
-import { useState } from "react";
 
 import "../pages/Login.css";
-import { useDispatch } from "react-redux";
-import axios from "axios";
-import { useNavigate } from "react-router-dom";
-import actions from "../redux/userActions";
+import RegisterNav from "./RegisterNav";
+import SignInNav from "./SignInNav";
 import Register from "./Register";
 import SignIn from "./SignIn";
 function NavBar() {
@@ -47,7 +44,7 @@ function NavBar() {
                   RESERVAS
                 </Nav.Link>
                 <div className="linkOffcanvas mx-1">
-                  <SignIn />
+                  <SignIn className="" />
                 </div>
                 <div className="linkOffcanvas mx-1">
                   <Register />
@@ -77,8 +74,8 @@ function NavBar() {
           <Nav.Link className=" mx-2 linkMenu" href="#pricing">
             RESERVAS
           </Nav.Link>
-          <Register className="linkMenu" />
-          <SignIn className="linkMenu" />
+          <RegisterNav className="linkMenu" />
+          <SignInNav className="linkMenu" />
           <Nav.Link className="carrito mx-1 " href="#pricing">
             CARRITO (0)
           </Nav.Link>

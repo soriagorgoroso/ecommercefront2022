@@ -1,0 +1,38 @@
+.navContainer {
+  background-color: rgb(236, 235, 234);
+}
+.navBarImg {
+  width: 210px;
+}
+
+@media (min-width: 1200px) {
+  .ButtonMenu {
+    display: none;
+  }
+}
+@media (max-width: 1200px) {
+  .linkMenu {
+    display: none;
+  }
+}
+.linkMenu {
+  color: black;
+  font-size: 20px;
+  padding: 0px;
+}
+.carrito {
+  color: black;
+  font-size: 20px;
+  padding: 0px;
+}
+.registerButton {
+  background-color: rgb(109, 107, 107);
+  margin-top: 5px;
+  border-radius: 25px;
+  text-align: center;
+  color: antiquewhite;
+}
+
+.registerButton:hover {
+  color: antiquewhite;
+}

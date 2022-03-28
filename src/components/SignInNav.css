@@ -1,0 +1,7 @@
+.buttonNav {
+  color: antiquewhite;
+}
+.buttonNav:hover {
+  color: antiquewhite;
+  /* border: 3px antiquewhite solid; */
+}

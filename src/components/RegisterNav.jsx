@@ -5,9 +5,9 @@ import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import actions from "../redux/userActions";
 import { useDispatch } from "react-redux";
+import "./SignInNav.css";
 
 import "react-toastify/dist/ReactToastify.css";
-import "./Register.css";
 
 import { Modal, Button, FloatingLabel, Form, Nav } from "react-bootstrap";
 
@@ -68,23 +68,13 @@ function Register(props) {
   return (
     <>
       <Nav.Link
-        className="registerButton mx-1"
+        className=" mx-1 buttonNavDos"
         onClick={() => handleShow(true)}
         to="#"
       >
         UNITE
       </Nav.Link>
-      <div className="p-0 d-flex justify-content-center modal-body">
-        <div>
-          <div className="containerLogo">
-            <img
-              src="/img/logos/logosinfondo.png"
-              alt="LogoHackBier"
-              className="navBarImg"
-            />
-          </div>
-        </div>
-      </div>
+
       <Modal
         show={show}
         {...props}

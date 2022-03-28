@@ -1,24 +1,13 @@
 import React from "react";
-import {
-  Navbar,
-  Container,
-  Nav,
-  Image,
-  Offcanvas,
-  ListGroup,
-  Button,
-  Modal,
-  Form,
-} from "react-bootstrap";
+import { Nav, Modal, Form } from "react-bootstrap";
 import "./NavBar.css";
 import { useState } from "react";
-import "./SignIn.css";
+import "./SignInNav.css";
 import "../pages/Login.css";
 import { useDispatch } from "react-redux";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import actions from "../redux/userActions";
-import Register from "./Register";
 
 function SignIn() {
   const [show, setShow] = useState(false);
@@ -52,7 +41,7 @@ function SignIn() {
     <>
       {" "}
       <Nav.Link
-        className="registerButton mx-1 "
+        className="buttonNavDos mx-1 "
         href="#pricing"
         onClick={handleShow}
       >
