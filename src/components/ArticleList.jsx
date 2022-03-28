@@ -6,6 +6,7 @@ import { Col, Container, Form, Row } from "react-bootstrap";
 function ArticleList() {
   const [articles, setArticles] = React.useState(null);
   const [categoryValue, setCategoryValue] = React.useState("Sin filtro");
+  const [categories, setcategories] = React.useState(null);
 
   React.useEffect(() => {
     const getArticles = async () => {
@@ -15,7 +16,16 @@ function ArticleList() {
     getArticles();
   }, []);
 
+  React.useEffect(() => {
+    const getCategories = async () => {
+      const response = await axios.get("http://localhost:8000/categories");
+      setcategories(response.data);
+    };
+    getCategories();
+  }, []);
+
   return (
+    categories &&
     articles && (
       <Container>
         <h1 className="mt-5 mb-3">TIENDA</h1>
@@ -30,11 +40,9 @@ function ArticleList() {
             }}
           >
             <option value="Sin filtro">Sin filtro</option>
-            <option value="IPA">IPA</option>
-            <option value="APA">APA</option>
-            <option value="BELGA">BELGA</option>
-            <option value="LAGER">LAGER</option>
-            <option value="SOUR">SOUR</option>
+            {categories.map((category) => (
+              <option value={category.name}>{category.name}</option>
+            ))}
           </Form.Select>
         </div>
         <div className="fs-5 mb-5">
