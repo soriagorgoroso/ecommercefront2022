@@ -1,7 +1,6 @@
 import React from "react";
 import { Col, Row, Form, Button, FormControl } from "react-bootstrap";
 import "./singleArticle.css";
-import NumericInput from "react-numeric-input";
 
 function ButtonToCart() {
   return (
