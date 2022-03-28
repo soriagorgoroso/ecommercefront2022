@@ -1,5 +1,6 @@
 import React from "react";
 import { Carousel } from "react-bootstrap";
+import "./Header.css";
 
 // {<div className="header">
 //   <img
@@ -14,21 +15,21 @@ function Header() {
     <Carousel>
       <Carousel.Item>
         <img
-          className="d-block w-100 img-fluid"
+          className="d-100 img-fluid"
           src="/img/local/imagenDelLocal.png"
           alt="First slide"
         />
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100 img-fluid"
+          className="w-100 img-fluid"
           src="/img/local/imagenDelLocal2.jpg"
           alt="Second slide"
         />
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100 img-fluid"
+          className="w-100 img-fluid"
           src="/img/local/imagenDelLocal3.jpg"
           alt="Third slide"
         />
