@@ -37,7 +37,8 @@
 
 .article-qty-container {
   background-color: rgb(236, 235, 234);
-  border: 1px solid black;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
   height: 95%;
 }
 
