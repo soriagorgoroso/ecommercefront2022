@@ -1,21 +1,17 @@
 import React from "react";
-import {
-  Navbar,
-  Container,
-  Nav,
-  Image,
-  Offcanvas,
-  ListGroup,
-} from "react-bootstrap";
+import { Navbar, Container, Nav, Offcanvas } from "react-bootstrap";
 import "./NavBar.css";
+import "./UserForm.css";
 import { useState } from "react";
 
+import "../pages/Login.css";
+import { useDispatch } from "react-redux";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import actions from "../redux/userActions";
+import Register from "./Register";
+import SignIn from "./SignIn";
 function NavBar() {
-  const [show, setShow] = useState(false);
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-
   return (
     <>
       {/* <Container fluid className="navBarContiainer"> */}
@@ -30,15 +26,15 @@ function NavBar() {
             aria-labelledby="offcanvasNavbarLabel"
             placement="start"
           >
-            <Offcanvas.Header closeButton>
-              <Offcanvas.Title id="offcanvasNavbarLabel"></Offcanvas.Title>
+            <Offcanvas.Header closeButton className="navContainer">
+              <Offcanvas.Title id="offcanvasNavbarLabel "></Offcanvas.Title>
             </Offcanvas.Header>
-            <Offcanvas.Body>
-              <Nav className="justify-content-end flex-grow-1 pe-3">
+            <Offcanvas.Body className="navContainer">
+              <Nav className="justify-content-end flex-grow-1 pe-3 ">
                 <Nav.Link className="linkOffcanvas mx-1 " href="#pricing">
                   CARRITO (0)
                 </Nav.Link>
-                <Nav.Link className="linkOffcanvas mx-1 " href="/">
+                <Nav.Link className="linkOffcanvas  mx-1 " href="/">
                   CERVEZAS
                 </Nav.Link>
                 <Nav.Link className="linkOffcanvas mx-1 " href="/locales">
@@ -50,15 +46,16 @@ function NavBar() {
                 <Nav.Link className="linkOffcanvas mx-1 " href="#pricing">
                   RESERVAS
                 </Nav.Link>
-                <div className="">
-                  <Nav.Link className="linkOffcanvas mx-1 " href="#pricing">
-                    UNITE | INICIA SESION
-                  </Nav.Link>
+                <div className="linkOffcanvas mx-1">
+                  <SignIn />
+                </div>
+                <div className="linkOffcanvas mx-1">
+                  <Register />
                 </div>
               </Nav>
             </Offcanvas.Body>{" "}
           </Navbar.Offcanvas>
-          <Navbar.Brand href="#">
+          <Navbar.Brand href="/">
             {" "}
             <div className="containerLogo">
               <img
@@ -80,12 +77,8 @@ function NavBar() {
           <Nav.Link className=" mx-2 linkMenu" href="#pricing">
             RESERVAS
           </Nav.Link>
-          <Nav.Link className="linkMenu mx-1 " href="#pricing">
-            UNITE
-          </Nav.Link>
-          <Nav.Link className="linkMenu mx-1 " href="#pricing">
-            INICIA SESION
-          </Nav.Link>
+          <Register className="linkMenu" />
+          <SignIn className="linkMenu" />
           <Nav.Link className="carrito mx-1 " href="#pricing">
             CARRITO (0)
           </Nav.Link>

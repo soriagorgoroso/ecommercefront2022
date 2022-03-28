@@ -35,3 +35,7 @@
 .linkMenu:hover {
   color: black;
 }
+.linkOffcanvas:hover {
+  color: antiquewhite;
+  border: 3px antiquewhite solid;
+}
