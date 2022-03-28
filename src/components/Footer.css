@@ -1,0 +1,11 @@
+.footer-list {
+  list-style: none;
+}
+
+li > a:hover {
+  text-decoration: line-through;
+}
+
+.small-text {
+  font-size: 0.8rem;
+}
