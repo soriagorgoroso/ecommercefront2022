@@ -15,7 +15,7 @@ function Header() {
     <Carousel>
       <Carousel.Item>
         <img
-          className="d-100 img-fluid"
+          className="w-100 img-fluid"
           src="/img/local/imagenDelLocal.png"
           alt="First slide"
         />
