@@ -74,17 +74,7 @@ function Register(props) {
       >
         UNITE
       </Nav.Link>
-      <div className="p-0 d-flex justify-content-center modal-body">
-        <div>
-          <div className="containerLogo">
-            <img
-              src="/img/logos/logosinfondo.png"
-              alt="LogoHackBier"
-              className="navBarImg"
-            />
-          </div>
-        </div>
-      </div>
+
       <Modal
         show={show}
         {...props}

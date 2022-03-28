@@ -8,7 +8,7 @@ function Footer() {
       <footer className=" py-3 my-4 border-top border-bottom">
         <div className="d-flex justify-items-center flex-wrap">
           <div className="col-md-4">
-            <img className="w-50" src="/img/logos/logosinfondo.png"></img>
+            <img className="w-50" src="/img/logos/logo-nosotros.png"></img>
           </div>
           <div className="col-md-4">
             <ul className="footer-list">

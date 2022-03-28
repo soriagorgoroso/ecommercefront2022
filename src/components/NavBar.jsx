@@ -8,6 +8,7 @@ import RegisterNav from "./RegisterNav";
 import SignInNav from "./SignInNav";
 import Register from "./Register";
 import SignIn from "./SignIn";
+
 function NavBar() {
   return (
     <>
@@ -24,13 +25,24 @@ function NavBar() {
             placement="start"
           >
             <Offcanvas.Header closeButton className="navContainer">
+              <div className="p-0 d-flex justify-content-center modal-body">
+                <div>
+                  <div className="containerLogo">
+                    <img
+                      src="/img/logos/logosinfondo.png"
+                      alt="LogoHackBier"
+                      className="navBarImg"
+                    />
+                  </div>
+                </div>
+                <button type="button" class="btn btn-primary">
+                  <span class="badge bg-secondary">4</span>
+                </button>
+              </div>
               <Offcanvas.Title id="offcanvasNavbarLabel "></Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body className="navContainer">
               <Nav className="justify-content-end flex-grow-1 pe-3 ">
-                <Nav.Link className="linkOffcanvas mx-1 " href="#pricing">
-                  CARRITO (0)
-                </Nav.Link>
                 <Nav.Link className="linkOffcanvas  mx-1 " href="/">
                   CERVEZAS
                 </Nav.Link>
