@@ -2,13 +2,15 @@ import React from "react";
 import { Navbar, Container, Nav, Offcanvas } from "react-bootstrap";
 import "./NavBar.css";
 import "./UserForm.css";
-
+import { useSelector } from "react-redux";
 import RegisterNav from "./RegisterNavBar";
 import SignInNav from "./SignInNavBar";
 import RegisterNavBarIzq from "./RegisterNavBarIzq";
 import SignInNavBarIzq from "./SignInNavBarIzq";
 
 function NavBar() {
+  const user = useSelector((state) => state.user);
+
   return (
     <>
       {/* <Container fluid className="navBarContiainer"> */}
@@ -35,6 +37,7 @@ function NavBar() {
                   </div>
                 </div>
               </div>
+
               <Offcanvas.Title id="offcanvasNavbarLabel "></Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body className="navContainer">
@@ -54,17 +57,21 @@ function NavBar() {
                 <Nav.Link className="linkOffcanvas mx-1 " href="#pricing">
                   RESERVAS
                 </Nav.Link>
-                <div className="linkOffcanvas mx-1">
-                  <SignInNavBarIzq className="" />
-                </div>
-                <div className="linkOffcanvas mx-1">
-                  <RegisterNavBarIzq />
-                </div>
+                {!user ? (
+                  <div className="linkOffcanvas mx-1">
+                    <SignInNavBarIzq className="" />
+                    <RegisterNavBarIzq />
+                  </div>
+                ) : (
+                  <Nav.Link className="linkOffcanvas mx-1 " href="/profile">
+                    MI PERFIL
+                  </Nav.Link>
+                )}
+                <div className="linkOffcanvas mx-1"></div>:
               </Nav>
-            </Offcanvas.Body>{" "}
+            </Offcanvas.Body>
           </Navbar.Offcanvas>
           <Navbar.Brand href="/">
-            {" "}
             <div className="containerLogo">
               <img
                 src="/img/logos/logosinfondo.png"
@@ -85,8 +92,16 @@ function NavBar() {
           <Nav.Link className=" mx-2 linkMenu" href="#pricing">
             RESERVAS
           </Nav.Link>
-          <RegisterNav className="linkMenu" />
-          <SignInNav className="linkMenu" />
+          {!user ? (
+            <div>
+              <RegisterNav className="linkMenu" />
+              <SignInNav className="linkMenu" />
+            </div>
+          ) : (
+            <Nav.Link className=" mx-2 linkMenu" href="#pricing">
+              MI PERFIL
+            </Nav.Link>
+          )}
           <Nav.Link className="carrito mx-1 " href="#pricing">
             CARRITO (0)
           </Nav.Link>
