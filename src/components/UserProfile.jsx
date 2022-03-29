@@ -27,7 +27,7 @@ function UserProfile() {
       </div>
       <div className="d-flex align-items-center bg-warning ronded shadow-sm">
         <h1>Ordenes</h1>
-        <h2>{}</h2>
+        <h2>{userdata.orders}</h2>
       </div>
     </>
   );
