@@ -2,18 +2,19 @@ import React from "react";
 import { Nav, Modal, Form } from "react-bootstrap";
 import "./NavBar.css";
 import { useState } from "react";
-import "./SignInNav.css";
-import "../pages/Login.css";
+import "./SignIn.css";
 import { useDispatch } from "react-redux";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import actions from "../redux/userActions";
 
 function SignIn() {
-  const [show, setShow] = useState(false);
-  const [data, setData] = useState("");
   const [password, setPassword] = useState("");
+  const [data, setData] = useState("");
+  const [show, setShow] = useState(false);
+
   const [errorMessage, setErrorMessage] = useState("");
+
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -23,15 +24,12 @@ function SignIn() {
   const handleSubmit = async (ev) => {
     ev.preventDefault();
     try {
-      const response = await axios.post(
-        process.env.REACT_APP_API_URL + "/users/login",
-        {
-          username: data,
-          password: password,
-        }
-      );
+      const response = await axios.post("http://localhost:8000/tokens", {
+        email: data,
+        password: password,
+      });
       dispatch(actions.login(response.data));
-      navigate("/home");
+      navigate("/");
     } catch (error) {
       setErrorMessage("Error!");
       console.log(error);
@@ -41,7 +39,7 @@ function SignIn() {
     <>
       {" "}
       <Nav.Link
-        className="buttonNavDos mx-1 "
+        className="registerButton mx-1 "
         href="#pricing"
         onClick={handleShow}
       >
@@ -81,16 +79,16 @@ function SignIn() {
             <Form onSubmit={handleSubmit}>
               <div className="form-floating mb-3">
                 <Form.Control
-                  name="username"
-                  type="text"
+                  name="email"
+                  type="email"
                   className="form-control border border-warning"
-                  id="username"
-                  placeholder="Username"
+                  id="email"
+                  placeholder="email"
                   value={data}
                   onChange={(e) => setData(e.target.value)}
                 />
-                <Form.Label className="text-secondary " htmlFor="floatingInput">
-                  Usuario
+                <Form.Label className="text-dark " htmlFor="floatingInput">
+                  Email
                 </Form.Label>
               </div>
               <div className="form-floating">

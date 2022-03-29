@@ -1,16 +1,12 @@
 import { createStore, combineReducers } from "redux";
 import { persistStore, persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
-import { userReducer } from "../reducers";
-import { articleReducer } from "../reducers";
-import { orderReducer } from "../reducers";
-import { categoryReducer } from "../reducers";
+import user from "./userReducer";
+// import cartReducer from "./cartReducer";
 
 const rootReducer = combineReducers({
-  user: userReducer,
-  article: articleReducer,
-  order: orderReducer,
-  category: categoryReducer,
+  user,
+  // cart: cartReducer,
 });
 
 const persistConfig = {

@@ -5,9 +5,12 @@ import Home from "./pages/Home";
 import Article from "./pages/Article";
 import Stores from "./pages/Stores";
 import AboutUs from "./pages/AboutUs";
-import Register from "./components/Register";
+import Register from "./components/RegisterNavBarIzq";
+import { useSelector } from "react-redux";
 
 function App() {
+  // const loggedUser = useSelector((state) => state.users[0]);
+
   return (
     <div className="App">
       <Routes>
@@ -15,8 +18,15 @@ function App() {
         <Route path="/articulos/:id" element={<Article />} />
         <Route path="/locales" element={<Stores />} />
         <Route path="/nosotros" element={<AboutUs />} />
-        <Route path="/register" element={<Register />} />
+        <Route path="/register" element={<Register />} />{" "}
       </Routes>
+      {/* <Routes>
+        {loggedUser ? (
+          <Route path="/" element={<Home />} />
+        ) : (
+          <Route path="/" element={<Home />} />
+        )}
+      </Routes> */}
     </div>
   );
 }

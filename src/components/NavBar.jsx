@@ -3,11 +3,10 @@ import { Navbar, Container, Nav, Offcanvas } from "react-bootstrap";
 import "./NavBar.css";
 import "./UserForm.css";
 
-import "../pages/Login.css";
-import RegisterNav from "./RegisterNav";
-import SignInNav from "./SignInNav";
-import Register from "./Register";
-import SignIn from "./SignIn";
+import RegisterNav from "./RegisterNavBar";
+import SignInNav from "./SignInNavBar";
+import RegisterNavBarIzq from "./RegisterNavBarIzq";
+import SignInNavBarIzq from "./SignInNavBarIzq";
 
 function NavBar() {
   return (
@@ -35,14 +34,14 @@ function NavBar() {
                     />
                   </div>
                 </div>
-                <button type="button" class="btn btn-primary">
-                  <span class="badge bg-secondary">4</span>
-                </button>
               </div>
               <Offcanvas.Title id="offcanvasNavbarLabel "></Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body className="navContainer">
               <Nav className="justify-content-end flex-grow-1 pe-3 ">
+                <Nav.Link className="linkOffcanvas  mx-1 " href="/">
+                  CARRITO <span className="badge bg-secondary">4</span>
+                </Nav.Link>
                 <Nav.Link className="linkOffcanvas  mx-1 " href="/">
                   CERVEZAS
                 </Nav.Link>
@@ -56,10 +55,10 @@ function NavBar() {
                   RESERVAS
                 </Nav.Link>
                 <div className="linkOffcanvas mx-1">
-                  <SignIn className="" />
+                  <SignInNavBarIzq className="" />
                 </div>
                 <div className="linkOffcanvas mx-1">
-                  <Register />
+                  <RegisterNavBarIzq />
                 </div>
               </Nav>
             </Offcanvas.Body>{" "}
