@@ -1,8 +1,11 @@
 import React from "react";
 import { Col, Row, Form, Button, FormControl } from "react-bootstrap";
 import "./singleArticle.css";
+import { useDispatch } from "react-redux";
 
 function ButtonToCart() {
+  const dispatch = useDispatch();
+
   return (
     <div className="to-cart-form my-4">
       <Form method="post" action="">
@@ -13,7 +16,7 @@ function ButtonToCart() {
                 <Button className="plus-minus-btn fs-5"> - </Button>
               </div>
 
-              <FormControl className="article-qty" type="text"></FormControl>
+              <div className="article-qty">1</div>
 
               <div className="plus-btn-container float-end">
                 <Button className="plus-minus-btn fs-5"> + </Button>

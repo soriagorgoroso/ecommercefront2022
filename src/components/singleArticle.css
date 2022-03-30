@@ -46,6 +46,7 @@
   background-color: rgb(236, 235, 234);
   border: none;
   text-align: center;
+  width: 80%;
 }
 
 .article-qty:focus {
@@ -60,7 +61,10 @@
   border-radius: 0;
 }
 
-.plus-minus-btn:hover {
+.plus-minus-btn:hover,
+.plus-minus-btn:active {
   background-color: black;
   color: rgb(236, 235, 234);
+  border: none;
+  box-shadow: none;
 }

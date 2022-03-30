@@ -1,14 +1,21 @@
 import React from "react";
-import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useSelector } from "react-redux";
-import { Container, Row, Col, Accordion } from "react-bootstrap";
+import {
+  Container,
+  Row,
+  Col,
+  Accordion,
+  Card,
+  CardHeader,
+  CardBody,
+} from "react-bootstrap";
 
 function UserProfile() {
-  const [users, setUsers] = React.useState(null);
+  /*const [users, setUsers] = React.useState(null)*/
+
   const [orders, setOrders] = React.useState(null);
   const userdata = useSelector((state) => state.user);
-  const params = useParams();
 
   React.useEffect(() => {
     const getOrders = async () => {
@@ -82,9 +89,28 @@ function UserProfile() {
               </p>
             </Col>
           </Row>
-
           <Row>
-            {" "}
+            <Container>
+              {orders.map((order) => (
+                <Card border="primary" style={{ width: "18rem" }}>
+                  <Card.Header>Orden nro: {order.orderNumber}</Card.Header>
+                  <Card.Body>
+                    <ul style={{ listStyle: "none" }}>
+                      {order.articles.map((article) => (
+                        <li>
+                          <span>{article.article}</span>
+                          <span> Cantidad: {article.quantity}</span>
+                          <span>Precio: {article.price}</span>
+                        </li>
+                      ))}
+                      <li>Subtotal:</li>
+                    </ul>
+                  </Card.Body>
+                </Card>
+              ))}
+            </Container>
+          </Row>
+          {/* <Row>
             <Col xs={6} sm={6} lg={8}>
               <Accordion defaultActiveKey="0">
                 <Accordion.Item eventKey="0">
@@ -94,11 +120,11 @@ function UserProfile() {
                   {orders.map((order) =>
                     order.articles.map((article) => (
                       <Accordion.Body>
-                        {/* <p className="p-2 fs-3 text"> */}
+                        { <p className="p-2 fs-3 text"> }
                         <span>{article.article}</span>
                         <span> {article.price}</span>
                         <span>{article.quantity}</span>
-                        {/* </p> */}
+                        { </p> }
                         <span>Cantidad {article.quantity}</span>
                         <span>Total {article.price}</span>
                       </Accordion.Body>
@@ -107,7 +133,7 @@ function UserProfile() {
                 </Accordion.Item>
               </Accordion>
             </Col>
-          </Row>
+          </Row> */}
         </Container>
       </>
     )
