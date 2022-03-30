@@ -9,8 +9,8 @@ function Cart(handlerTotal) {
     <>
       <NavBar />
       <Container>
-        <div className="wrapper">
-          <Row>
+        <div className="">
+          <Row className="">
             {" "}
             <div className="container containerCar">
               <button
@@ -44,8 +44,8 @@ function Cart(handlerTotal) {
             </div>
           </Row>
           <Row>
-            <Col>
-              <div className="container containerCar">
+            <Col className="">
+              <div className="container containerCar ">
                 <form action="" id="cart">
                   <div id="cart--items">
                     <div className="itemlist">

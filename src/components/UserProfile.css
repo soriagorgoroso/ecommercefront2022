@@ -1,0 +1,13 @@
+.containerOrders {
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+}
+/* .cardHeader {
+  color: black;
+  background-color: antiquewhite(236, 235, 234);
+} */
+.cardHeader {
+  color: antiquewhite;
+  background-color: rgb(109, 107, 107);
+}

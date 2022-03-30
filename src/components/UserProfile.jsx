@@ -10,7 +10,8 @@ import {
   CardHeader,
   CardBody,
 } from "react-bootstrap";
-
+import "./UserProfile.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 function UserProfile() {
   /*const [users, setUsers] = React.useState(null)*/
 
@@ -48,7 +49,7 @@ function UserProfile() {
   return (
     orders && (
       <>
-        <Container className="mt-4 border border-5 rounded-3 shadow-lg">
+        <Container className="mt-4 border border-1 ">
           <h1 className="text-center mb-5">
             Bienvenido a tu perfil
             {/* {userdata.username} */}
@@ -71,7 +72,7 @@ function UserProfile() {
                 />
               </div>
             </Col>
-            <Col xs={6} sm={6} lg={8}>
+            <Col xs={6} sm={6} lg={8} className="pe-0">
               <p className="p-2 fs-3 text">
                 Nombre: <span> </span> {userdata.firstname}
               </p>
@@ -89,51 +90,30 @@ function UserProfile() {
               </p>
             </Col>
           </Row>
-          <Row>
-            <Container>
-              {orders.map((order) => (
-                <Card border="primary" style={{ width: "18rem" }}>
-                  <Card.Header>Orden nro: {order.orderNumber}</Card.Header>
-                  <Card.Body>
-                    <ul style={{ listStyle: "none" }}>
-                      {order.articles.map((article) => (
-                        <li>
-                          <span>{article.article}</span>
-                          <span> Cantidad: {article.quantity}</span>
-                          <span>Precio: {article.price}</span>
-                        </li>
-                      ))}
-                      <li>Subtotal:</li>
-                    </ul>
-                  </Card.Body>
-                </Card>
-              ))}
-            </Container>
-          </Row>
-          {/* <Row>
-            <Col xs={6} sm={6} lg={8}>
-              <Accordion defaultActiveKey="0">
-                <Accordion.Item eventKey="0">
-                  <Accordion.Header>
-                    {orders.map((order) => order._id)}
-                  </Accordion.Header>
-                  {orders.map((order) =>
-                    order.articles.map((article) => (
-                      <Accordion.Body>
-                        { <p className="p-2 fs-3 text"> }
+          <Row className="containerOrders">
+            {orders.map((order) => (
+              <Card border="" className="m-2 p-0 " style={{ width: "18rem" }}>
+                <Card.Header className="cardHeader" as="h5">
+                  <i class="fa-thin fa-beer-mug-empty"></i>
+                  <FontAwesomeIcon icon="fa-thin fa-beer-mug-empty" />
+                  Orden nro: {order.orderNumber}
+                </Card.Header>
+
+                <Card.Body>
+                  <ul style={{ listStyle: "none" }}>
+                    {order.articles.map((article) => (
+                      <li>
                         <span>{article.article}</span>
-                        <span> {article.price}</span>
-                        <span>{article.quantity}</span>
-                        { </p> }
-                        <span>Cantidad {article.quantity}</span>
-                        <span>Total {article.price}</span>
-                      </Accordion.Body>
-                    ))
-                  )}
-                </Accordion.Item>
-              </Accordion>
-            </Col>
-          </Row> */}
+                        <span> Cantidad: {article.quantity}</span>
+                        <span>Precio: {article.price}</span>
+                      </li>
+                    ))}
+                    <li>Subtotal:</li>
+                  </ul>
+                </Card.Body>
+              </Card>
+            ))}
+          </Row>
         </Container>
       </>
     )
