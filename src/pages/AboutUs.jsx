@@ -1,8 +1,8 @@
 import React from "react";
-
+import "./AboutUs.css";
 import NavBar from "../components/NavBar";
-import { Container, Row, Col } from "react-bootstrap";
-
+import Footer from "../components/Footer";
+import { Container, Row, Col, Nav } from "react-bootstrap";
 function AboutUs() {
   return (
     <>
@@ -41,7 +41,154 @@ function AboutUs() {
             </div>
           </Col>
         </Row>
+        <Row className="mt-5">
+          <Col
+            lg={4}
+            md={4}
+            sm={4}
+            className="d-flex justify-content-end border  border-3 p-0 contenedor m-3  pe-1"
+          >
+            <div>
+              <img
+                // src={require(``)}
+                alt="GBarg"
+                className="photoAboutUs "
+              />
+
+              <div>
+                <ul>
+                  <h3 className="text-center">Gonzalo Barg</h3>
+                  <li>
+                    <img
+                      src={require("./img/facheros/icon/github.png")}
+                      alt=""
+                      className="iconAboutUs"
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src={require("./img/facheros/icon/gmail(2).png")}
+                      alt=""
+                      className="iconAboutUs"
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src={require("./img/facheros/icon/linkedin.png")}
+                      alt=""
+                      className="iconAboutUs"
+                    />
+                  </li>
+                  <li></li>
+                </ul>
+              </div>
+            </div>
+          </Col>
+          <Col
+            lg={4}
+            md={4}
+            sm={4}
+            className="d-flex justify-content-end border  border-3 p-0 contenedor m-3  pe-1"
+          >
+            <div>
+              {/* <img src={require(``)} alt="FMarco" className="photoAboutUs " /> */}
+
+              <div>
+                <ul>
+                  <h3 className="text-center">Fernando Marco</h3>
+                  <li>
+                    <img
+                      src={require("./img/facheros/icon/github.png")}
+                      alt=""
+                      className="iconAboutUs"
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src={require("./img/facheros/icon/gmail(2).png")}
+                      alt=""
+                      className="iconAboutUs"
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src={require("./img/facheros/icon/linkedin.png")}
+                      alt=""
+                      className="iconAboutUs"
+                    />
+                  </li>
+                  <li></li>
+                </ul>
+              </div>
+            </div>
+          </Col>
+          <Col
+            lg={4}
+            md={4}
+            sm={4}
+            className="d-flex justify-content-end border  border-3 p-0 contenedor m-3  pe-1"
+          >
+            <div>
+              <img
+                src={require(`./img/facheros/DSC00375.jpg`)}
+                alt="SSoria"
+                className="photoAboutUs "
+              />
+
+              <div>
+                <ul>
+                  <h3 className="text-center">Sebastian Soria</h3>
+
+                  <li>
+                    <Nav.Link
+                      href="https://www.linkedin.com/in/soriagorgoroso/"
+                      to
+                      className="text-decoration-none mx-1 "
+                    >
+                      <img
+                        src={require("./img/facheros/icon/linkedin.png")}
+                        alt=""
+                        className="iconAboutUs"
+                      />
+                      <span className=" ps-2 redesAboutUs">
+                        {" "}
+                        /soriagorgoroso
+                      </span>
+                    </Nav.Link>
+                  </li>
+                  <li>
+                    <Nav.Link className="text-decoration-none mx-1 ">
+                      <img
+                        src={require("./img/facheros/icon/github.png")}
+                        alt="GitHub"
+                        className="iconAboutUs"
+                        href="https://github.com/soriagorgoroso"
+                      />
+                      <span className="ps-2 redesAboutUs">
+                        {" "}
+                        /soriagorgoroso
+                      </span>
+                    </Nav.Link>
+                  </li>
+                  <li>
+                    <Nav.Link className=" text-decoration-none mx-1 ">
+                      <img
+                        src={require("./img/facheros/icon/gmail(2).png")}
+                        alt=""
+                        className="iconAboutUs"
+                      />
+                      <span className="ps-2 redesAboutUs">
+                        soriagorgoroso@gmail.com
+                      </span>
+                    </Nav.Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </Col>
+        </Row>
       </Container>
+      <Footer />
     </>
   );
 }

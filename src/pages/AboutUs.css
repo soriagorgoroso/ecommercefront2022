@@ -1,0 +1,18 @@
+.photoAboutUs {
+  width: 325px;
+  padding: 10px;
+}
+.contenedor {
+  width: 340px;
+}
+.iconAboutUs {
+  width: 30px;
+}
+.redesAboutUs {
+  color: black;
+}
+
+.redesAboutUs:hover {
+  text-decoration: none;
+  color: black;
+}

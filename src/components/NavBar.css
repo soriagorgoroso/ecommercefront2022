@@ -39,3 +39,9 @@
   color: antiquewhite;
   border: 3px antiquewhite solid;
 }
+
+@media (max-width: 1200px) {
+  .containerLogo {
+    margin-left: 40px;
+  }
+}

@@ -34,12 +34,15 @@
 .separator {
   opacity: 1;
 }
-
+.inputquantity {
+  width: 30px;
+}
 .article-qty-container {
   background-color: rgb(236, 235, 234);
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-  height: 95%;
+  border: 1px solid black;
+  /* height: 95%; */
+  justify-content: center;
+  margin-bottom: 10px;
 }
 
 .article-qty {
@@ -55,16 +58,26 @@
 }
 
 .plus-minus-btn {
-  background-color: rgb(236, 235, 234);
-  color: black;
-  border: 1px solid black;
-  border-radius: 0;
+  background-color: rgb(109, 107, 107);
+  /* margin-top: 5px; */
+  border-radius: 25px;
+  text-align: center;
+  color: antiquewhite;
+  border: none;
 }
 
 .plus-minus-btn:hover,
 .plus-minus-btn:active {
-  background-color: black;
+  background-color: rgb(109, 107, 107);
   color: rgb(236, 235, 234);
   border: none;
   box-shadow: none;
+}
+
+.to-cart-btn {
+  background-color: rgb(109, 107, 107);
+  /* margin-top: 5px; */
+  border-radius: 25px;
+  text-align: center;
+  color: antiquewhite;
 }

@@ -3,6 +3,7 @@ import { persistStore, persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import user from "./userReducer";
 import cartReducer from "./cartReducer";
+import counter from "./CounterReducer";
 
 const rootReducer = combineReducers({
   user,

@@ -51,10 +51,10 @@ function NavBar() {
                 <Nav.Link className="linkOffcanvas mx-1 " href="/locales">
                   LOCALES
                 </Nav.Link>
-                <Nav.Link className="linkOffcanvas mx-1 " href="#pricing">
+                <Nav.Link className="linkOffcanvas mx-1 " href="/nosotros">
                   NOSOTROS
                 </Nav.Link>
-                <Nav.Link className="linkOffcanvas mx-1 " href="#pricing">
+                <Nav.Link className="linkOffcanvas mx-1 " href="/reservas">
                   RESERVAS
                 </Nav.Link>
                 {!user ? (
@@ -75,7 +75,7 @@ function NavBar() {
             </Offcanvas.Body>
           </Navbar.Offcanvas>
           <Navbar.Brand href="/">
-            <div className="containerLogo">
+            <div className="containerLogo ">
               <img
                 src="/img/logos/logosinfondo.png"
                 alt="LogoHackBier"
@@ -89,10 +89,10 @@ function NavBar() {
           <Nav.Link className=" mx-2 linkMenu" href="/locales">
             LOCALES
           </Nav.Link>
-          <Nav.Link className=" mx-2 linkMenu" href="#pricing">
+          <Nav.Link className=" mx-2 linkMenu" href="/nosotros">
             NOSOTROS
           </Nav.Link>
-          <Nav.Link className=" mx-2 linkMenu" href="#pricing">
+          <Nav.Link className=" mx-2 linkMenu" href="/reservas">
             RESERVAS
           </Nav.Link>
           {!user ? (

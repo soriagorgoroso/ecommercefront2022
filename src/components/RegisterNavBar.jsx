@@ -96,7 +96,7 @@ function Register(props) {
             <div>
               <button
                 type="button"
-                className="btn-close btn-close-white"
+                className="btn-close btn-close-dark"
                 aria-label="Close"
                 onClick={handleClose}
               ></button>
@@ -114,7 +114,7 @@ function Register(props) {
                 label="Nombre"
               >
                 <Form.Control
-                  className=" text-white border border-warning"
+                  className=" text-dark border border-warning"
                   type="text"
                   placeholder="First Name"
                   value={name}
@@ -127,7 +127,7 @@ function Register(props) {
                 label="Apellido"
               >
                 <Form.Control
-                  className=" text-white border border-warning"
+                  className=" text-dark border border-warning"
                   type="text"
                   placeholder="Last Name"
                   value={surname}
@@ -140,7 +140,7 @@ function Register(props) {
                 label="Usuario"
               >
                 <Form.Control
-                  className=" text-white border border-warning"
+                  className=" text-dark border border-warning"
                   type="text"
                   placeholder="usuario"
                   value={username}
@@ -153,7 +153,7 @@ function Register(props) {
                 label="Correo"
               >
                 <Form.Control
-                  className=" text-white border border-warning"
+                  className=" text-dark border border-warning"
                   placeholder="Email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -165,7 +165,7 @@ function Register(props) {
                 label="Contraseña"
               >
                 <Form.Control
-                  className=" text-white border border-warning"
+                  className=" text-dark border border-warning"
                   type="password"
                   placeholder="Password"
                   value={password}
