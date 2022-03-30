@@ -1,0 +1,130 @@
+:root {
+  --primary: #046ec8;
+  --primary-text: #eee;
+  --secondary: #92f3ef;
+  --secondary-text: #333;
+  --unit: 8px;
+  --typeface: "Segoe UI", Lato, Verdana, sans-serif;
+  --hideLabelText: "- less";
+  --showLabelText: "+ more";
+  --removeLabelText: "x";
+}
+
+.wrapper {
+  /* max-width: 30rem;
+  margin: 0 auto; */
+}
+/* .containerCheckOut {
+  margin-top: 1500px;
+} */
+.containerCar {
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid #999;
+  border-radius: 30px;
+  /* box-shadow: 5px 10px; */
+}
+.item {
+  position: relative;
+  padding: 1.5rem 0;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid black;
+}
+.item--description {
+  margin-bottom: 0.5rem;
+}
+.item--controls {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.chargelist {
+  margin-left: 1rem;
+}
+.chargetotal {
+  display: flex;
+  justify-content: space-between;
+  line-height: 1.5rem;
+  margin-top: 0.5rem;
+}
+.chargetotal--description {
+  flex: 1 0 auto;
+}
+.chargetotal--amount {
+  margin-left: 0.5rem;
+}
+.charge {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 1.25rem;
+}
+.charge-tax {
+  color: #555;
+}
+.charge-service {
+  color: #555;
+}
+.charge--description {
+  flex: 1 0 auto;
+}
+.charge--amount {
+  margin-left: 0.5rem;
+}
+.controlset {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+}
+.controlset > * {
+  flex: 1 0 auto;
+  margin: 0 0.25rem;
+}
+.controlset input[type="text"] {
+  margin-right: 0.5rem;
+  line-height: 1.2rem;
+}
+.button {
+  border-radius: 0.5rem;
+  border: none;
+  line-height: 1.5rem;
+}
+.button--primary {
+  background-color: rgb(109, 107, 107);
+  /* margin-top: 5px; */
+  border-radius: 25px;
+  text-align: center;
+  color: antiquewhite;
+}
+.button--primary:hover {
+  color: antiquewhite;
+}
+.button--secondary {
+  background-color: white;
+  border-radius: 25px;
+}
+.toggle-label {
+  color: var(--primary, blue);
+  cursor: pointer;
+}
+[for^="itemremove"]::after {
+  content: var(--removeLabelText, "x");
+}
+.showhidelabel::after {
+  content: var(--hideLabelText, "Hide");
+}
+.showhideflag {
+  display: none;
+}
+.showhideflag:checked ~ .showhidetarget {
+  display: none;
+}
+.showhideflag:checked ~ .showhidelabel::after {
+  content: var(--showLabelText, "Details");
+}
+.remove-item {
+  display: none;
+}
+.remove-item:checked + .item {
+  display: none;
+}

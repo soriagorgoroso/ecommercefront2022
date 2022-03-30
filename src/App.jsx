@@ -7,8 +7,8 @@ import Stores from "./pages/Stores";
 import AboutUs from "./pages/AboutUs";
 import Register from "./components/RegisterNavBarIzq";
 import User from "./pages/User";
+import Cart from "./pages/Cart";
 import { useSelector } from "react-redux";
-
 function App() {
   // const loggedUser = useSelector((state) => state.users[0]);
 
@@ -18,9 +18,10 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/mi_perfil/:username" element={<User />} />
         <Route path="/articulos/:id" element={<Article />} />
+        <Route path="/cart" element={<Cart />} />
         <Route path="/locales" element={<Stores />} />
         <Route path="/nosotros" element={<AboutUs />} />
-        <Route path="/register" element={<Register />} />{" "}
+        <Route path="/register" element={<Register />} />
       </Routes>
     </div>
   );
