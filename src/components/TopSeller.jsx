@@ -14,7 +14,6 @@ function TopSeller() {
     getArticles();
   }, []);
 
-  console.log(articles);
   //const topSellers = articles.filter((article) => article.topSeller);
   //console.log(topSellers);
 

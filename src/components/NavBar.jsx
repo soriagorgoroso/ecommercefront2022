@@ -7,8 +7,10 @@ import RegisterNav from "./RegisterNavBar";
 import SignInNav from "./SignInNavBar";
 import RegisterNavBarIzq from "./RegisterNavBarIzq";
 import SignInNavBarIzq from "./SignInNavBarIzq";
+import { useParams } from "react-router-dom";
 
 function NavBar() {
+  const params = useParams();
   const user = useSelector((state) => state.user);
 
   return (
@@ -63,7 +65,10 @@ function NavBar() {
                     <RegisterNavBarIzq />
                   </div>
                 ) : (
-                  <Nav.Link className="linkOffcanvas mx-1 " href="/profile">
+                  <Nav.Link
+                    className="linkOffcanvas mx-1 "
+                    href={`/mi_perfil/${params.username}`}
+                  >
                     MI PERFIL
                   </Nav.Link>
                 )}
@@ -98,7 +103,10 @@ function NavBar() {
               <SignInNav className="linkMenu" />
             </div>
           ) : (
-            <Nav.Link className=" mx-2 linkMenu" href="#pricing">
+            <Nav.Link
+              className=" mx-2 linkMenu"
+              href={`/mi_perfil/${params.username}`}
+            >
               MI PERFIL
             </Nav.Link>
           )}
