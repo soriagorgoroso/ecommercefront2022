@@ -1,7 +1,10 @@
 function cartReducer(cart = [], action) {
   switch (action.type) {
     case "ADD":
-      if (cart.some((article) => article.name === action.payload.name)) {
+      if (
+        cart.length > 0 &&
+        cart.some((article) => article.name === action.payload.name)
+      ) {
         return cart.map((article) => {
           if (article.name === action.payload.name) {
             return {

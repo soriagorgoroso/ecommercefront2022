@@ -1,11 +1,7 @@
-const actions = {
-  add: (article) => {
-    return { type: "ADD", payload: article };
-  },
-
-  delete: () => {
-    return { type: "DELETE" };
-  },
+export const addToCart = (article) => {
+  return { type: "ADD", payload: article };
 };
 
-export default actions;
+export const deleteFromCart = () => {
+  return { type: "DELETE" };
+};

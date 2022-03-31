@@ -130,7 +130,7 @@ function AboutUs() {
           >
             <div>
               <img
-                src={require(`./img/facheros/DSC00375.jpg`)}
+                src={`./img/facheros/DSC00375.jpg`}
                 alt="SSoria"
                 className="photoAboutUs "
               />
@@ -146,7 +146,7 @@ function AboutUs() {
                       className="text-decoration-none mx-1 "
                     >
                       <img
-                        src={require("./img/facheros/icon/linkedin.png")}
+                        src={"./img/facheros/DSC00375.jpg"}
                         alt=""
                         className="iconAboutUs"
                       />

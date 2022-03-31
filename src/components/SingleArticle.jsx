@@ -40,7 +40,7 @@ function SingleArticle() {
               <span className="fs-4 fw-bold">
                 {article.category} | {article.sizecc}cc | {article.ibus}
               </span>
-              <ButtonToCart />
+              <ButtonToCart article={article} />
               <hr className="separator mt-4"></hr>
               <span className="fs-6">SOBRE LA CERVEZA</span>
               <p className="fs-6 pt-2">{article.description}</p>
