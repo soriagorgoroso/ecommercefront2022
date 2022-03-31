@@ -42,19 +42,12 @@ function AboutUs() {
           </Col>
         </Row>
         <Row className="mt-5 d-flex justify-content-between ">
-          <Col
-            xxl={4}
-            xl={4}
-            lg={4}
-            md={4}
-            sm={4}
-            className="border  border-3 p-0 contenedor m-3  pe-1"
-          >
+          <Col className="border  border-3 p-0 contenedor m-3  pe-1">
             <div>
               <img
                 src={`./img/facheros/DSC00375.jpg`}
                 alt="SSoria"
-                className="photoAboutUs fluid "
+                className="photoAboutUs mx-auto object-fit"
               />
 
               <div>
@@ -108,19 +101,12 @@ function AboutUs() {
               </div>
             </div>
           </Col>
-          <Col
-            xxl={4}
-            xl={4}
-            lg={4}
-            md={4}
-            sm={4}
-            className="d-flex justify-content-end border  border-3 p-0 contenedor m-3  pe-1"
-          >
+          <Col className="d-flex justify-content-end border  border-3 p-0 contenedor m-3  pe-1">
             <div>
               <img
                 src={`./img/facheros/DSC00609.jpg`}
                 alt="SSoria"
-                className="photoAboutUs img-fluid rounded mx-auto d-block"
+                className="photoAboutUs mx-auto object-fit"
               />
 
               <div>
@@ -168,19 +154,12 @@ function AboutUs() {
               </div>
             </div>
           </Col>
-          <Col
-            xxl={4}
-            xl={4}
-            lg={4}
-            md={4}
-            sm={4}
-            className="d-flex justify-content-end border  border-3 p-0 contenedor m-3  pe-1"
-          >
+          <Col className="d-flex justify-content-end border  border-3 p-0 contenedor m-3  pe-1">
             <div>
               <img
                 src={`./img/facheros/DSC00375.jpg`}
                 alt="SSoria"
-                className="photoAboutUs fluid "
+                className="photoAboutUs mx-auto object-fit "
               />
 
               <div>
