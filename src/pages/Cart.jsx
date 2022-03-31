@@ -48,115 +48,7 @@ function Cart(handlerTotal) {
               <div className="container containerCar ">
                 <form action="" id="cart">
                   <div id="cart--items">
-                    <div className="itemlist">
-                      <input
-                        className="remove-item"
-                        type="checkbox"
-                        id="itemremove1"
-                      />
-
-                      <div className="item">
-                        <div className="item--description">Una chebecha </div>
-                        <div>
-                          <div class="input-group mb-3">
-                            <span class="button--primary input-group-text">
-                              $
-                            </span>
-
-                            <span class="button--primary input-group-text">
-                              5.00
-                            </span>
-                            <button className="button--primary input-group-text">
-                              -
-                            </button>
-                            <button className="button--primary input-group-text">
-                              +
-                            </button>
-                            <span class="button--primary input-group-text">
-                              1
-                            </span>
-                          </div>
-                        </div>
-                        <div className="item--summary">
-                          <input
-                            id="item1"
-                            className="showhideflag"
-                            type="checkbox"
-                            checked="checked"
-                          />
-
-                          <div className="chargetotal">
-                            <div className="chargetotal--description">
-                              Total
-                            </div>
-                            <div className="chargetotal--currency">USD</div>
-                            <div className="chargetotal--amount">300.00</div>
-                          </div>
-                        </div>
-                        <div className="item--controls">
-                          <label
-                            for="itemremove1"
-                            className="toggle-label"
-                          ></label>
-                        </div>
-                      </div>
-                      <div className="item">
-                        <div className="item--description">Una chebecha </div>
-                        <div>
-                          <div class="input-group mb-3">
-                            <span class="button--primary input-group-text">
-                              $
-                            </span>
-
-                            <span class="button--primary input-group-text">
-                              5.00
-                            </span>
-                            <button className="button--primary input-group-text">
-                              -
-                            </button>
-                            <button className="button--primary input-group-text">
-                              +
-                            </button>
-                            <span class="button--primary input-group-text">
-                              1
-                            </span>
-                          </div>
-                        </div>
-                        <div className="item--summary">
-                          <input
-                            id="item1"
-                            className="showhideflag"
-                            type="checkbox"
-                            checked="checked"
-                          />
-
-                          <div className="chargetotal">
-                            <div className="chargetotal--description">
-                              Total
-                            </div>
-                            <div className="chargetotal--currency">USD</div>
-                            <div className="chargetotal--amount">300.00</div>
-                          </div>
-                        </div>
-                        <div className="item--controls">
-                          <label
-                            for="itemremove1"
-                            className="toggle-label"
-                          ></label>
-                        </div>
-                      </div>
-                      <input
-                        className="remove-item"
-                        type="checkbox"
-                        id="itemremove2"
-                      />
-
-                      <input
-                        className="remove-item"
-                        type="checkbox"
-                        id="itemremove3"
-                      />
-                    </div>
+                    <div className="itemlist"></div>
                     <div className="item">
                       <div className="item--description">Una chebecha </div>
                       <div>
@@ -180,13 +72,6 @@ function Cart(handlerTotal) {
                         </div>
                       </div>
                       <div className="item--summary">
-                        <input
-                          id="item1"
-                          className="showhideflag"
-                          type="checkbox"
-                          checked="checked"
-                        />
-
                         <div className="chargetotal">
                           <div className="chargetotal--description">Total</div>
                           <div className="chargetotal--currency">USD</div>

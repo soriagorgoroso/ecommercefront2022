@@ -41,98 +41,20 @@ function AboutUs() {
             </div>
           </Col>
         </Row>
-        <Row className="mt-5">
+        <Row className="mt-5 d-flex justify-content-between ">
           <Col
+            xxl={4}
+            xl={4}
             lg={4}
             md={4}
             sm={4}
-            className="d-flex justify-content-end border  border-3 p-0 contenedor m-3  pe-1"
-          >
-            <div>
-              <img
-                // src={require(``)}
-                alt="GBarg"
-                className="photoAboutUs "
-              />
-
-              <div>
-                <ul>
-                  <h3 className="text-center">Gonzalo Barg</h3>
-                  <li>
-                    <img
-                      src={require("./img/facheros/icon/github.png")}
-                      alt=""
-                      className="iconAboutUs"
-                    />
-                  </li>
-                  <li>
-                    <img
-                      src={require("./img/facheros/icon/gmail(2).png")}
-                      alt=""
-                      className="iconAboutUs"
-                    />
-                  </li>
-                  <li>
-                    <img
-                      src={require("./img/facheros/icon/linkedin.png")}
-                      alt=""
-                      className="iconAboutUs"
-                    />
-                  </li>
-                  <li></li>
-                </ul>
-              </div>
-            </div>
-          </Col>
-          <Col
-            lg={4}
-            md={4}
-            sm={4}
-            className="d-flex justify-content-end border  border-3 p-0 contenedor m-3  pe-1"
-          >
-            <div>
-              {/* <img src={require(``)} alt="FMarco" className="photoAboutUs " /> */}
-
-              <div>
-                <ul>
-                  <h3 className="text-center">Fernando Marco</h3>
-                  <li>
-                    <img
-                      src={require("./img/facheros/icon/github.png")}
-                      alt=""
-                      className="iconAboutUs"
-                    />
-                  </li>
-                  <li>
-                    <img
-                      src={require("./img/facheros/icon/gmail(2).png")}
-                      alt=""
-                      className="iconAboutUs"
-                    />
-                  </li>
-                  <li>
-                    <img
-                      src={require("./img/facheros/icon/linkedin.png")}
-                      alt=""
-                      className="iconAboutUs"
-                    />
-                  </li>
-                  <li></li>
-                </ul>
-              </div>
-            </div>
-          </Col>
-          <Col
-            lg={4}
-            md={4}
-            sm={4}
-            className="d-flex justify-content-end border  border-3 p-0 contenedor m-3  pe-1"
+            className="border  border-3 p-0 contenedor m-3  pe-1"
           >
             <div>
               <img
                 src={`./img/facheros/DSC00375.jpg`}
                 alt="SSoria"
-                className="photoAboutUs "
+                className="photoAboutUs fluid "
               />
 
               <div>
@@ -146,7 +68,7 @@ function AboutUs() {
                       className="text-decoration-none mx-1 "
                     >
                       <img
-                        src={"./img/facheros/DSC00375.jpg"}
+                        src={"./img/icon/linkedin.png"}
                         alt=""
                         className="iconAboutUs"
                       />
@@ -159,7 +81,7 @@ function AboutUs() {
                   <li>
                     <Nav.Link className="text-decoration-none mx-1 ">
                       <img
-                        src={require("./img/facheros/icon/github.png")}
+                        src={"./img/icon/github.png"}
                         alt="GitHub"
                         className="iconAboutUs"
                         href="https://github.com/soriagorgoroso"
@@ -173,7 +95,133 @@ function AboutUs() {
                   <li>
                     <Nav.Link className=" text-decoration-none mx-1 ">
                       <img
-                        src={require("./img/facheros/icon/gmail(2).png")}
+                        src={"./img/icon/gmail(2).png"}
+                        alt=""
+                        className="iconAboutUs"
+                      />
+                      <span className="ps-2 redesAboutUs">
+                        soriagorgoroso@gmail.com
+                      </span>
+                    </Nav.Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </Col>
+          <Col
+            xxl={4}
+            xl={4}
+            lg={4}
+            md={4}
+            sm={4}
+            className="d-flex justify-content-end border  border-3 p-0 contenedor m-3  pe-1"
+          >
+            <div>
+              <img
+                src={`./img/facheros/DSC00609.jpg`}
+                alt="SSoria"
+                className="photoAboutUs img-fluid rounded mx-auto d-block"
+              />
+
+              <div>
+                <ul>
+                  <h3 className="text-center">Fernando Marco</h3>
+
+                  <li className="">
+                    <Nav.Link
+                      href="https://www.linkedin.com/in/f-n-marco/"
+                      to
+                      className="text-decoration-none mx-1 "
+                    >
+                      <img
+                        src={"./img/icon/linkedin.png"}
+                        alt=""
+                        className="iconAboutUs"
+                      />
+                      <span className=" ps-2 redesAboutUs"> /f-n-marco</span>
+                    </Nav.Link>
+                  </li>
+                  <li>
+                    <Nav.Link className="text-decoration-none mx-1 ">
+                      <img
+                        src={"./img/icon/github.png"}
+                        alt="GitHub"
+                        className="iconAboutUs"
+                        href="https://github.com/fnma88"
+                      />
+                      <span className="ps-2 redesAboutUs"> /fnma88</span>
+                    </Nav.Link>
+                  </li>
+                  <li>
+                    <Nav.Link className=" text-decoration-none mx-1 ">
+                      <img
+                        src={"./img/icon/gmail(2).png"}
+                        alt=""
+                        className="iconAboutUs"
+                      />
+                      <span className="ps-2 redesAboutUs">
+                        fn.marcoarias@gmail.com
+                      </span>
+                    </Nav.Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </Col>
+          <Col
+            xxl={4}
+            xl={4}
+            lg={4}
+            md={4}
+            sm={4}
+            className="d-flex justify-content-end border  border-3 p-0 contenedor m-3  pe-1"
+          >
+            <div>
+              <img
+                src={`./img/facheros/DSC00375.jpg`}
+                alt="SSoria"
+                className="photoAboutUs fluid "
+              />
+
+              <div>
+                <ul>
+                  <h3 className="text-center">Sebastian Soria</h3>
+
+                  <li>
+                    <Nav.Link
+                      href="https://www.linkedin.com/in/soriagorgoroso/"
+                      to
+                      className="text-decoration-none mx-1 "
+                    >
+                      <img
+                        src={"./img/icon/linkedin.png"}
+                        alt=""
+                        className="iconAboutUs"
+                      />
+                      <span className=" ps-2 redesAboutUs">
+                        {" "}
+                        /soriagorgoroso
+                      </span>
+                    </Nav.Link>
+                  </li>
+                  <li>
+                    <Nav.Link className="text-decoration-none mx-1 ">
+                      <img
+                        src={"./img/icon/github.png"}
+                        alt="GitHub"
+                        className="iconAboutUs"
+                        href="https://github.com/soriagorgoroso"
+                      />
+                      <span className="ps-2 redesAboutUs">
+                        {" "}
+                        /soriagorgoroso
+                      </span>
+                    </Nav.Link>
+                  </li>
+                  <li>
+                    <Nav.Link className=" text-decoration-none mx-1 ">
+                      <img
+                        src={"./img/icon/gmail(2).png"}
                         alt=""
                         className="iconAboutUs"
                       />
