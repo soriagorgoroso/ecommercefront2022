@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Row, Form, Button, FormControl } from "react-bootstrap";
+import { Col, Row, Form, Button } from "react-bootstrap";
 import "./singleArticle.css";
 import { addToCart } from "../actions/cartActions";
 import { useDispatch } from "react-redux";
@@ -27,6 +27,8 @@ function ButtonToCart({ article }) {
         name: article.name,
         price: article.price,
         quantity: Number(num),
+        category: article.category,
+        image: article.image,
       })
     );
     setNum(1);

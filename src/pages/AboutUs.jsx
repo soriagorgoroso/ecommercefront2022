@@ -178,7 +178,6 @@ function AboutUs() {
                         className="iconAboutUs"
                       />
                       <span className=" ps-2 redesAboutUs">
-                        {" "}
                         /soriagorgoroso
                       </span>
                     </Nav.Link>
