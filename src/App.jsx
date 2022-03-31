@@ -8,7 +8,9 @@ import AboutUs from "./pages/AboutUs";
 import Register from "./components/RegisterNavBarIzq";
 import User from "./pages/User";
 import Cart from "./pages/Cart";
+import Reservas from "./pages/Reservas";
 import { useSelector } from "react-redux";
+
 function App() {
   // const loggedUser = useSelector((state) => state.users[0]);
 
@@ -22,6 +24,7 @@ function App() {
         <Route path="/locales" element={<Stores />} />
         <Route path="/nosotros" element={<AboutUs />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/reservas" element={<Reservas />} />
       </Routes>
     </div>
   );
