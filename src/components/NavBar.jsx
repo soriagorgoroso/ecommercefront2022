@@ -2,7 +2,10 @@ import React from "react";
 import { Navbar, Container, Nav, Offcanvas } from "react-bootstrap";
 import "./NavBar.css";
 import "./UserForm.css";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
+import actions from "../redux/userActions";
+import axios from "axios";
 import RegisterNav from "./RegisterNavBar";
 import SignInNav from "./SignInNavBar";
 import RegisterNavBarIzq from "./RegisterNavBarIzq";
@@ -11,6 +14,25 @@ import SignInNavBarIzq from "./SignInNavBarIzq";
 function NavBar() {
   const user = useSelector((state) => state.user);
   const cart = useSelector((state) => state.cart);
+
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const handleLogout = async (ev) => {
+    ev.preventDefault();
+    try {
+      console.log(user);
+      await axios({
+        url: process.env.REACT_APP_API_URL + `/users/logout`,
+        method: "POST",
+        headers: { Authorization: `Bearer ${user.token}` },
+      });
+      dispatch(actions.logout());
+      navigate("/");
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <>
@@ -64,12 +86,21 @@ function NavBar() {
                     <RegisterNavBarIzq />
                   </div>
                 ) : (
-                  <Nav.Link
-                    className="linkOffcanvas mx-1 "
-                    href={`/mi_perfil/${user.username}`}
-                  >
-                    MI PERFIL
-                  </Nav.Link>
+                  <div>
+                    {" "}
+                    <Nav.Link
+                      className="linkOffcanvas mx-1 "
+                      href={`/mi_perfil/${user.username}`}
+                    >
+                      MI PERFIL
+                    </Nav.Link>
+                    <Nav.Link
+                      className="linkOffcanvas mx-1 "
+                      onClick={handleLogout}
+                    >
+                      Cerrar Sesion{" "}
+                    </Nav.Link>
+                  </div>
                 )}
                 <div className="linkOffcanvas mx-1"></div>:
               </Nav>
@@ -102,12 +133,17 @@ function NavBar() {
               <SignInNav className="linkMenu" />
             </div>
           ) : (
-            <Nav.Link
-              className=" mx-2 linkMenu"
-              href={`/mi_perfil/${user.username}`}
-            >
-              MI PERFIL
-            </Nav.Link>
+            <div>
+              <Nav.Link
+                className=" mx-2 linkMenu"
+                href={`/mi_perfil/${user.username}`}
+              >
+                MI PERFIL
+              </Nav.Link>
+              <Nav.Link className=" mx-2 linkMenu" onClick={handleLogout}>
+                CERRAR SESION
+              </Nav.Link>
+            </div>
           )}
           <Nav.Link className="carrito mx-1 " href="/carrito">
             CARRITO ({cart.length})
