@@ -18,8 +18,10 @@ function cartReducer(cart = [], action) {
       return [...cart, action.payload];
 
     case "DELETE":
-      cart.filter((article) => article.name !== action.payload.name);
-      return [cart];
+      const newCart = cart.filter(
+        (article) => article.name !== action.payload.name
+      );
+      return newCart;
 
     default:
       return cart;

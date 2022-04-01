@@ -1,9 +1,12 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
+import { addToCart, deleteFromCart } from "../actions/cartActions";
 import { Col, Row, Container } from "react-bootstrap";
 import SubtotalCard from "./SubtotalCard";
 function ShoppingCart() {
   const articlesInCart = useSelector((state) => state.cart);
+  const dispatch = useDispatch();
 
   return (
     <Container>
@@ -73,13 +76,51 @@ function ShoppingCart() {
                         </div>
                         <div>
                           <div className="input-group mb-3">
-                            <button className="button--primary input-group-text bg-dark">
-                              -
-                            </button>
+                            {article.quantity === 1 ? (
+                              <button
+                                className="button--primary input-group-text bg-secondary"
+                                onClick={(ev) => ev.preventDefault()}
+                                disabled
+                              >
+                                -
+                              </button>
+                            ) : (
+                              <button
+                                className="button--primary input-group-text bg-dark"
+                                onClick={(ev) => {
+                                  ev.preventDefault();
+                                  dispatch(
+                                    addToCart({
+                                      name: article.name,
+                                      price: article.price,
+                                      quantity: -1,
+                                      category: article.category,
+                                      image: article.image,
+                                    })
+                                  );
+                                }}
+                              >
+                                -
+                              </button>
+                            )}
                             <span className="button--primary input-group-text bg-dark">
                               {article.quantity}
                             </span>
-                            <button className="button--primary input-group-text bg-dark">
+                            <button
+                              className="button--primary input-group-text bg-dark"
+                              onClick={(ev) => {
+                                ev.preventDefault();
+                                dispatch(
+                                  addToCart({
+                                    name: article.name,
+                                    price: article.price,
+                                    quantity: 1,
+                                    category: article.category,
+                                    image: article.image,
+                                  })
+                                );
+                              }}
+                            >
                               +
                             </button>
                           </div>
@@ -89,11 +130,26 @@ function ShoppingCart() {
                           <span>$ {article.price * article.quantity}</span>
                         </div>
                         <div className="pb-3 fs-5">
-                          <label
-                            htmlFor="itemremove1"
-                            className="toggle-label"
-                            style={{ color: "black" }}
-                          ></label>
+                          <button
+                            onClick={(ev) => {
+                              ev.preventDefault();
+                              dispatch(
+                                deleteFromCart({
+                                  name: article.name,
+                                  price: article.price,
+                                  quantity: article.quantity,
+                                  category: article.category,
+                                  image: article.image,
+                                })
+                              );
+                            }}
+                          >
+                            <label
+                              htmlFor="itemremove1"
+                              className="toggle-label"
+                              style={{ color: "black" }}
+                            ></label>
+                          </button>
                         </div>
 
                         {/* <div className="item--controls">

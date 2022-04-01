@@ -12,8 +12,8 @@ function SubtotalCard({ articlesInCart }) {
     0
   );
   const iva = subtotal * 0.22;
-  const envio = 150;
-  const total = subtotal + iva + envio;
+  let envio = 0;
+  //const total = subtotal + iva + envio;
 
   const handleSubmit = async (ev) => {
     ev.preventDefault();
@@ -38,7 +38,7 @@ function SubtotalCard({ articlesInCart }) {
 
   return (
     <Col>
-      <div className="container containerCart mt-5 containerCheckOut bg-light">
+      <div className="container containerCart containerCheckOut bg-light">
         <form action="" id="cart" className="">
           <div id="cart--summary">
             <div className="chargelist">
@@ -50,7 +50,9 @@ function SubtotalCard({ articlesInCart }) {
               <div className="charge">
                 <div className="charge--description">Envio</div>
                 <div className="charge--currency">$</div>
-                <div className="charge--amount">{envio}</div>
+                <div className="charge--amount">
+                  {articlesInCart.length >= 1 ? (envio = 150) : envio}
+                </div>
               </div>
               <div className="charge">
                 <div className="charge--description">IVA</div>
@@ -61,7 +63,9 @@ function SubtotalCard({ articlesInCart }) {
             <div className="chargetotal">
               <div className="chargetotal--description">Total</div>
               <div className="charge--currency">$</div>
-              <div className="chargetotal--amount">{total}</div>
+              <div className="chargetotal--amount">
+                {subtotal + iva + envio}
+              </div>
             </div>
           </div>
           <div id="cart--controls">
