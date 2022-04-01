@@ -44,7 +44,7 @@ function ShoppingCart() {
         </Row> */}
       <Row className="justify-content-center">
         <Col xs={12} lg={6}>
-          <div className="bg-light p-4">
+          <div className="bg-light mt-4 p-4">
             <h2 className="cart-title">Tu carrito</h2>
             <form action="" id="cart">
               <div id="cart--items">

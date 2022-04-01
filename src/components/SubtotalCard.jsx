@@ -39,7 +39,7 @@ function SubtotalCard({ articlesInCart }) {
 
   return (
     <Col xs={12} lg={6}>
-      <div className="bg-light p-4">
+      <div className="bg-light mt-4 p-4">
         <form action="" id="cart" className="">
           <div id="cart--summary">
             <div className="subtotal-container">
