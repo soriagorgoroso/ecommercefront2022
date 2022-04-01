@@ -92,7 +92,12 @@ function UserProfile() {
           </Row>
           <Row className="containerOrders">
             {orders.map((order) => (
-              <Card border="" className="m-2 p-0 " style={{ width: "18rem" }}>
+              <Card
+                border=""
+                className="m-2 p-0 "
+                key={order.id}
+                style={{ width: "18rem" }}
+              >
                 <Card.Header className="cardHeader" as="h5">
                   <i class="fa-thin fa-beer-mug-empty"></i>
                   <FontAwesomeIcon icon="fa-thin fa-beer-mug-empty" />
@@ -102,7 +107,7 @@ function UserProfile() {
                 <Card.Body>
                   <ul style={{ listStyle: "none" }}>
                     {order.articles.map((article) => (
-                      <li>
+                      <li key={article.id}>
                         <span>{article.article}</span>
                         <span> Cantidad: {article.quantity}</span>
                         <span>Precio: {article.price}</span>

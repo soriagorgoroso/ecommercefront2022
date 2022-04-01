@@ -2,8 +2,8 @@ const actions = {
   login: (sessionData) => {
     return { type: "LOGIN", payload: sessionData };
   },
-  logout: () => {
-    return { type: "LOGOUT" };
+  logout: (sessionData) => {
+    return { type: "LOGOUT", payload: sessionData };
   },
 };
 

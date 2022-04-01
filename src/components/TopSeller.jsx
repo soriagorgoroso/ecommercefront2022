@@ -55,7 +55,7 @@ function TopSeller() {
           itemClass="carousel-item-padding-40-px"
         >
           {articles.map((article) => (
-            <div className="my-4 px-4">
+            <div className="my-4 px-4" key={article.id}>
               <a href={`/articulos/${article.id}`}>
                 <img
                   src={`/img/photos/${article.category}/${article.image}`}

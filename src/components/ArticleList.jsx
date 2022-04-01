@@ -41,7 +41,9 @@ function ArticleList() {
           >
             <option value="Sin filtro">Sin filtro</option>
             {categories.map((category) => (
-              <option value={category.name}>{category.name}</option>
+              <option value={category.name} key={category.id}>
+                {category.name}
+              </option>
             ))}
           </Form.Select>
         </div>

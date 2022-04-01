@@ -2,6 +2,7 @@ import React from "react";
 import { Col } from "react-bootstrap";
 import axios from "axios";
 import { useSelector } from "react-redux";
+import "../pages/Cart.css";
 
 function SubtotalCard({ articlesInCart }) {
   const loggedUser = useSelector((state) => state.user);
@@ -37,34 +38,30 @@ function SubtotalCard({ articlesInCart }) {
   };
 
   return (
-    <Col>
-      <div className="container containerCart containerCheckOut bg-light">
+    <Col xs={12} lg={6}>
+      <div className="bg-light p-4">
         <form action="" id="cart" className="">
           <div id="cart--summary">
-            <div className="chargelist">
+            <div className="subtotal-container">
               <div className="charge">
                 <div className="charge--description">Total Productos</div>
-                <div className="charge--currency">$</div>
-                <div className="charge--amount">{subtotal}</div>
+                <div className="charge--amount">US$ {subtotal}</div>
               </div>
               <div className="charge">
                 <div className="charge--description">Envio</div>
-                <div className="charge--currency">$</div>
                 <div className="charge--amount">
-                  {articlesInCart.length >= 1 ? (envio = 150) : envio}
+                  US$ {articlesInCart.length >= 1 ? (envio = 150) : envio}
                 </div>
               </div>
-              <div className="charge">
+              <div className="charge pb-0">
                 <div className="charge--description">IVA</div>
-                <div className="charge--currency">$</div>
-                <div className="charge--amount">{iva}</div>
+                <div className="charge--amount">US$ {iva}</div>
               </div>
             </div>
-            <div className="chargetotal">
+            <div className="chargetotal fw-bold pb-3">
               <div className="chargetotal--description">Total</div>
-              <div className="charge--currency">$</div>
               <div className="chargetotal--amount">
-                {subtotal + iva + envio}
+                <span>US$ {subtotal + iva + envio}</span>
               </div>
             </div>
           </div>
@@ -79,7 +76,7 @@ function SubtotalCard({ articlesInCart }) {
                     aria-describedby="basic-addon3"
                   />
                   <button
-                    className="button button--primary input-group-text bg-dark"
+                    className="btn btn-dark text-center rounded-0 fw-bold input-group-text"
                     id="basic-addon3"
                   >
                     Aplicar codigo
@@ -90,11 +87,11 @@ function SubtotalCard({ articlesInCart }) {
             <div className="controlset">
               <button
                 id="confirmBtn"
-                className="button button--primary bg-dark"
+                className="btn btn-dark text-center rounded-0 fw-bold"
                 type="submit"
                 onClick={handleSubmit}
               >
-                Confirm
+                Confirmar compra
               </button>
             </div>
           </div>
