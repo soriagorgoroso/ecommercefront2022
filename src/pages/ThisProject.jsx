@@ -222,8 +222,24 @@ function ThisProject() {
             blanditiis cupiditate repellendus!
           </p>
         </Row>
-        <Row>
-          <h2 className="mt-5">El proyecto Hack Bier</h2>
+        <Row className="mb-5">
+          <h2 className="my-5">Funcionamiento</h2>
+          <Col>
+            <h3 className="mb-3">Información para ingresar al sitio</h3>
+            <a className="mt-5" href="/">
+              <h5>www.hackbier.com</h5>
+            </a>
+            <p>email: user@hackbier.com</p>
+            <p>contraseña: user</p>
+          </Col>
+          <Col>
+            <h3 className="mb-3">Información para ingresar al administrador</h3>
+            <a className="mt-5" href="/">
+              <h5>www.adminhackbier.com</h5>
+            </a>
+            <p>email: admin@hackbier.com</p>
+            <p>contraseña: admin</p>
+          </Col>
         </Row>
       </Container>
     </>
