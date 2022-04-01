@@ -189,7 +189,7 @@ function ThisProject() {
           Para poder cumplir con la consigna en el tiempo disponible utilizamos
           la metodología SCRUM, dividiendo nuestro trabajo en tres Sprints de
           una semana y realizando Daily meetings, manteniendo una lista de
-          tareas actualizada mediante Trello.
+          tareas actualizada mediante Trello y nuestro código en GitHub.
         </p>
         <p className="fs-3 mt-3">
           Con una sólida base de HTML, CSS, y JavaScript, comenzamos a aplicar
