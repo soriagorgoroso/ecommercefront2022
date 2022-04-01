@@ -10,7 +10,7 @@ function ThisProject() {
       <Row>
         <img
           className="flex-image"
-          src="./img/logos/facebook_cover_photo_1.png"
+          src="./img/logos/facebook_cover_photo_1-removebg-preview.png"
           alt="logo"
         />
       </Row>
