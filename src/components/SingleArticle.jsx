@@ -25,7 +25,7 @@ function SingleArticle() {
       <Row xs={1} sm={1} lg={2} className="justify-content-center g-5">
         <Col className="pt-4">
           <img
-            src={`/img/photos/${article.category}/${article.image}`}
+            src={`${process.env.REACT_APP_IMG_URL}/${article.image}`}
             alt="Cerveza IPA"
             className="article-image float-end shadow-sm"
           />
