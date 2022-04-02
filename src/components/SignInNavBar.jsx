@@ -25,7 +25,7 @@ function SignIn() {
     ev.preventDefault();
     try {
       const response = await axios.post(
-        process.env.DB_CONNECTION_STRING + "/ tokens",
+        process.env.DB_CONNECTION_STRING / tokens,
         {
           email: data,
           password: password,
