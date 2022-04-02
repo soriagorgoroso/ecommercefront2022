@@ -21,7 +21,8 @@ function SubtotalCard({ articlesInCart }) {
     try {
       const response = await axios({
         method: "post",
-        url: process.env.DB_CONNECTION_STRING / orders,
+        url: `${process.env.DB_CONNECTION_STRING}/orders`,
+
         headers: {
           Authorization: "Bearer " + loggedUser.token,
         },

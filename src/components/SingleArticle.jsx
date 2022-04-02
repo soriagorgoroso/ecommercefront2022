@@ -12,7 +12,7 @@ function SingleArticle() {
   React.useEffect(() => {
     const getArticle = async () => {
       const response = await axios.get(
-        `process.env.DB_CONNECTION_STRING/${params.id}`
+        `${process.env.DB_CONNECTION_STRING}/${params.id}`
       );
 
       setArticle(response.data);
