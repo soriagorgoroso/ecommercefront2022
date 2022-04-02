@@ -63,7 +63,7 @@ function ArticleList() {
                   <a href={`/articulos/${article.id}`}>
                     <img
                       className="img-fluid"
-                      src={`/img/photos/${article.category}/${article.image}`}
+                      src={`${process.env.REACT_APP_IMG_URL}/${article.image}`}
                       alt="imagen del producto"
                     />
                     <div className="d-flex justify-content-between mt-3">
