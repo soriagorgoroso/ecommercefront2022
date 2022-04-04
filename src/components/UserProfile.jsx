@@ -20,7 +20,7 @@ function UserProfile() {
 
   React.useEffect(() => {
     const getOrders = async () => {
-      const response = await axios.get(process.env.DB_CONNECTION_STRING, {
+      const response = await axios.get(process.env.REACT_APP_API_URL, {
         headers: {
           Authorization: "Bearer " + userdata.token,
         },
@@ -33,7 +33,7 @@ function UserProfile() {
   //   React.useEffect(() => {
   //     const getUsers = async () => {
   //       const response = await axios.get(
-  //         `process.env.DB_CONNECTION_STRING/${params}`,
+  //         `process.env.REACT_APP_API_URL/${params}`,
   //         {
   //           headers: {
   //             Authorization: "Bearer " + userdata.token,

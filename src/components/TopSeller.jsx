@@ -8,7 +8,7 @@ function TopSeller() {
 
   React.useEffect(() => {
     const getArticles = async () => {
-      const response = await axios.get(process.env.DB_CONNECTION_STRING);
+      const response = await axios.get(process.env.REACT_APP_IMG_URL);
       setArticles(response.data);
     };
     getArticles();

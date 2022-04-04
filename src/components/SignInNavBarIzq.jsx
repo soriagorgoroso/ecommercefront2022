@@ -25,7 +25,7 @@ function SignIn() {
     ev.preventDefault();
     try {
       const response = await axios.post(
-        process.env.DB_CONNECTION_STRING,
+        process.env.REACT_APP_API_URL,
         "/tokens",
         {
           email: data,

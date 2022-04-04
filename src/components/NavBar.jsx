@@ -3,7 +3,7 @@ import { Navbar, Container, Nav, Offcanvas } from "react-bootstrap";
 import "./NavBar.css";
 import "./UserForm.css";
 import { useSelector, useDispatch } from "react-redux";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import actions from "../redux/userActions";
 import axios from "axios";
 import RegisterNav from "./RegisterNavBar";
