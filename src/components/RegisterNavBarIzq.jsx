@@ -151,6 +151,36 @@ function Register(props) {
               </FloatingLabel>
               <FloatingLabel
                 className="m-3 text-dark"
+                controlId="telephone"
+                label="Telefono"
+              >
+                <Form.Control
+                  className=" text-dark border border-warning"
+                  type="text"
+                  placeholder="telephone"
+                  onChange={(ev) =>
+                    setFormFields({ ...formFields, telephone: ev.target.value })
+                  }
+                  value={formFields.telephone}
+                />
+              </FloatingLabel>
+              <FloatingLabel
+                className="m-3 text-dark"
+                controlId="address"
+                label="Addres"
+              >
+                <Form.Control
+                  className=" text-dark border border-warning"
+                  type="text"
+                  placeholder="Dirrecion"
+                  onChange={(ev) =>
+                    setFormFields({ ...formFields, address: ev.target.value })
+                  }
+                  value={formFields.addres}
+                />
+              </FloatingLabel>
+              <FloatingLabel
+                className="m-3 text-dark"
                 controlId="Email"
                 label="Correo"
               >
