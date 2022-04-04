@@ -51,7 +51,7 @@ function SubtotalCard({ articlesInCart }) {
               <div className="charge">
                 <div className="charge--description">Envio</div>
                 <div className="charge--amount">
-                  US$ {articlesInCart.length >= 1 ? (envio = 150) : envio}
+                  US$ {articlesInCart.length >= 1 ? (envio = 10) : envio}
                 </div>
               </div>
               <div className="charge pb-0">

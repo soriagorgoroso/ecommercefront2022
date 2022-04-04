@@ -25,6 +25,11 @@
   /* box-shadow: 5px 10px; */
 }
 .item {
+  display: flex;
+  flex-direction: row;
+  flex-flow: row;
+  justify-content: space-around;
+  align-items: center;
   position: relative;
   padding: 1.5rem 0;
   margin-bottom: 0.5rem;
@@ -135,10 +140,69 @@
   padding-bottom: 1.5rem;
 }
 
+.img-thumbnail {
+  width: 20%;
+}
+
+.article-name {
+  width: 250px;
+  text-align: center;
+}
+
+.article-price {
+  width: 82px;
+  text-align: center;
+}
+
+.article-quantity-container {
+  width: 140px;
+}
+
+.article-total {
+  width: 100px;
+  text-align: center;
+}
+
 /*SUBTOTAL CARD*/
 
 #confirmBtn:hover,
 .btn:hover {
   background-color: white;
   color: black;
+}
+
+@media only screen and (max-width: 780px) {
+  .item {
+    display: flex;
+    flex-direction: column;
+    flex-flow: column;
+  }
+
+  .img-thumbnail {
+    width: 75%;
+    margin: 1rem 0;
+  }
+
+  .interior-row {
+    width: 250px;
+    margin: 1rem 0;
+  }
+
+  .article-price {
+    width: 25%;
+  }
+
+  .article-quantity-container {
+    width: 50%;
+  }
+
+  .article-total {
+    font-size: x-large;
+  }
+
+  .delete-article-btn {
+    position: absolute;
+    top: 0rem;
+    right: 0rem;
+  }
 }
