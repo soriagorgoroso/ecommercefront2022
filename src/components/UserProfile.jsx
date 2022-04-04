@@ -1,15 +1,7 @@
 import React from "react";
 import axios from "axios";
 import { useSelector } from "react-redux";
-import {
-  Container,
-  Row,
-  Col,
-  Accordion,
-  Card,
-  CardHeader,
-  CardBody,
-} from "react-bootstrap";
+import { Container, Row, Col, Card } from "react-bootstrap";
 import "./UserProfile.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 function UserProfile() {
@@ -20,11 +12,14 @@ function UserProfile() {
 
   React.useEffect(() => {
     const getOrders = async () => {
-      const response = await axios.get(process.env.REACT_APP_API_URL, {
-        headers: {
-          Authorization: "Bearer " + userdata.token,
-        },
-      });
+      const response = await axios.get(
+        process.env.REACT_APP_API_URL + "/orders",
+        {
+          headers: {
+            Authorization: "Bearer " + userdata.token,
+          },
+        }
+      );
 
       setOrders(response.data);
     };
