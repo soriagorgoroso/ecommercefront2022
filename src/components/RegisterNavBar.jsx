@@ -1,68 +1,69 @@
 import "./UserForm.css";
+import React from "react";
 import axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import actions from "../redux/userActions";
-import { useDispatch } from "react-redux";
-import "./SignInNav.css";
 
 import "react-toastify/dist/ReactToastify.css";
+import "./Register.css";
 
 import { Modal, Button, FloatingLabel, Form, Nav } from "react-bootstrap";
 
 function Register(props) {
-  const [show, setShow] = useState(false);
-  const [name, setName] = useState("");
-  const [surname, setSurname] = useState("");
-  const [username, setUsername] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
+  const [show, setShow] = useState(false);
+  const [warning, setWarning] = React.useState(null);
+  const [formFields, setFormFields] = React.useState({
+    firstname: "",
+    lastname: "",
+    username: "",
+    email: "",
+    password: "",
+    address: "",
+    telephone: "",
+  });
+
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  const handleRegister = async () => {
-    try {
-      await axios.post(process.env.REACT_APP_API_URL + "/users", {
-        firstname: name,
-        lastname: surname,
-        username: username,
-        email: email,
-        password: password,
-      });
-      toast.success("Registered successfully!", {
-        position: "top-right",
-        autoClose: 2500,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        progress: undefined,
-      });
-      try {
-        const response = await axios.post(
-          process.env.REACT_APP_API_URL + "/users/login",
-          {
-            username: username,
-            email: email,
-            password: password,
-          }
-        );
-        dispatch(actions.login(response.data));
-        navigate("/home");
-      } catch (error) {
-        console.log(error);
+
+  const handleSubmit = async (ev) => {
+    ev.preventDefault();
+    for (const field in formFields) {
+      if (field === "") return;
+    }
+    const response = await axios(
+      {
+        method: "post",
+        url: `${process.env.REACT_APP_API_URL}/users`,
+        // headers: {
+        //   Authorization: "Bearer " + userLogged.token,
+        // },
+        data: formFields,
+      },
+      {
+        validateStatus: function (status) {
+          return status >= 200;
+        },
       }
-    } catch (error) {
-      toast.info(" Error, some fields need to be completed.", {
-        position: "top-right",
-        autoClose: 2500,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        progress: undefined,
-      });
+    );
+    const response2 = await axios.post(
+      `${process.env.REACT_APP_API_URL}/tokens`,
+      {
+        email: formFields.email,
+        password: formFields.password,
+      }
+    );
+    console.log(response2);
+    if (response2.status === 200) {
+      dispatch(actions.login(response2.data));
+      navigate("/");
+    } else {
+      setWarning(response2.data.msg);
     }
   };
   return (
@@ -107,7 +108,10 @@ function Register(props) {
               Crea tu cuenta
             </h2>
 
-            <div className="form-floating mb-3 labeltext">
+            <Form
+              onSubmit={handleSubmit}
+              className="form-floating mb-3 labeltext"
+            >
               <FloatingLabel
                 className="m-3 text-dark"
                 controlId="Nombre"
@@ -117,8 +121,10 @@ function Register(props) {
                   className=" text-dark border border-warning"
                   type="text"
                   placeholder="First Name"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
+                  value={formFields.firstname}
+                  onChange={(ev) =>
+                    setFormFields({ ...formFields, firstname: ev.target.value })
+                  }
                 />
               </FloatingLabel>
               <FloatingLabel
@@ -130,8 +136,10 @@ function Register(props) {
                   className=" text-dark border border-warning"
                   type="text"
                   placeholder="Last Name"
-                  value={surname}
-                  onChange={(e) => setSurname(e.target.value)}
+                  value={formFields.lastname}
+                  onChange={(ev) =>
+                    setFormFields({ ...formFields, lastname: ev.target.value })
+                  }
                 />
               </FloatingLabel>
               <FloatingLabel
@@ -143,8 +151,40 @@ function Register(props) {
                   className=" text-dark border border-warning"
                   type="text"
                   placeholder="usuario"
-                  value={username}
-                  onChange={(e) => setUsername(e.target.value)}
+                  value={formFields.username}
+                  onChange={(ev) =>
+                    setFormFields({ ...formFields, username: ev.target.value })
+                  }
+                />
+              </FloatingLabel>
+              <FloatingLabel
+                className="m-3 text-dark"
+                controlId="telephone"
+                label="Telefono"
+              >
+                <Form.Control
+                  className=" text-dark border border-warning"
+                  type="text"
+                  placeholder="telephone"
+                  onChange={(ev) =>
+                    setFormFields({ ...formFields, telephone: ev.target.value })
+                  }
+                  value={formFields.telephone}
+                />
+              </FloatingLabel>
+              <FloatingLabel
+                className="m-3 text-dark"
+                controlId="address"
+                label="Addres"
+              >
+                <Form.Control
+                  className=" text-dark border border-warning"
+                  type="text"
+                  placeholder="Dirrecion"
+                  onChange={(ev) =>
+                    setFormFields({ ...formFields, address: ev.target.value })
+                  }
+                  value={formFields.addres}
                 />
               </FloatingLabel>
               <FloatingLabel
@@ -155,8 +195,10 @@ function Register(props) {
                 <Form.Control
                   className=" text-dark border border-warning"
                   placeholder="Email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  value={formFields.email}
+                  onChange={(ev) =>
+                    setFormFields({ ...formFields, email: ev.target.value })
+                  }
                 />
               </FloatingLabel>
               <FloatingLabel
@@ -168,21 +210,24 @@ function Register(props) {
                   className=" text-dark border border-warning"
                   type="password"
                   placeholder="Password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
+                  value={formFields.password}
+                  onChange={(ev) =>
+                    setFormFields({ ...formFields, password: ev.target.value })
+                  }
                 />
               </FloatingLabel>
-            </div>
-            <div className="row g-2">
-              <div className="d-grid gap-2 py-5">
-                <Button
-                  onClick={handleRegister}
-                  className="btn btn-light fw-bold rounded-pill text-black border border-warning"
-                >
-                  Siguiente
-                </Button>
+              <div className="row g-2">
+                <div className="d-grid gap-2 py-5">
+                  <Button
+                    type="submit"
+                    className="btn btn-light fw-bold rounded-pill text-black border border-warning"
+                  >
+                    Siguiente
+                  </Button>
+                </div>
+                <div>{warning && <p>{warning}</p>}</div>
               </div>
-            </div>
+            </Form>
           </div>
         </Modal.Body>
       </Modal>

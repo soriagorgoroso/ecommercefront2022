@@ -21,7 +21,6 @@ function NavBar() {
   const handleLogout = async (ev) => {
     ev.preventDefault();
     try {
-      console.log(user);
       await axios({
         url: process.env.REACT_APP_API_URL + `/users/logout`,
         method: "POST",

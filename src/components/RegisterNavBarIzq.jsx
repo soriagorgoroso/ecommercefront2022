@@ -15,8 +15,8 @@ import { Modal, Button, FloatingLabel, Form, Nav } from "react-bootstrap";
 function Register(props) {
   const navigate = useNavigate();
   const dispatch = useDispatch();
+
   const [show, setShow] = useState(false);
-  const userLogged = useSelector((state) => state.user);
   const [warning, setWarning] = React.useState(null);
   const [formFields, setFormFields] = React.useState({
     firstname: "",
@@ -51,10 +51,18 @@ function Register(props) {
         },
       }
     );
-    if (response.statusText === "OK") {
+    const response2 = await axios.post(
+      `${process.env.REACT_APP_API_URL}/tokens`,
+      {
+        email: formFields.email,
+        password: formFields.password,
+      }
+    );
+    if (response2.status === 200) {
+      dispatch(actions.login(response2.data));
       navigate("/");
     } else {
-      setWarning(response.data.msg);
+      setWarning(response2.data.msg);
     }
   };
 
@@ -97,7 +105,7 @@ function Register(props) {
           </div>
           <div className="px-2 pt-2">
             <h2 className="modal-title text-dark fw-bold pb-4">
-              Crea tu cuentaadasdas
+              Crea tu cuenta
             </h2>
 
             <Form
@@ -217,6 +225,7 @@ function Register(props) {
                     Siguiente
                   </Button>
                 </div>
+                <div>{warning && <p>{warning}</p>}</div>
               </div>
             </Form>
           </div>
