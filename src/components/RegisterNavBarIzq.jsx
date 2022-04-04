@@ -51,13 +51,14 @@ function Register(props) {
         },
       }
     );
-    const response2 = await axios.post(
-      `${process.env.REACT_APP_API_URL}/tokens`,
-      {
+    const response2 = await axios({
+      method: "post",
+      url: `${process.env.REACT_APP_API_URL}/tokens`,
+      data: {
         email: formFields.email,
         password: formFields.password,
-      }
-    );
+      },
+    });
     if (response2.status === 200) {
       dispatch(actions.login(response2.data));
       navigate("/");
