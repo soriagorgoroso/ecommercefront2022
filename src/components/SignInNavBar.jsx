@@ -24,13 +24,11 @@ function SignIn() {
   const handleSubmit = async (ev) => {
     ev.preventDefault();
     try {
-      const response = await axios.post(
-        process.env.REACT_APP_API_URL + "/ tokens",
-        {
-          email: data,
-          password: password,
-        }
-      );
+      const response = await axios({
+        method: "post",
+        url: `${process.env.REACT_APP_API_URL}/tokens`,
+        data: { email: data, password: password },
+      });
       dispatch(actions.login(response.data));
       navigate("/");
     } catch (error) {
