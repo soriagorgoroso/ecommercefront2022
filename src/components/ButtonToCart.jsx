@@ -39,20 +39,32 @@ function ButtonToCart({ article }) {
       <Form method="post" action="post" onSubmit={handleSubmit}>
         <Row>
           <Col>
-            <div className="article-qty-container p-2 d-flex justify-space-around align-items-center">
-              <div className="minus-btn-container float-start">
-                <Button className="plus-minus-btn fs-5" onClick={takeNum}>
+            <div className="px-2 input-group mb-3" style={{ width: "100%" }}>
+              {num === 1 ? (
+                <button
+                  className="btn text-center rounded-0 fw-bold input-group-text bg-secondary"
+                  onClick={(ev) => ev.preventDefault()}
+                  disabled
+                >
                   -
-                </Button>
-              </div>
-
-              <div className="article-qty">{num}</div>
-
-              <div className="plus-btn-container float-end">
-                <Button onClick={addNum} className="plus-minus-btn fs-5">
-                  +
-                </Button>
-              </div>
+                </button>
+              ) : (
+                <button
+                  className="btn btn-dark text-center rounded-0 fw-bold input-group-text"
+                  onClick={takeNum}
+                >
+                  -
+                </button>
+              )}
+              <span className="text-center rounded-0 fw-bold input-group-text">
+                {num}
+              </span>
+              <button
+                className="btn btn-dark text-center rounded-0 fw-bold input-group-text"
+                onClick={addNum}
+              >
+                +
+              </button>
             </div>
           </Col>
           <Col>

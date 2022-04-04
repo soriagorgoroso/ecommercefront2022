@@ -85,8 +85,8 @@ function UserProfile() {
                   <Card.Body>
                     <ul style={{ listStyle: "none" }}>
                       {order.articles.map((article) => (
-                        <li key={article._id}>
-                          <span>{article.article}</span>
+                        <li key={article.id}>
+                          <span>{article.name}</span>
                           <span> Cantidad: {article.quantity}</span>
                           <span>Precio: {article.price}</span>
                         </li>
