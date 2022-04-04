@@ -12,14 +12,13 @@ function SingleArticle() {
   React.useEffect(() => {
     const getArticle = async () => {
       const response = await axios.get(
-        `${process.env.DB_CONNECTION_STRING}/${params.id}`
+        `${process.env.REACT_APP_API_URL}/articles/${params.id}`
       );
 
       setArticle(response.data);
     };
     getArticle();
   }, []);
-
   return (
     article && (
       <Row xs={1} sm={1} lg={2} className="justify-content-center g-5">
@@ -36,7 +35,7 @@ function SingleArticle() {
               <div className="product-name-container">
                 <h1 className="product-name fw-bold">{article.name}</h1>
               </div>
-              <h1 className="fw-bold">${article.price}</h1>
+              <h1 className="fw-bold">USD {article.price}</h1>
               <span className="fs-4 fw-bold">
                 {article.category} | {article.sizecc}cc | {article.ibus}
               </span>

@@ -11,7 +11,7 @@ function ArticleList() {
   React.useEffect(() => {
     const getArticles = async () => {
       const response = await axios.get(
-        `${process.env.DB_CONNECTION_STRING}/articles`
+        `${process.env.REACT_APP_API_URL}/articles`
       );
       setArticles(response.data);
     };
@@ -21,7 +21,7 @@ function ArticleList() {
   React.useEffect(() => {
     const getCategories = async () => {
       const response = await axios.get(
-        `${process.env.DB_CONNECTION_STRING}/categories`
+        `${process.env.REACT_APP_API_URL}/categories`
       );
       setcategories(response.data);
     };
