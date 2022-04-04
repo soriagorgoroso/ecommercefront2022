@@ -3,7 +3,7 @@ import axios from "axios";
 import { useSelector } from "react-redux";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import "./UserProfile.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+//import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function UserProfile() {
   /*const [users, setUsers] = React.useState(null)*/
@@ -13,19 +13,17 @@ function UserProfile() {
 
   React.useEffect(() => {
     const getOrders = async () => {
-      const response = await axios.get(
-        process.env.REACT_APP_API_URL + "/orders",
-        {
-          headers: {
-            Authorization: "Bearer " + userdata.token,
-          },
-        }
-      );
-
+      const response = await axios({
+        method: "get",
+        url: `${process.env.REACT_APP_API_URL}/orders`,
+        headers: {
+          Authorization: "Bearer " + userdata.token,
+        },
+      });
       setOrders(response.data);
     };
     getOrders();
-  }, []);
+  }, [userdata.token]);
 
   //   React.useEffect(() => {
   //     const getUsers = async () => {
@@ -44,7 +42,8 @@ function UserProfile() {
   //   }, []);
 
   return (
-    orders && (
+    orders &&
+    userdata && (
       <>
         <Container className="mt-4 border border-1">
           <h1 className="text-center my-3">MI PERFIL</h1>
@@ -59,7 +58,7 @@ function UserProfile() {
                 Editar mis datos
               </a>
             </Col>
-            <Col md={12} lg={6} className="p-3 border border-1">
+            {/* <Col md={12} lg={6} className="p-3 border border-1">
               <h2 className="text-center mb-1">CAMBIAR CONTRASEÑA</h2>
               <p className="p-2 fs-3 text">Usuario: {userdata.username}</p>
               <p className="p-2 fs-3 text">Nombre: {userdata.firstname}</p>
@@ -68,21 +67,16 @@ function UserProfile() {
               <a className="btn btn-outline-warning" href="/editar">
                 Editar mis datos
               </a>
-            </Col>
+            </Col> */}
           </Row>
           <Row className="p-3 border border-1">
             <h2>Ordenes:</h2>
             {orders.map((order) => (
-              <Col>
-                <Card
-                  border=""
-                  className="m-2 p-0 "
-                  key={order.id}
-                  style={{ width: "18rem" }}
-                >
+              <Col key={order.id}>
+                <Card border="" className="m-2 p-0" style={{ width: "18rem" }}>
                   <Card.Header className="cardHeader" as="h5">
-                    <i class="fa-thin fa-beer-mug-empty"></i>
-                    <FontAwesomeIcon icon="fa-thin fa-beer-mug-empty" />
+                    <i className="fa-thin fa-beer-mug-empty"></i>
+                    {/* <FontAwesomeIcon icon="fa-thin fa-beer-mug-empty" /> */}
                     Fecha: {order.createdAt.slice(0, 10)}
                     <br />
                     Codigo: {order.id.slice(-10)}
@@ -91,7 +85,7 @@ function UserProfile() {
                   <Card.Body>
                     <ul style={{ listStyle: "none" }}>
                       {order.articles.map((article) => (
-                        <li key={article.id}>
+                        <li key={article._id}>
                           <span>{article.article}</span>
                           <span> Cantidad: {article.quantity}</span>
                           <span>Precio: {article.price}</span>
