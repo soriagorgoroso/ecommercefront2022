@@ -32,12 +32,12 @@
   text-align: center;
   color: black;
 }
-.linkMenu:hover {
-  color: black;
-}
 .linkOffcanvas:hover {
   color: black;
   border: 3px black solid;
+}
+.linkMenu:hover {
+  color: black;
 }
 
 @media (max-width: 1200px) {

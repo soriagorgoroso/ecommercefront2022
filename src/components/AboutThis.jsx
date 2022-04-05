@@ -176,13 +176,11 @@ function AboutThis({ name, ...props }) {
             </Col>
           </Row>
           <Row>
-            <Col>
-              <div className="col-md-4">
-                <Nav.Link className="linkOffcanvasModal mx-1 " href="/proyecto">
-                  SOBRE EL PROYECTO
-                </Nav.Link>
-              </div>
-            </Col>
+            <div className="">
+              <Nav.Link className="linkOffcanvasModal mx-1 " href="/proyecto">
+                SOBRE EL PROYECTO
+              </Nav.Link>
+            </div>
           </Row>
         </Offcanvas.Body>
       </Offcanvas>

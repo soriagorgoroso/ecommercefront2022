@@ -7,6 +7,7 @@ import { useDispatch } from "react-redux";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import actions from "../redux/userActions";
+import RegisterNavBarIzq from "./RegisterNavBarIzq";
 
 function SignIn() {
   const [password, setPassword] = useState("");
@@ -123,10 +124,10 @@ function SignIn() {
             </Form>
 
             <a
-              className="btn fw-bold rounded-pill border border-warning text-black"
+              className="btn fw-bold rounded-pill border border-warning text-black p-0"
               href="/checkin"
             >
-              Registrate
+              <RegisterNavBarIzq />
             </a>
           </div>
           <p className="text-danger fs-5 w-100 text-center ">{errorMessage}</p>
