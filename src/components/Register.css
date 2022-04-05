@@ -26,13 +26,12 @@
   padding: 0px;
 }
 .registerButton {
-  background-color: rgb(109, 107, 107);
+  color: black;
   margin-top: 5px;
   border-radius: 25px;
   text-align: center;
-  color: antiquewhite;
 }
 
 .registerButton:hover {
-  color: antiquewhite;
+  color: black;
 }
