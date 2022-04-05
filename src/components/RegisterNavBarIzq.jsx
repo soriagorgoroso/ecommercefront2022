@@ -10,7 +10,15 @@ import actions from "../redux/userActions";
 import "react-toastify/dist/ReactToastify.css";
 import "./Register.css";
 
-import { Modal, Button, FloatingLabel, Form, Nav } from "react-bootstrap";
+import {
+  Modal,
+  Button,
+  FloatingLabel,
+  Form,
+  Nav,
+  Col,
+  Row,
+} from "react-bootstrap";
 
 function Register(props) {
   const navigate = useNavigate();
@@ -105,7 +113,7 @@ function Register(props) {
             </div>
           </div>
           <div className="px-2 pt-2">
-            <h2 className="modal-title text-dark fw-bold pb-4">
+            <h2 className="modal-title text-dark fw-bold pb-4 text-center">
               Crea tu cuenta
             </h2>
 
@@ -113,81 +121,109 @@ function Register(props) {
               onSubmit={handleSubmit}
               className="form-floating mb-3 labeltext"
             >
-              <FloatingLabel
-                className="m-3 text-dark"
-                controlId="Nombre"
-                label="Nombre"
-              >
-                <Form.Control
-                  className=" text-dark border border-warning"
-                  type="text"
-                  placeholder="First Name"
-                  value={formFields.firstname}
-                  onChange={(ev) =>
-                    setFormFields({ ...formFields, firstname: ev.target.value })
-                  }
-                />
-              </FloatingLabel>
-              <FloatingLabel
-                className="m-3 text-dark"
-                controlId="Apellido"
-                label="Apellido"
-              >
-                <Form.Control
-                  className=" text-dark border border-warning"
-                  type="text"
-                  placeholder="Last Name"
-                  value={formFields.lastname}
-                  onChange={(ev) =>
-                    setFormFields({ ...formFields, lastname: ev.target.value })
-                  }
-                />
-              </FloatingLabel>
-              <FloatingLabel
-                className="m-3 text-dark"
-                controlId="Username"
-                label="Usuario"
-              >
-                <Form.Control
-                  className=" text-dark border border-warning"
-                  type="text"
-                  placeholder="usuario"
-                  value={formFields.username}
-                  onChange={(ev) =>
-                    setFormFields({ ...formFields, username: ev.target.value })
-                  }
-                />
-              </FloatingLabel>
-              <FloatingLabel
-                className="m-3 text-dark"
-                controlId="telephone"
-                label="Telefono"
-              >
-                <Form.Control
-                  className=" text-dark border border-warning"
-                  type="text"
-                  placeholder="telephone"
-                  onChange={(ev) =>
-                    setFormFields({ ...formFields, telephone: ev.target.value })
-                  }
-                  value={formFields.telephone}
-                />
-              </FloatingLabel>
+              <Row>
+                <Col>
+                  {" "}
+                  <FloatingLabel
+                    className="m-3 text-dark"
+                    controlId="Nombre"
+                    label="Nombre"
+                  >
+                    <Form.Control
+                      className=" text-dark border border-warning"
+                      type="text"
+                      placeholder="First Name"
+                      value={formFields.firstname}
+                      onChange={(ev) =>
+                        setFormFields({
+                          ...formFields,
+                          firstname: ev.target.value,
+                        })
+                      }
+                    />
+                  </FloatingLabel>
+                  {/* Nombre */}
+                  <FloatingLabel
+                    className="m-3 text-dark"
+                    controlId="Apellido"
+                    label="Apellido"
+                  >
+                    <Form.Control
+                      className=" text-dark border border-warning"
+                      type="text"
+                      placeholder="Last Name"
+                      value={formFields.lastname}
+                      onChange={(ev) =>
+                        setFormFields({
+                          ...formFields,
+                          lastname: ev.target.value,
+                        })
+                      }
+                    />
+                  </FloatingLabel>
+                  {/* Apellido */}
+                </Col>
+                <Col>
+                  {" "}
+                  <FloatingLabel
+                    className="m-3 text-dark"
+                    controlId="Username"
+                    label="Usuario"
+                  >
+                    <Form.Control
+                      className=" text-dark border border-warning"
+                      type="text"
+                      placeholder="usuario"
+                      value={formFields.username}
+                      onChange={(ev) =>
+                        setFormFields({
+                          ...formFields,
+                          username: ev.target.value,
+                        })
+                      }
+                    />
+                  </FloatingLabel>
+                  {/* Usuario */}
+                  <FloatingLabel
+                    className="m-3 text-dark"
+                    controlId="telephone"
+                    label="Telefono"
+                  >
+                    <Form.Control
+                      className=" text-dark border border-warning"
+                      type="text"
+                      placeholder="telephone"
+                      onChange={(ev) =>
+                        setFormFields({
+                          ...formFields,
+                          telephone: ev.target.value,
+                        })
+                      }
+                      value={formFields.telephone}
+                    />
+                  </FloatingLabel>
+                  {/* Telefono */}
+                </Col>
+              </Row>
+              <Row></Row>
+
               <FloatingLabel
                 className="m-3 text-dark"
                 controlId="address"
-                label="Addres"
+                label="Direccion"
               >
                 <Form.Control
                   className=" text-dark border border-warning"
                   type="text"
-                  placeholder="Dirrecion"
+                  placeholder="Direcion"
                   onChange={(ev) =>
                     setFormFields({ ...formFields, address: ev.target.value })
                   }
                   value={formFields.addres}
                 />
               </FloatingLabel>
+              {/* Direccion */}
+
               <FloatingLabel
                 className="m-3 text-dark"
                 controlId="Email"
@@ -202,6 +238,8 @@ function Register(props) {
                   }
                 />
               </FloatingLabel>
+              {/* Email */}
+
               <FloatingLabel
                 className="m-3 text-dark"
                 controlId="Password"
@@ -216,7 +254,15 @@ function Register(props) {
                     setFormFields({ ...formFields, password: ev.target.value })
                   }
                 />
+                <span className="text-dark ">
+                  *Datos protegidos y asegurados
+                </span>
+
+                <i class="fa-solid fa-shield-check"></i>
+                <i class="fa-light fa-shield-check"></i>
               </FloatingLabel>
+              {/* Password */}
+
               <div className="row g-2">
                 <div className="d-grid gap-2 py-5">
                   <Button
