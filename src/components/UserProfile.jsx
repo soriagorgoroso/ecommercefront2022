@@ -3,7 +3,7 @@ import axios from "axios";
 import { useSelector } from "react-redux";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import "./UserProfile.css";
-//import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { v4 as uuidv4 } from "uuid";
 
 function UserProfile() {
   /*const [users, setUsers] = React.useState(null)*/
@@ -86,7 +86,7 @@ function UserProfile() {
                   <Card.Body>
                     <ul style={{ listStyle: "none" }}>
                       {order.articles.map((article) => (
-                        <li key={article.id}>
+                        <li key={uuidv4()}>
                           <span>{article.name}</span>
                           <span> Cantidad: {article.quantity}</span>
                           <span>Precio: {article.price}</span>
