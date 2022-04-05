@@ -102,6 +102,9 @@ function NavBar() {
                     </Nav.Link>
                   </div>
                 )}
+                <Nav.Link className="linkOffcanvas mx-1 mt-5 " href="/proyecto">
+                  SOBRE ESTE PROYECTO
+                </Nav.Link>
                 <div className="linkOffcanvas mx-1"></div>:
               </Nav>
             </Offcanvas.Body>

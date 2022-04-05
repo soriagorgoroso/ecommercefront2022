@@ -2,10 +2,12 @@ import React from "react";
 import "./AboutUs.css";
 import { Container, Row, Col, Nav } from "react-bootstrap";
 import NavBar from "../components/NavBar";
+import AboutThis from "../components/AboutThis";
 
 function ThisProject() {
   return (
     <>
+      <AboutThis />
       <NavBar />
       <Row>
         <img
