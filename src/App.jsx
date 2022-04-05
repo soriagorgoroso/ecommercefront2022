@@ -11,12 +11,14 @@ import Cart from "./pages/Cart";
 import Reservas from "./pages/Reservas";
 import ThisProject from "./pages/ThisProject";
 //import { useSelector } from "react-redux";
+import AboutThis from "./components/AboutThis";
 
 function App() {
   // const loggedUser = useSelector((state) => state.users[0]);
 
   return (
     <div className="App">
+      <AboutThis />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/mi_perfil/:username" element={<User />} />
