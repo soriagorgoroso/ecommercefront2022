@@ -63,16 +63,10 @@ function NavBar() {
               <Offcanvas.Title id="offcanvasNavbarLabel "></Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body className="navContainer">
-<<<<<<< Updated upstream
-              <Nav className="justify-content-end flex-grow-1 pe-3 ">
+              <Nav className="justify-content-end flex-grow-1  ">
                 <Nav.Link className="linkOffcanvas  mx-1 " href="/carrito">
                   CARRITO{" "}
                   <span className="badge bg-secondary">({cart.length})</span>
-=======
-              <Nav className="justify-content-end flex-grow-1 ">
-                <Nav.Link className="linkOffcanvas  mx-1 " href="/cart">
-                  CARRITO <span className="badge bg-secondary">4</span>
->>>>>>> Stashed changes
                 </Nav.Link>
                 <Nav.Link className="linkOffcanvas  mx-1 " href="/">
                   CERVEZAS
