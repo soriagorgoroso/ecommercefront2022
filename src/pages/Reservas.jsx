@@ -1,21 +1,20 @@
 import React from "react";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
-import { Container, Row, Col, Nav } from "react-bootstrap";
+import { Container, Row, Col, Nav, Card } from "react-bootstrap";
 import "./Reservas.css";
 function Reservas() {
   return (
     <>
       <NavBar />
-      <Container className="containerReservas">
-        <Row className="m-4">
+      <Container className="">
+        <Row className="m-4 containerReservas"></Row>
+        <Row className="m-4 pt-2 containerReservas">
           <h1>Reservas</h1>
 
-          <p>Contacto mail: hola@cervezamalafama.com</p>
-        </Row>
-        <Row className="m-4 ">
+          <p className="pb-2">Contacto mail: hola@cervezamalafama.com</p>
           <Col>
-            <div className="datosReservas">
+            <div className="datosReservas p-3">
               <Nav.Link
                 className="to-cart-btn px-3"
                 variant="outline-dark rounded-0"
@@ -31,7 +30,7 @@ function Reservas() {
             </div>
           </Col>
           <Col>
-            <div className="datosReservas">
+            <div className="datosReservas p-3">
               <Nav.Link
                 className="to-cart-btn px-3 "
                 variant="outline-dark rounded-0"
