@@ -6,7 +6,7 @@ import "../pages/Cart.css";
 
 function SubtotalCard({ articlesInCart }) {
   const loggedUser = useSelector((state) => state.user);
-  const [discountCode, setDiscountCode] = React.useState("");
+  //const [discountCode, setDiscountCode] = React.useState("");
   const [errorMessage, setErrorMessage] = React.useState("");
 
   let subtotal = articlesInCart.reduce(
@@ -16,8 +16,6 @@ function SubtotalCard({ articlesInCart }) {
 
   const iva = subtotal * 0.22;
   let envio = 0;
-
-  const [total, setTotal] = React.useState(subtotal + iva + envio);
 
   const filteredArticles = articlesInCart.map(
     (article) =>
@@ -81,7 +79,7 @@ function SubtotalCard({ articlesInCart }) {
           <div className="chargetotal fw-bold pb-3">
             <div className="chargetotal--description">Total</div>
             <div className="chargetotal--amount">
-              <span>US$ {total}</span>
+              <span>US$ {subtotal + envio + iva}</span>
             </div>
           </div>
         </div>
@@ -94,19 +92,19 @@ function SubtotalCard({ articlesInCart }) {
                   className="form-control button button--secondary"
                   id="discount-code"
                   aria-describedby="basic-addon3"
-                  onChange={(event) => {
-                    setDiscountCode(event.target.value);
-                    console.log(discountCode);
-                  }}
+                  // onChange={(event) => {
+                  //   setDiscountCode(event.target.value);
+                  //   console.log(discountCode);
+                  // }}
                 />
                 <button
                   className="btn btn-dark text-center rounded-0 fw-bold input-group-text"
                   id="basic-addon3"
-                  onClick={() => {
-                    discountCode === "HackBier2022"
-                      ? setTotal(total * 0.8)
-                      : console.log(discountCode);
-                  }}
+                  // onClick={() => {
+                  //   discountCode === "HackBier2022"
+                  //     ? setTotal(total * 0.8)
+                  //     : console.log(discountCode);
+                  // }}
                 >
                   Aplicar codigo
                 </button>

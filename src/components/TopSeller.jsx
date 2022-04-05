@@ -61,7 +61,7 @@ function TopSeller() {
               <a href={`/articulos/${article.id}`}>
                 <img
                   src={`${process.env.REACT_APP_IMG_URL}/${article.image}`}
-                  className="img-thumbnail"
+                  className="w-100"
                   alt="producto"
                 ></img>
               </a>
