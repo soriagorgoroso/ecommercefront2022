@@ -10,7 +10,6 @@ function UserProfile() {
 
   const [orders, setOrders] = React.useState(null);
   const userdata = useSelector((state) => state.user);
-  console.log(userdata);
 
   React.useEffect(() => {
     const getOrders = async () => {
@@ -76,8 +75,6 @@ function UserProfile() {
               <Col key={order.id}>
                 <Card border="" className="m-2 p-0" style={{ width: "18rem" }}>
                   <Card.Header className="cardHeader" as="h5">
-                    <i className="fa-thin fa-beer-mug-empty"></i>
-                    {/* <FontAwesomeIcon icon="fa-thin fa-beer-mug-empty" /> */}
                     Fecha: {order.createdAt.slice(0, 10)}
                     <br />
                     Codigo: {order.id.slice(-10)}
@@ -87,8 +84,10 @@ function UserProfile() {
                     <ul style={{ listStyle: "none" }}>
                       {order.articles.map((article) => (
                         <li key={uuidv4()}>
-                          <span>{article.name}</span>
+                          <span>Articulo: {article.name}</span>
+                          <br />
                           <span> Cantidad: {article.quantity}</span>
+                          <br />
                           <span>Precio: {article.price}</span>
                         </li>
                       ))}
