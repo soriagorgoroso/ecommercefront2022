@@ -1,7 +1,7 @@
 import React from "react";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
-import { Container, Row, Col, Button, Nav } from "react-bootstrap";
+import { Container, Row, Col, Nav } from "react-bootstrap";
 import "./Reservas.css";
 function Reservas() {
   return (

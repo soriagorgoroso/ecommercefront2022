@@ -18,7 +18,7 @@ function SingleArticle() {
       setArticle(response.data);
     };
     getArticle();
-  }, []);
+  }, [params.id]);
   return (
     article && (
       <Row xs={1} sm={1} lg={2} className="justify-content-center g-5">
