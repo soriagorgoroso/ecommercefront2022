@@ -16,21 +16,21 @@ function Header() {
       <Carousel.Item>
         <img
           className="w-100 img-fluid"
-          src="/img/local/imagenDelLocal.png"
+          src={`${process.env.REACT_APP_IMG_URL}/ImagenDelLocal.png`}
           alt="First slide"
         />
       </Carousel.Item>
       <Carousel.Item>
         <img
           className="w-100 img-fluid"
-          src="/img/local/imagenDelLocal2.jpg"
+          src={`${process.env.REACT_APP_IMG_URL}/ImagenDelLocal2.jpg`}
           alt="Second slide"
         />
       </Carousel.Item>
       <Carousel.Item>
         <img
           className="w-100 img-fluid"
-          src="/img/local/imagenDelLocal3.jpg"
+          src={`${process.env.REACT_APP_IMG_URL}/ImagenDelLocal3.jpg`}
           alt="Third slide"
         />
       </Carousel.Item>
