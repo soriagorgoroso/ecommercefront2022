@@ -1,11 +1,12 @@
 import React from "react";
-import { Col } from "react-bootstrap";
+import { Row, Col, Accordion, Form } from "react-bootstrap";
 import axios from "axios";
 import { useSelector } from "react-redux";
 import "../pages/Cart.css";
 
 function SubtotalCard({ articlesInCart }) {
   const loggedUser = useSelector((state) => state.user);
+  const [discountCode, setDiscountCode] = React.useState("");
   const [errorMessage, setErrorMessage] = React.useState("");
 
   let subtotal = articlesInCart.reduce(
@@ -15,7 +16,7 @@ function SubtotalCard({ articlesInCart }) {
 
   const iva = subtotal * 0.22;
   let envio = 0;
-  //const total = subtotal + iva + envio;
+  let total = subtotal + iva + envio;
 
   const filteredArticles = articlesInCart.map(
     (article) =>
@@ -79,7 +80,7 @@ function SubtotalCard({ articlesInCart }) {
           <div className="chargetotal fw-bold pb-3">
             <div className="chargetotal--description">Total</div>
             <div className="chargetotal--amount">
-              <span>US$ {subtotal + iva + envio}</span>
+              <span>US$ {total}</span>
             </div>
           </div>
         </div>
@@ -90,12 +91,21 @@ function SubtotalCard({ articlesInCart }) {
                 <input
                   type="text"
                   className="form-control button button--secondary"
-                  id="basic-url"
+                  id="discount-code"
                   aria-describedby="basic-addon3"
+                  onChange={(event) => {
+                    setDiscountCode(event.target.value);
+                    console.log(discountCode);
+                  }}
                 />
                 <button
                   className="btn btn-dark text-center rounded-0 fw-bold input-group-text"
                   id="basic-addon3"
+                  onClick={() => {
+                    discountCode === "HackBier2022"
+                      ? (total = total * 0.2)
+                      : console.log(discountCode);
+                  }}
                 >
                   Aplicar codigo
                 </button>
@@ -105,60 +115,89 @@ function SubtotalCard({ articlesInCart }) {
         </div>
       </div>
 
-      <div className="bg-light mt-4 p-4">
-        <form action="" id="payment-info">
-          <label htmlFor="name-on-card" className="my-2">
-            Nombre (tal como figura en la tarjeta)
-          </label>
-          <input
-            type={"text"}
-            className="form-control"
-            key={"name-on-card"}
-            name="name-on-card"
-            value={""}
-          ></input>
-          <label htmlFor="card-number" className="my-2">
-            Número de tarjeta
-          </label>
-          <input
-            type={"text"}
-            className="form-control"
-            key={"card-number"}
-            name={"card-number"}
-            value={""}
-          ></input>
-          <label htmlFor="expiration-date" className="my-2">
-            Fecha de expiración
-          </label>
-          <input
-            type={"date"}
-            className="form-control"
-            key={"expiration-date"}
-            name={"expiration-date"}
-            value={""}
-          ></input>
-          <label htmlFor="security-number" className="my-2">
-            Código de seguridad
-          </label>
-          <input
-            type={"text"}
-            className="form-control"
-            key={"security-number"}
-            name={"security-number"}
-            value={""}
-            placeholder="xxx"
-          ></input>
-          <div className="controlset mt-2">
-            <button
-              id="confirmBtn"
-              className="btn btn-dark text-center rounded-0 fw-bold"
-              type="submit"
-              onClick={handleSubmit}
-            >
-              Confirmar compra
-            </button>
-          </div>
-        </form>
+      <Accordion flush>
+        <Accordion.Item eventKey="0">
+          <Accordion.Header>Datos de envío</Accordion.Header>
+          <Accordion.Body>
+            <Form>
+              <Form.Group className="mb-3" controlId="form-name">
+                <Form.Label>Nombre completo</Form.Label>
+                <Form.Control type="text" />
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="form-adress">
+                <Form.Label>Dirección</Form.Label>
+                <Form.Control type="text" />
+              </Form.Group>
+              <Row className="mb-3">
+                <Form.Group as={Col} controlId="form-city">
+                  <Form.Label>Ciudad</Form.Label>
+                  <Form.Control type="text" />
+                </Form.Group>
+                <Form.Group as={Col} controlId="form-country">
+                  <Form.Label>País</Form.Label>
+                  <Form.Select size="sm">
+                    <option>Seleccionar</option>
+                    <option>Uruguay</option>
+                    <option>Argentina</option>
+                    <option>Brasil</option>
+                  </Form.Select>
+                </Form.Group>
+              </Row>
+              <Row className="mb-3">
+                <Form.Group as={Col} controlId="form-state">
+                  <Form.Label>Provincia/Estado</Form.Label>
+                  <Form.Control type="text" />
+                </Form.Group>
+                <Form.Group as={Col} controlId="form-zip-code">
+                  <Form.Label>Código postal</Form.Label>
+                  <Form.Control type="text" />
+                </Form.Group>
+              </Row>
+              <Form.Group className="mb-3" controlId="form-phone">
+                <Form.Label>Número de teléfono</Form.Label>
+                <Form.Control type="text" />
+              </Form.Group>
+            </Form>
+          </Accordion.Body>
+        </Accordion.Item>
+        <Accordion.Item eventKey="1">
+          <Accordion.Header>Información del pago</Accordion.Header>
+          <Accordion.Body>
+            <Form>
+              <Form.Group className="mb-3" controlId="form-card">
+                <Form.Label>Número de tarjeta</Form.Label>
+                <Form.Control type="text" />
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="form-card-name">
+                <Form.Label>Nombre (tal como figura en la tarjeta)</Form.Label>
+                <Form.Control type="text" />
+              </Form.Group>
+              <Row className="mb-3">
+                <Form.Group as={Col} controlId="form-expiration-date">
+                  <Form.Label>Vencimiento</Form.Label>
+                  <Form.Control type="date" />
+                </Form.Group>
+                <Form.Group as={Col} controlId="form-security-code">
+                  <Form.Label>Código de seguridad</Form.Label>
+                  <Form.Control type="text" placeholder="xxx" />
+                </Form.Group>
+              </Row>
+            </Form>
+          </Accordion.Body>
+        </Accordion.Item>
+      </Accordion>
+
+      <div className="bg-light p-4">
+        <div className="controlset mt-2">
+          <button
+            id="confirmBtn"
+            className="btn btn-dark text-center rounded-0 fw-bold"
+            type="submit"
+            onClick={handleSubmit}
+          >
+            Confirmar compra
+          </button>
+        </div>
       </div>
     </Col>
   );
