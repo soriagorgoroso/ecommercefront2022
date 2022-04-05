@@ -40,7 +40,7 @@ function AboutThis({ name, ...props }) {
                     <img
                       src={"./img/icon/linkedin.png"}
                       alt=""
-                      className="iconAboutUsModal"
+                      className="iconAboutUsModal me-2"
                     />
                     <span className="  redesAboutUsModal">/soriagorgoroso</span>
                   </Nav.Link>
@@ -50,7 +50,7 @@ function AboutThis({ name, ...props }) {
                     <img
                       src={"./img/icon/github.png"}
                       alt="GitHub"
-                      className="iconAboutUsModal"
+                      className="iconAboutUsModal me-2"
                       href="https://github.com/soriagorgoroso"
                     />
                     <span className=" redesAboutUsModal"> /soriagorgoroso</span>
@@ -61,7 +61,7 @@ function AboutThis({ name, ...props }) {
                     <img
                       src={"./img/icon/gmail(2).png"}
                       alt=""
-                      className="iconAboutUsModal"
+                      className="iconAboutUsModal me-2"
                     />
                     <span className=" redesAboutUsModal">
                       soriagorgoroso@gmail.com
@@ -92,7 +92,7 @@ function AboutThis({ name, ...props }) {
                     <img
                       src={"./img/icon/linkedin.png"}
                       alt=""
-                      className="iconAboutUsModal"
+                      className="iconAboutUsModal me-2"
                     />
                     <span className="  redesAboutUsModal">/f-n-marco</span>
                   </Nav.Link>
@@ -102,7 +102,7 @@ function AboutThis({ name, ...props }) {
                     <img
                       src={"./img/icon/github.png"}
                       alt="GitHub"
-                      className="iconAboutUsModal"
+                      className="iconAboutUsModal me-2"
                       href="https://github.com/fnma88"
                     />
                     <span className=" redesAboutUsModal"> /fnma88</span>
@@ -113,7 +113,7 @@ function AboutThis({ name, ...props }) {
                     <img
                       src={"./img/icon/gmail(2).png"}
                       alt=""
-                      className="iconAboutUsModal"
+                      className="iconAboutUsModal me-2"
                     />
                     <span className=" redesAboutUsModal">
                       fn.marcoarias@gmail.com{" "}
@@ -144,7 +144,7 @@ function AboutThis({ name, ...props }) {
                     <img
                       src={"./img/icon/linkedin.png"}
                       alt=""
-                      className="iconAboutUsModal"
+                      className="iconAboutUsModal me-2"
                     />
                     <span className="  redesAboutUsModal">/soriagorgoroso</span>
                   </Nav.Link>
@@ -154,10 +154,13 @@ function AboutThis({ name, ...props }) {
                     <img
                       src={"./img/icon/github.png"}
                       alt="GitHub"
-                      className="iconAboutUsModal"
+                      className="iconAboutUsModal me-2"
                       href="https://github.com/soriagorgoroso"
                     />
-                    <span className=" redesAboutUsModal"> /soriagorgoroso</span>
+                    <span className=" redesAboutUsModal ">
+                      {" "}
+                      /soriagorgoroso
+                    </span>
                   </Nav.Link>
                 </li>
                 <li>
@@ -165,7 +168,7 @@ function AboutThis({ name, ...props }) {
                     <img
                       src={"./img/icon/gmail(2).png"}
                       alt=""
-                      className="iconAboutUsModal"
+                      className="iconAboutUsModal me-2"
                     />
                     <span className=" redesAboutUsModal">
                       soriagorgoroso@gmail.com

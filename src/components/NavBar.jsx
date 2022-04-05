@@ -83,10 +83,10 @@ function NavBar() {
                 {!user ? (
                   <div className="linkOffcanvas mx-1">
                     <div>
-                      <Nav.Link>
+                      <Nav.Link className="">
                         <SignInNavBarIzq className="" />
                       </Nav.Link>
-                      <Nav.Link>
+                      <Nav.Link className="">
                         <RegisterNavBarIzq />
                       </Nav.Link>
                     </div>
