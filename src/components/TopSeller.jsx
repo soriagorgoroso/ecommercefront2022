@@ -8,7 +8,9 @@ function TopSeller() {
 
   React.useEffect(() => {
     const getArticles = async () => {
-      const response = await axios.get(process.env.REACT_APP_IMG_URL);
+      const response = await axios.get(
+        `${process.env.REACT_APP_API_URL}/articles`
+      );
       setArticles(response.data);
     };
     getArticles();
@@ -58,8 +60,9 @@ function TopSeller() {
             <div className="my-4 px-4" key={article.id}>
               <a href={`/articulos/${article.id}`}>
                 <img
-                  src={`/img/photos/${article.category}/${article.image}`}
+                  src={`${process.env.REACT_APP_IMG_URL}/${article.image}`}
                   className="img-thumbnail"
+                  alt="producto"
                 ></img>
               </a>
 

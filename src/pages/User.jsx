@@ -1,7 +1,7 @@
 import React from "react";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
-//import TopSeller from "../components/TopSeller";
+import TopSeller from "../components/TopSeller";
 import UserProfile from "../components/UserProfile";
 
 function User() {
@@ -9,7 +9,7 @@ function User() {
     <>
       <NavBar />
       <UserProfile />
-      {/* <TopSeller /> */}
+      <TopSeller />
       <Footer />
     </>
   );
