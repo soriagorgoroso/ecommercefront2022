@@ -256,15 +256,13 @@ function Register(props) {
                 />
                 <span className="text-dark ">
                   *Datos protegidos y asegurados
+                  <i className="ps-2 fa-solid fa-lock"></i>
                 </span>
-
-                <i class="fa-solid fa-shield-check"></i>
-                <i class="fa-light fa-shield-check"></i>
               </FloatingLabel>
               {/* Password */}
 
               <div className="row g-2">
-                <div className="d-grid gap-2 py-5">
+                <div className=" d-grid gap-2 py-5">
                   <Button
                     type="submit"
                     className="btn btn-light fw-bold rounded-pill text-black border border-warning"

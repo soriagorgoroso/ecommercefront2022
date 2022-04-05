@@ -246,8 +246,7 @@ function Register(props) {
                 <span className="text-dark ">
                   *Datos protegidos y asegurados
                 </span>
-                <i class="fa-solid fa-shield-check"></i>
-                <i class="fa-light fa-shield-check"></i>
+                <i className="ps-2 fa-solid fa-lock"></i>
               </FloatingLabel>
               <div className="row g-2">
                 <div className="d-grid gap-2 py-5">
