@@ -26,18 +26,18 @@
   padding: 0px;
 }
 .linkOffcanvas {
-  background-color: rgb(109, 107, 107);
+  background-color: white;
   margin-top: 5px;
-  border-radius: 25px;
+  /* border-radius: 25px; */
   text-align: center;
-  color: antiquewhite;
+  color: black;
 }
 .linkMenu:hover {
   color: black;
 }
 .linkOffcanvas:hover {
-  color: antiquewhite;
-  border: 3px antiquewhite solid;
+  color: black;
+  border: 3px black solid;
 }
 
 @media (max-width: 1200px) {
