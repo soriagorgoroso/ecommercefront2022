@@ -10,6 +10,7 @@ function UserProfile() {
 
   const [orders, setOrders] = React.useState(null);
   const userdata = useSelector((state) => state.user);
+  console.log(userdata);
 
   React.useEffect(() => {
     const getOrders = async () => {
