@@ -16,7 +16,8 @@ function SubtotalCard({ articlesInCart }) {
 
   const iva = subtotal * 0.22;
   let envio = 0;
-  let total = subtotal + iva + envio;
+
+  const [total, setTotal] = React.useState(subtotal + iva + envio);
 
   const filteredArticles = articlesInCart.map(
     (article) =>
@@ -103,7 +104,7 @@ function SubtotalCard({ articlesInCart }) {
                   id="basic-addon3"
                   onClick={() => {
                     discountCode === "HackBier2022"
-                      ? (total = total * 0.2)
+                      ? setTotal(total * 0.8)
                       : console.log(discountCode);
                   }}
                 >
