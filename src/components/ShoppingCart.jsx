@@ -50,9 +50,12 @@ function ShoppingCart() {
               <div className="text-center">
                 <h2 className="mb-4">Tu carrito tiene sed. Dale cerveza.</h2>
                 <div>
-                  <button className="btn btn-dark text-center rounded-0 fw-bold">
+                  <a
+                    href="/"
+                    className="btn btn-dark text-center rounded-0 fw-bold"
+                  >
                     Ir a la tienda
-                  </button>
+                  </a>
                 </div>
               </div>
             ) : (

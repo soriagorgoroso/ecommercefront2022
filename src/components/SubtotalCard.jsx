@@ -17,18 +17,19 @@ function SubtotalCard({ articlesInCart }) {
   let envio = 0;
   //const total = subtotal + iva + envio;
 
-  const filteredArticles = articlesInCart.map((article) =>
-    // Object.keys(article).reduce((accumulator, key) => {
-    //   if (key === "name" || key === "price" || key === "quantity") {
-    //     accumulator[key] = article[key];
-    //   }
-    //   return accumulator;
-    // }, {})
-    {
-      delete article.image;
-      delete article.category;
-      return article;
-    }
+  const filteredArticles = articlesInCart.map(
+    (article) =>
+      Object.keys(article).reduce((accumulator, key) => {
+        if (key === "name" || key === "price" || key === "quantity") {
+          accumulator[key] = article[key];
+        }
+        return accumulator;
+      }, {})
+    // {
+    //   delete article.image;
+    //   delete article.category;
+    //   return article;
+    // }
   );
 
   const handleSubmit = async (ev) => {

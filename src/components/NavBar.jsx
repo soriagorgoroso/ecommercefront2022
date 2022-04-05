@@ -64,8 +64,9 @@ function NavBar() {
             </Offcanvas.Header>
             <Offcanvas.Body className="navContainer">
               <Nav className="justify-content-end flex-grow-1 pe-3 ">
-                <Nav.Link className="linkOffcanvas  mx-1 " href="/cart">
-                  CARRITO <span className="badge bg-secondary">4</span>
+                <Nav.Link className="linkOffcanvas  mx-1 " href="/carrito">
+                  CARRITO{" "}
+                  <span className="badge bg-secondary">({cart.length})</span>
                 </Nav.Link>
                 <Nav.Link className="linkOffcanvas  mx-1 " href="/">
                   CERVEZAS
