@@ -14,6 +14,7 @@ import EditUser from "./pages/EditUser";
 //import { useSelector } from "react-redux";
 import AboutThis from "./components/AboutThis";
 import CheckOut from "./pages/CheckOut";
+import Error from "./pages/Error";
 
 function App() {
   // const loggedUser = useSelector((state) => state.users[0]);
@@ -33,6 +34,7 @@ function App() {
         <Route path="/proyecto" element={<ThisProject />} />
         <Route path="/confirmacion" element={<CheckOut />} />
         <Route path="/editarusuario/:username" element={<EditUser />} />
+        <Route path="*" element={<Error />} />
       </Routes>
     </div>
   );
