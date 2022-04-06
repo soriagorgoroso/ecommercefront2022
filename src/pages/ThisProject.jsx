@@ -205,34 +205,24 @@ function ThisProject() {
         <Row className="mt-5">
           <h2 className="mt-5">El proyecto Hack Bier</h2>
           <p className="fs-3 mt-3">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio ab
-            eligendi ratione nesciunt incidunt placeat totam officia quis
-            repellat saepe distinctio accusantium, ea possimus? Perferendis
-            aperiam deserunt sit voluptatem suscipit!
-          </p>
-          <p className="fs-3 mt-3">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas
-            impedit libero, tenetur ea natus ex velit, corrupti, laudantium
-            assumenda totam ipsum sint illo? Ullam nesciunt ipsa consequuntur.
-            Consequuntur, cumque minima?
-          </p>
-          <p className="fs-3 mt-3">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. At vitae
-            maxime numquam iusto in quas, doloribus, officia distinctio nulla
-            odio asperiores corporis, ex dolorem reprehenderit perspiciatis?
-            Maiores reiciendis quasi porro?
-          </p>
-          <p className="fs-3 mt-3">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio
-            ad totam debitis perferendis est, minima beatae cumque incidunt
-            harum, ab labore expedita ea corporis asperiores, aliquid nisi unde?
-            Recusandae, voluptatibus.
-          </p>
-          <p className="fs-3 mt-3 mb-5">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis
-            asperiores esse quod saepe ipsa, ipsam tempore, corrupti harum quos
-            voluptate iste odit aspernatur assumenda eos voluptatem incidunt
-            blanditiis cupiditate repellendus!
+            Este proyecto nace como el trabajo final del bootcamp de desarrollo
+            web full stack que realizamos entre enero y abril de 2022, en este
+            curso<b> dedicamos más de 600</b> horas prácticas de desarrollo
+            tanto en front-end como en back-end. El mismo consistía en realizar
+            un sitio de e-commerce, con su sitio de administrador, y su base de
+            datos en un periodo de tres semanas, en el cual invertimos 200 horas
+            de trabajo cada uno. Para poder cumplir con la consigna en el tiempo
+            disponible utilizamos la metodología Scrum, dividiendo nuestro
+            trabajo en tres sprints de una semana, realizando daily meetings, y
+            una demo al final de cada sprint; manteniendo una lista de tareas
+            actualizada mediante Trello y nuestro código en GitHub. Para el
+            desarrollo del front-end utilizamos HTML, CSS, JavaScript,
+            Bootstrap, y ReactJs. Para el back-end Node.js, y MongoDB para
+            nuestra base de datos. Al momento de realizar el deployment
+            utilizamos Supabase, Vercel, y MongoDB Atlas. Nuestro trabajo está
+            inspirado en el sitio web de la cervecería Mala Fama y sus
+            productos, ya que es un tema que a los tres nos apasiona y tiene
+            gran posibilidad de desarrollo.
           </p>
         </Row>
         <Row className="mb-5">
