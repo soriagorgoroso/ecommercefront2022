@@ -65,7 +65,7 @@ function SignIn() {
           ></button>
           <div className="p-0 d-flex justify-content-center modal-body">
             <div>
-              <div className="containerLogo">
+              <div className="">
                 <img
                   src="/img/logos/logosinfondo.png"
                   alt="LogoHackBier"
@@ -76,7 +76,7 @@ function SignIn() {
           </div>
           <div className="px-2 pt-2">
             <h2 className="modal-title  fw-bold pb-4" id="staticBackdropLabel">
-              Ingresa !{" "}
+              Iniciar Sesion
             </h2>
             <Form onSubmit={handleSubmit}>
               <div className="form-floating mb-3">
@@ -115,20 +115,21 @@ function SignIn() {
                 <div className="d-grid gap-2 py-5">
                   <button
                     type="submit"
-                    className="btn fw-bold rounded-pill text-black border border-warning"
+                    className="btn fw-bold  text-black border border-warning"
                   >
                     Siguiente
                   </button>
                 </div>
               </div>
             </Form>
-
-            <a
-              className="btn fw-bold rounded-pill border border-warning text-black p-0"
-              href="/checkin"
-            >
-              <RegisterNavBarIzq />
-            </a>
+            <div className="text-center">
+              <a
+                className="btn fw-bold  border border-warning text-black p-0 d-grid "
+                href="/checkin"
+              >
+                <RegisterNavBarIzq />
+              </a>
+            </div>
           </div>
           <p className="text-danger fs-5 w-100 text-center ">{errorMessage}</p>
         </Modal.Body>
