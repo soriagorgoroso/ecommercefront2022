@@ -21,15 +21,15 @@ function SingleArticle() {
   }, [params.id]);
   return (
     article && (
-      <Row xs={1} sm={1} lg={2} className="justify-content-center g-5">
-        <Col className="pt-4">
+      <Row className="justify-content-start g-5">
+        <Col xs={12} sm={12} lg={6} className="pt-4">
           <img
             src={`${process.env.REACT_APP_IMG_URL}/${article.image}`}
             alt="Cerveza IPA"
             className="article-image float-end shadow-sm"
           />
         </Col>
-        <Col className="pt-4 ps-4 ">
+        <Col xs={12} sm={12} lg={6} className="pt-4 ps-4 ">
           <div className="d-flex flex-column justify-content-center">
             <div className="text-left article-info-container pt-2">
               <div className="product-name-container">

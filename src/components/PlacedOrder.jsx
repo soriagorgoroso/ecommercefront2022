@@ -17,58 +17,90 @@ function PlacedOrder() {
 
   return (
     <div className="body">
-      <div className="flex-element">
-        <div id="pictures" className="column half">
+      <div className="flex-element m-4 bg-light shadow-sm">
+        <div id="pictures" className="column half h-100">
           <img
-            className="bg-image"
-            src={`${process.env.REACT_APP_IMG_URL}/portadaOrder.png`}
+            className="img-fluid bg-image"
+            src={`${process.env.REACT_APP_IMG_URL}/portadaOrder.jpg`}
           ></img>
         </div>
-        <div className="last">
+        <div className="last h-100">
           <div className="summary-container pt-2">
-            <div className="flex-interior-element ps-5">
-              <div className="summary-element w-75">
-                <h1 className="fw-bold">Muchas gracias por tu compra!</h1>
+            <div className="flex-interior-element">
+              <div
+                className="summary-element w-100"
+                style={{ position: "relative" }}
+              >
+                <h1 className="fw-bold">Gracias por tu compra!</h1>
+                <p>
+                  Ya estamos preparando tu pedido. Que disfrutes de nuestra
+                  cerveza!
+                </p>
+                <a
+                  href={"/"}
+                  className="btn btn-dark rounded-0 text-center fw-bold back-to-home"
+                >
+                  Volver al inicio
+                </a>
               </div>
-              <div style={{ paddingLeft: "2rem" }}>
-                Ya estamos preparando tu pedido. Que disfrutes de nuestra
-                cerveza!
-              </div>
-              <div className="summary-element w-75 bg-light">
+
+              <div className="summary-element w-100">
                 <h2 className="cart-title">Tu orden</h2>
+
                 <div className="itemlist">
-                  {orderArticles.map((article) => {
-                    console.log(article);
-                    <div className="item">
-                      <img
-                        src={`/img/photos/${article.category}/${article.image}`}
-                        alt={article.name}
-                        className="img-thumbnail"
-                      ></img>
-                      <div className="article-name mx-2 pb-2">
-                        <h5>{article.name}</h5>
+                  {/* <div className="item">
+                    <div className="article-name mx pb-2">
+                      <p>Cerveza</p>
+                    </div>
+                    <div className="interior-row d-flex flex-row justify-content-center align-items-center">
+                      <div className="article-price input-group mb-3">
+                        <span className="rounded-0 px-2">US$ 5</span>
                       </div>
-                      <div className="interior-row d-flex flex-row justify-content-center align-items-center">
-                        <div className="article-price input-group mb-3 ">
-                          <span className="rounded-0 px-2">
-                            US$ {article.price}
-                          </span>
-                        </div>
 
-                        <div className="article-quantity-container px-2 input-group mb-3">
-                          <span className="text-center rounded-0 fw-bold input-group-text">
-                            {article.quantity}
-                          </span>
-                        </div>
+                      <div className="article-quantity-container px-2 input-group mb-3">
+                        <span className="text-center rounded-0 fw-bold input-group-text">
+                          2
+                        </span>
+                      </div>
 
-                        <div className="article-total pb-3">
-                          <span className="fw-bold">
-                            US$ {article.price * article.quantity}
-                          </span>
+                      <div className="article-total pb-3">
+                        <span className="fw-bold">US$ 10</span>
+                      </div>
+                    </div>
+                  </div> */}
+                  {orderArticles.map((art) => (
+                    <>
+                      <div className="item">
+                        <img
+                          src={`/img/photos/${art.category}/${art.image}`}
+                          alt={art.name}
+                          className="img-thumbnail"
+                        ></img>
+                        <div className="article-name mx-2 pb-2">
+                          <h5>{art.name}</h5>
+                        </div>
+                        <div className="interior-row d-flex flex-row justify-content-center align-items-center">
+                          <div className="article-price input-group mb-3 ">
+                            <span className="rounded-0 px-2">
+                              US$ {art.price}
+                            </span>
+                          </div>
+
+                          <div className="article-quantity-container px-2 input-group mb-3">
+                            <span className="text-center rounded-0 fw-bold input-group-text">
+                              {art.quantity}
+                            </span>
+                          </div>
+
+                          <div className="article-total pb-3">
+                            <span className="fw-bold">
+                              US$ {art.price * art.quantity}
+                            </span>
+                          </div>
                         </div>
                       </div>
-                    </div>;
-                  })}
+                    </>
+                  ))}
                 </div>
               </div>
             </div>

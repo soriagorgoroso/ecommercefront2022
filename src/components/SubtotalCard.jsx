@@ -52,7 +52,7 @@ function SubtotalCard({ articlesInCart, setDone }) {
           console.log("Procesando pedido");
           setDone(true);
           navigate("/confirmacion");
-        }, 5000);
+        }, 8000);
       };
       toggleLoader();
 
@@ -92,11 +92,11 @@ function SubtotalCard({ articlesInCart, setDone }) {
         </div>
         <div id="cart--controls">
           <div className="promotioncontrols">
-            <div className="controlset">
+            <div className="controlset p-0">
               <div className="input-group mb-3">
                 <input
                   type="text"
-                  className="form-control button button--secondary"
+                  className="form-control rounded-0"
                   id="discount-code"
                   aria-describedby="basic-addon3"
                   // onChange={(event) => {
