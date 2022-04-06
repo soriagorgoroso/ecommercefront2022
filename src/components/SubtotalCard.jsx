@@ -1,11 +1,12 @@
-import React, { useState } from "react";
-import { Row, Col, Accordion, Form } from "react-bootstrap";
+import React from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useSelector } from "react-redux";
 import "../pages/Cart.css";
 import AdditionalOrderInfo from "./AdditionalOrderInfo";
 
-function SubtotalCard({ articlesInCart, done, setDone }) {
+function SubtotalCard({ articlesInCart, setDone }) {
+  const navigate = useNavigate();
   const loggedUser = useSelector((state) => state.user);
   //const [discountCode, setDiscountCode] = React.useState("");
   const [errorMessage, setErrorMessage] = React.useState("");
@@ -50,6 +51,7 @@ function SubtotalCard({ articlesInCart, done, setDone }) {
         setTimeout(() => {
           console.log("Procesando pedido");
           setDone(true);
+          navigate("/confirmacion");
         }, 5000);
       };
       toggleLoader();
@@ -62,7 +64,7 @@ function SubtotalCard({ articlesInCart, done, setDone }) {
   };
 
   return (
-    <Col xs={12} lg={6}>
+    <>
       <div className="bg-light mt-4 p-4">
         <div id="cart--summary">
           <div className="subtotal-container">
@@ -133,7 +135,7 @@ function SubtotalCard({ articlesInCart, done, setDone }) {
           </button>
         </div>
       </div>
-    </Col>
+    </>
   );
 }
 
