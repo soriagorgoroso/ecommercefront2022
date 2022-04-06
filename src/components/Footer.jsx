@@ -5,7 +5,7 @@ import "./Footer.css";
 function Footer() {
   return (
     <>
-      <footer className=" py-3 my-4 border-top border-bottom">
+      <footer className="py-3 mt-4 border-top border-bottom ">
         <div className="d-flex justify-items-center flex-wrap">
           <div className="col-md-4">
             <img

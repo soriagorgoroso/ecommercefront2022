@@ -171,6 +171,16 @@
   color: black;
 }
 
+/*LOADING ANIMATION STYLES*/
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+
 @media only screen and (max-width: 780px) {
   .item {
     display: flex;

@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { Row, Col, Accordion, Form } from "react-bootstrap";
 import axios from "axios";
 import { useSelector } from "react-redux";
 import "../pages/Cart.css";
+import AdditionalOrderInfo from "./AdditionalOrderInfo";
 
-function SubtotalCard({ articlesInCart }) {
+function SubtotalCard({ articlesInCart, done, setDone }) {
   const loggedUser = useSelector((state) => state.user);
   //const [discountCode, setDiscountCode] = React.useState("");
   const [errorMessage, setErrorMessage] = React.useState("");
@@ -13,23 +14,18 @@ function SubtotalCard({ articlesInCart }) {
     (total, article) => total + article.price * article.quantity,
     0
   );
-
   const iva = subtotal * 0.22;
   let envio = 0;
 
-  const filteredArticles = articlesInCart.map(
-    (article) =>
-      Object.keys(article).reduce((accumulator, key) => {
-        if (key === "name" || key === "price" || key === "quantity") {
-          accumulator[key] = article[key];
-        }
-        return accumulator;
-      }, {})
-    // {
-    //   delete article.image;
-    //   delete article.category;
-    //   return article;
-    // }
+  //Función que quita las keys "category" y "image" a cada artículo antes de enviar la orden.
+
+  const filteredArticles = articlesInCart.map((article) =>
+    Object.keys(article).reduce((accumulator, key) => {
+      if (key === "name" || key === "price" || key === "quantity") {
+        accumulator[key] = article[key];
+      }
+      return accumulator;
+    }, {})
   );
 
   const handleSubmit = async (ev) => {
@@ -49,10 +45,19 @@ function SubtotalCard({ articlesInCart }) {
           articles: filteredArticles,
         },
       });
+      const toggleLoader = () => {
+        setDone(undefined);
+        setTimeout(() => {
+          console.log("Procesando pedido");
+          setDone(true);
+        }, 5000);
+      };
+      toggleLoader();
+
       console.log(response.data);
     } catch (error) {
       setErrorMessage("Error!");
-      console.log(errorMessage);
+      console.log(error);
     }
   };
 
@@ -114,77 +119,7 @@ function SubtotalCard({ articlesInCart }) {
         </div>
       </div>
 
-      <Accordion flush>
-        <Accordion.Item eventKey="0">
-          <Accordion.Header>Datos de envío</Accordion.Header>
-          <Accordion.Body>
-            <Form>
-              <Form.Group className="mb-3" controlId="form-name">
-                <Form.Label>Nombre completo</Form.Label>
-                <Form.Control type="text" />
-              </Form.Group>
-              <Form.Group className="mb-3" controlId="form-adress">
-                <Form.Label>Dirección</Form.Label>
-                <Form.Control type="text" />
-              </Form.Group>
-              <Row className="mb-3">
-                <Form.Group as={Col} controlId="form-city">
-                  <Form.Label>Ciudad</Form.Label>
-                  <Form.Control type="text" />
-                </Form.Group>
-                <Form.Group as={Col} controlId="form-country">
-                  <Form.Label>País</Form.Label>
-                  <Form.Select size="sm">
-                    <option>Seleccionar</option>
-                    <option>Uruguay</option>
-                    <option>Argentina</option>
-                    <option>Brasil</option>
-                  </Form.Select>
-                </Form.Group>
-              </Row>
-              <Row className="mb-3">
-                <Form.Group as={Col} controlId="form-state">
-                  <Form.Label>Provincia/Estado</Form.Label>
-                  <Form.Control type="text" />
-                </Form.Group>
-                <Form.Group as={Col} controlId="form-zip-code">
-                  <Form.Label>Código postal</Form.Label>
-                  <Form.Control type="text" />
-                </Form.Group>
-              </Row>
-              <Form.Group className="mb-3" controlId="form-phone">
-                <Form.Label>Número de teléfono</Form.Label>
-                <Form.Control type="text" />
-              </Form.Group>
-            </Form>
-          </Accordion.Body>
-        </Accordion.Item>
-        <Accordion.Item eventKey="1">
-          <Accordion.Header>Información del pago</Accordion.Header>
-          <Accordion.Body>
-            <Form>
-              <Form.Group className="mb-3" controlId="form-card">
-                <Form.Label>Número de tarjeta</Form.Label>
-                <Form.Control type="text" />
-              </Form.Group>
-              <Form.Group className="mb-3" controlId="form-card-name">
-                <Form.Label>Nombre (tal como figura en la tarjeta)</Form.Label>
-                <Form.Control type="text" />
-              </Form.Group>
-              <Row className="mb-3">
-                <Form.Group as={Col} controlId="form-expiration-date">
-                  <Form.Label>Vencimiento</Form.Label>
-                  <Form.Control type="date" />
-                </Form.Group>
-                <Form.Group as={Col} controlId="form-security-code">
-                  <Form.Label>Código de seguridad</Form.Label>
-                  <Form.Control type="text" placeholder="xxx" />
-                </Form.Group>
-              </Row>
-            </Form>
-          </Accordion.Body>
-        </Accordion.Item>
-      </Accordion>
+      <AdditionalOrderInfo />
 
       <div className="bg-light p-4">
         <div className="controlset mt-2">
