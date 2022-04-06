@@ -12,6 +12,7 @@ import Reservas from "./pages/Reservas";
 import ThisProject from "./pages/ThisProject";
 //import { useSelector } from "react-redux";
 import AboutThis from "./components/AboutThis";
+import CheckOut from "./pages/CheckOut";
 
 function App() {
   // const loggedUser = useSelector((state) => state.users[0]);
@@ -29,6 +30,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/reservas" element={<Reservas />} />
         <Route path="/proyecto" element={<ThisProject />} />
+        <Route path="/confirmacion" element={<CheckOut />} />
       </Routes>
     </div>
   );
