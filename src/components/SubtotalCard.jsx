@@ -46,7 +46,7 @@ function SubtotalCard({ articlesInCart, done, setDone }) {
         },
       });
       const toggleLoader = () => {
-        setDone(undefined);
+        setDone(false);
         setTimeout(() => {
           console.log("Procesando pedido");
           setDone(true);

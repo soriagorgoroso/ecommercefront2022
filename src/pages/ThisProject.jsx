@@ -18,21 +18,25 @@ function ThisProject() {
         <h1 className="mt-5">SOBRE ESTE PROYECTO</h1>
         <Row className="mt-3 d-flex justify-content-between ">
           <h2 className="mt-5">Los desarrolladores</h2>
-          <Col className="border  border-3 p-0 contenedor m-3  pe-1">
+          <Col
+            className="border  border-1 p-0 contenedor  pe-1 "
+            lg={4}
+            md={12}
+          >
             <div>
               <img
-                src={`./img/facheros/DSC00375.jpg`}
-                alt="SSoria"
+                src={`./img/facheros/FotoCV.jpeg`}
+                alt="GBarg"
                 className="photoAboutUs mx-auto object-fit"
               />
 
               <div>
                 <ul>
-                  <h3 className="text-center">Sebastian Soria</h3>
+                  <h3 className="text-center">Gonzalo Barg</h3>
 
                   <li>
                     <Nav.Link
-                      href="https://www.linkedin.com/in/soriagorgoroso/"
+                      href="https://www.linkedin.com/in/gonzalo-barg/"
                       to
                       className="text-decoration-none mx-1 "
                     >
@@ -41,24 +45,20 @@ function ThisProject() {
                         alt=""
                         className="iconAboutUs"
                       />
-                      <span className=" ps-2 redesAboutUs">
-                        {" "}
-                        /soriagorgoroso
-                      </span>
+                      <span className=" ps-2 redesAboutUs"> /gonzalo-barg</span>
                     </Nav.Link>
                   </li>
                   <li>
-                    <Nav.Link className="text-decoration-none mx-1 ">
+                    <Nav.Link
+                      className="text-decoration-none mx-1 "
+                      href="https://github.com/gonzabarg/"
+                    >
                       <img
                         src={"./img/icon/github.png"}
                         alt="GitHub"
                         className="iconAboutUs"
-                        href="https://github.com/soriagorgoroso"
                       />
-                      <span className="ps-2 redesAboutUs">
-                        {" "}
-                        /soriagorgoroso
-                      </span>
+                      <span className="ps-2 redesAboutUs"> /gonzabarg</span>
                     </Nav.Link>
                   </li>
                   <li>
@@ -69,7 +69,7 @@ function ThisProject() {
                         className="iconAboutUs"
                       />
                       <span className="ps-2 redesAboutUs">
-                        soriagorgoroso@gmail.com
+                        gonza.barg.999@gmail.com
                       </span>
                     </Nav.Link>
                   </li>
@@ -77,7 +77,11 @@ function ThisProject() {
               </div>
             </div>
           </Col>
-          <Col className="d-flex justify-content-end border  border-3 p-0 contenedor m-3  pe-1">
+          <Col
+            className=" border  border-1 p-0 contenedor  pe-1 "
+            lg={4}
+            md={12}
+          >
             <div>
               <img
                 src={`./img/facheros/DSC00609.jpg`}
@@ -104,12 +108,15 @@ function ThisProject() {
                     </Nav.Link>
                   </li>
                   <li>
-                    <Nav.Link className="text-decoration-none mx-1 ">
+                    <Nav.Link
+                      className="text-decoration-none mx-1 
+                  "
+                      href="https://github.com/fnma88"
+                    >
                       <img
                         src={"./img/icon/github.png"}
                         alt="GitHub"
                         className="iconAboutUs"
-                        href="https://github.com/fnma88"
                       />
                       <span className="ps-2 redesAboutUs"> /fnma88</span>
                     </Nav.Link>
@@ -130,7 +137,11 @@ function ThisProject() {
               </div>
             </div>
           </Col>
-          <Col className="d-flex justify-content-end border  border-3 p-0 contenedor m-3  pe-1">
+          <Col
+            className=" border  border-1 p-0 contenedor  pe-1 "
+            lg={4}
+            md={12}
+          >
             <div>
               <img
                 src={`./img/facheros/DSC00375.jpg`}
@@ -159,12 +170,14 @@ function ThisProject() {
                     </Nav.Link>
                   </li>
                   <li>
-                    <Nav.Link className="text-decoration-none mx-1 ">
+                    <Nav.Link
+                      className="text-decoration-none mx-1 "
+                      href="https://github.com/soriagorgoroso"
+                    >
                       <img
                         src={"./img/icon/github.png"}
                         alt="GitHub"
                         className="iconAboutUs"
-                        href="https://github.com/soriagorgoroso"
                       />
                       <span className="ps-2 redesAboutUs">
                         {" "}

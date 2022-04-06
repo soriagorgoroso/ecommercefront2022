@@ -65,7 +65,7 @@ function NavBar() {
             <Offcanvas.Body className="navContainer">
               <Nav className="justify-content-end flex-grow-1  ">
                 <Nav.Link className="linkOffcanvas  mx-1 " href="/carrito">
-                  CARRITO{" "}
+                  <i className="fa-solid fa-cart-shopping"></i>
                   <span className="badge bg-secondary">({cart.length})</span>
                 </Nav.Link>
                 <Nav.Link className="linkOffcanvas  mx-1 " href="/">
@@ -83,12 +83,16 @@ function NavBar() {
                 {!user ? (
                   <div className="linkOffcanvas mx-1">
                     <div>
-                      <Nav.Link className="">
-                        <SignInNavBarIzq className="" />
-                      </Nav.Link>
-                      <Nav.Link className="">
-                        <RegisterNavBarIzq />
-                      </Nav.Link>
+                      <RegisterNavBarIzq />
+                    </div>
+                  </div>
+                ) : (
+                  <div></div>
+                )}
+                {!user ? (
+                  <div className="linkOffcanvas mx-1">
+                    <div>
+                      <SignInNavBarIzq className="" />
                     </div>
                   </div>
                 ) : (
@@ -155,7 +159,7 @@ function NavBar() {
             </div>
           )}
           <Nav.Link className="carrito mx-1 " href="/carrito">
-            CARRITO ({cart.length})
+            <i className="fa-solid fa-cart-shopping"></i> ({cart.length})
           </Nav.Link>
         </Container>
       </Navbar>

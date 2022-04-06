@@ -8,7 +8,7 @@ import Loader from "./Loader";
 function ShoppingCart() {
   const articlesInCart = useSelector((state) => state.cart);
   const dispatch = useDispatch();
-  const [done, setDone] = useState(false);
+  const [done, setDone] = useState(true);
 
   return (
     <Container>

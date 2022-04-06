@@ -15,7 +15,9 @@ a {
 a:hover {
   color: black;
 }
-
+.containerArticleList {
+  margin-bottom: 70px;
+}
 /* The animation code */
 @keyframes float {
   from {
