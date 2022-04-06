@@ -99,26 +99,22 @@ function ButtonToCart({ article }) {
             onClick={handleClose}
           ></button>
           <div className="p-0 d-flex justify-content-center modal-body">
-            <div>
-              <div className="containerLogo">
-                <img
-                  src="/img/logos/logosinfondo.png"
-                  alt="LogoHackBier"
-                  className="navBarImg"
-                />
-              </div>
-            </div>
+            <img
+              src="/img/logos/logosinfondo.png"
+              alt="LogoHackBier"
+              className="navBarImg"
+            />
           </div>
           <div className="d-flex flex-column align-items-center justify-content-center m-4">
             <a
               href="/carrito"
-              className="btn btn-dark text-center rounded-0 mb-2 fw-bold"
+              className="btn btn-white border border-warning text-center rounded-0 mb-2 fw-bold"
             >
               Ir al carrito
             </a>
             <a
               href="/"
-              className="btn btn-dark text-center rounded-0 mt-2 fw-bold"
+              className="btn btn-white border border-warning text-center rounded-0 mt-2 fw-bold"
             >
               Seguir comprando
             </a>

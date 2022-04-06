@@ -80,7 +80,7 @@ function Register(props) {
         onClick={() => handleShow(true)}
         to="#"
       >
-        UNITE
+        Registrate
       </Nav.Link>
 
       <Modal
@@ -252,7 +252,7 @@ function Register(props) {
                 <div className="d-grid gap-2 py-5">
                   <Button
                     type="submit"
-                    className="btn btn-light fw-bold rounded-pill text-black border border-warning"
+                    className="btn btn-white bg-white fw-bold text-black border border-warning"
                   >
                     Siguiente
                   </Button>
