@@ -10,7 +10,6 @@ function Home() {
       <NavBar />
       <Header />
       <ArticleList />
-
       <Footer />
     </>
   );

@@ -54,7 +54,10 @@ function UserProfile() {
               <p className="p-2 fs-3 text">Nombre: {userdata.firstname}</p>
               <p className="p-2 fs-3 text">Apellido: {userdata.lastname}</p>
               <p className="p-2 fs-3 text mb-1">Correo: {userdata.email}</p>
-              <a className="btn btn-outline-warning" href="/editar">
+              <a
+                className="btn btn-white border border-warning"
+                href={`/editarusuario/${userdata.username}`}
+              >
                 Editar mis datos
               </a>
             </Col>

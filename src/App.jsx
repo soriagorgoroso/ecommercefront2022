@@ -10,6 +10,7 @@ import User from "./pages/User";
 import Cart from "./pages/Cart";
 import Reservas from "./pages/Reservas";
 import ThisProject from "./pages/ThisProject";
+import EditUser from "./pages/EditUser";
 //import { useSelector } from "react-redux";
 import AboutThis from "./components/AboutThis";
 import CheckOut from "./pages/CheckOut";
@@ -31,6 +32,7 @@ function App() {
         <Route path="/reservas" element={<Reservas />} />
         <Route path="/proyecto" element={<ThisProject />} />
         <Route path="/confirmacion" element={<CheckOut />} />
+        <Route path="/editarusuario/:username" element={<EditUser />} />
       </Routes>
     </div>
   );
