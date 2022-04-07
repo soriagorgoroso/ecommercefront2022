@@ -77,13 +77,13 @@ function Register(props) {
 
   return (
     <>
-      <Nav.Link
-        className="registerButton mx-1"
+      <button
+        className="btn btn-dark fw-bold rounded"
         onClick={() => handleShow(true)}
         to="#"
       >
         Registrate{" "}
-      </Nav.Link>
+      </button>
 
       <Modal
         show={show}

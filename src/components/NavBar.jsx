@@ -10,6 +10,7 @@ import RegisterNav from "./RegisterNavBar";
 import SignInNav from "./SignInNavBar";
 import RegisterNavBarIzq from "./RegisterNavBarIzq";
 import SignInNavBarIzq from "./SignInNavBarIzq";
+import { Dropdown, DropdownButton } from "react-bootstrap";
 
 function NavBar() {
   const user = useSelector((state) => state.user);
@@ -140,24 +141,35 @@ function NavBar() {
           <Nav.Link className=" mx-2 linkMenu" href="/reservas">
             RESERVAS
           </Nav.Link>
-          {!user ? (
-            <div>
-              <RegisterNav className="linkMenu" />
-              <SignInNav className="linkMenu" />
-            </div>
-          ) : (
-            <div>
-              <Nav.Link
-                className=" mx-2 linkMenu"
-                href={`/mi_perfil/${user.username}`}
-              >
-                MI PERFIL
-              </Nav.Link>
-              <Nav.Link className=" mx-2 linkMenu" onClick={handleLogout}>
-                CERRAR SESION
-              </Nav.Link>
-            </div>
-          )}
+          <Dropdown>
+            <Dropdown.Toggle
+              style={{
+                backgroundColor: "#ECEBEA",
+                color: "black",
+                border: "none",
+              }}
+            >
+              <i className="fa-solid fa-user text-black"></i>
+            </Dropdown.Toggle>
+
+            <Dropdown.Menu>
+              {!user ? (
+                <>
+                  <SignInNav className="linkMenu" />
+                  <RegisterNav className="linkMenu" />
+                </>
+              ) : (
+                <>
+                  <Dropdown.Item href={`/mi_perfil/${user.username}`}>
+                    MI PERFIL
+                  </Dropdown.Item>
+                  <Dropdown.Item onClick={handleLogout}>
+                    CERRAR SESIÓN
+                  </Dropdown.Item>
+                </>
+              )}
+            </Dropdown.Menu>
+          </Dropdown>
           <Nav.Link className="carrito mx-1 " href="/carrito">
             <i className="fa-solid fa-cart-shopping"></i> ({cart.length})
           </Nav.Link>

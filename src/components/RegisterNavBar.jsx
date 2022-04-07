@@ -111,9 +111,9 @@ function Register(props) {
             </div>
           </div>
           <div className="px-2 pt-2">
-            <h2 className="modal-title text-dark text-center fw-bold pb-4">
-              Crea tu cuenta
-            </h2>
+            <h4 className="modal-title text-dark text-center fw-bold pb-4">
+              Creá tu cuenta
+            </h4>
 
             <Form
               onSubmit={handleSubmit}
@@ -121,14 +121,13 @@ function Register(props) {
             >
               <Row>
                 <Col>
-                  {" "}
                   <FloatingLabel
                     className="m-3 text-dark"
                     controlId="Nombre"
                     label="Nombre"
                   >
                     <Form.Control
-                      className=" text-dark border border-warning"
+                      className=" text-dark border border-dark"
                       type="text"
                       placeholder="First Name"
                       value={formFields.firstname}
@@ -146,7 +145,7 @@ function Register(props) {
                     label="Apellido"
                   >
                     <Form.Control
-                      className=" text-dark border border-warning"
+                      className=" text-dark border border-dark"
                       type="text"
                       placeholder="Last Name"
                       value={formFields.lastname}
@@ -167,7 +166,7 @@ function Register(props) {
                     label="Usuario"
                   >
                     <Form.Control
-                      className=" text-dark border border-warning"
+                      className=" text-dark border border-dark"
                       type="text"
                       placeholder="usuario"
                       value={formFields.username}
@@ -185,7 +184,7 @@ function Register(props) {
                     label="Telefono"
                   >
                     <Form.Control
-                      className=" text-dark border border-warning"
+                      className=" text-dark border border-dark"
                       type="text"
                       placeholder="telephone"
                       onChange={(ev) =>
@@ -203,10 +202,10 @@ function Register(props) {
               <FloatingLabel
                 className="m-3 text-dark"
                 controlId="address"
-                label="Addres"
+                label="Dirección"
               >
                 <Form.Control
-                  className=" text-dark border border-warning"
+                  className=" text-dark border border-dark"
                   type="text"
                   placeholder="Dirrecion"
                   onChange={(ev) =>
@@ -221,7 +220,7 @@ function Register(props) {
                 label="Correo"
               >
                 <Form.Control
-                  className=" text-dark border border-warning"
+                  className=" text-dark border border-dark"
                   placeholder="Email"
                   value={formFields.email}
                   onChange={(ev) =>
@@ -235,7 +234,7 @@ function Register(props) {
                 label="Contraseña"
               >
                 <Form.Control
-                  className=" text-dark border border-warning"
+                  className=" text-dark border border-dark"
                   type="password"
                   placeholder="Password"
                   value={formFields.password}
@@ -249,13 +248,13 @@ function Register(props) {
                 <i className="ps-2 fa-solid fa-lock"></i>
               </FloatingLabel>
               <div className="row g-2">
-                <div className="d-grid gap-2 py-5">
-                  <Button
+                <div className="d-grid gap-2 py-2 mb-2">
+                  <button
                     type="submit"
-                    className="btn btn-white bg-white fw-bold text-black border border-warning"
+                    className="btn btn-dark fw-bold rounded"
                   >
                     Siguiente
-                  </Button>
+                  </button>
                 </div>
                 <div>{warning && <p>{warning}</p>}</div>
               </div>

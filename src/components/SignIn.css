@@ -1,9 +1,12 @@
 .buttonNavDos {
   color: black;
-  font-size: 20px;
-  padding: 0px;
+  font-size: 15px;
+  font-weight: bold;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid gainsboro;
 }
 .buttonNavDos:hover {
+  background-color: gainsboro;
   color: black;
 }
 @media (max-width: 1200px) {

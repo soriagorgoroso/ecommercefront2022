@@ -17,10 +17,10 @@ function PlacedOrder() {
 
   return (
     <div className="body">
-      <div className="flex-element m-4 bg-light shadow-sm">
+      <div className="flex-element m-4 bg-light shadow-md border border-light rounded">
         <div id="pictures" className="column half h-100">
           <img
-            className="img-fluid bg-image"
+            className="img-fluid"
             src={`${process.env.REACT_APP_IMG_URL}/portadaOrder.jpg`}
           ></img>
         </div>
@@ -74,29 +74,34 @@ function PlacedOrder() {
                         <img
                           src={`/img/photos/${art.category}/${art.image}`}
                           alt={art.name}
-                          className="img-thumbnail"
+                          className="thumbnail-summary border border-light rounded"
                         ></img>
-                        <div className="article-name mx-2 pb-2">
+                        <div className="article-name-summary mx-2 pb-2">
                           <h5>{art.name}</h5>
                         </div>
                         <div className="interior-row d-flex flex-row justify-content-center align-items-center">
-                          <div className="article-price input-group mb-3 ">
-                            <span className="rounded-0 px-2">
-                              US$ {art.price}
+                          <div className=" mb-3 mx-2" style={{ width: "120" }}>
+                            <span className="rounded-0 ">
+                              Precio:
+                              <span className="fw-bold ps-2">
+                                US${art.price}
+                              </span>
                             </span>
                           </div>
 
-                          <div className="article-quantity-container px-2 input-group mb-3">
-                            <span className="text-center rounded-0 fw-bold input-group-text">
-                              {art.quantity}
+                          <div className="mx-2 mb-3" style={{ width: "100px" }}>
+                            <span className="text-center rounded-0 fs-6">
+                              Cantidad:{" "}
+                              <span className="fw-bold ps-2">
+                                {art.quantity}
+                              </span>
                             </span>
                           </div>
-
-                          <div className="article-total pb-3">
-                            <span className="fw-bold">
-                              US$ {art.price * art.quantity}
-                            </span>
-                          </div>
+                        </div>
+                        <div className="article-total pb-3 mx-2">
+                          <span className="fw-bold">
+                            US$ {art.price * art.quantity}
+                          </span>
                         </div>
                       </div>
                     </>

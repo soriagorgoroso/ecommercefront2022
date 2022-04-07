@@ -75,15 +75,18 @@ function SignIn() {
             </div>
           </div>
           <div className="px-2 pt-2">
-            <h2 className="modal-title  fw-bold pb-4" id="staticBackdropLabel">
+            <h4
+              className="modal-title text-dark text-center fw-bold pb-4"
+              id="staticBackdropLabel"
+            >
               Iniciar Sesion
-            </h2>
+            </h4>
             <Form onSubmit={handleSubmit}>
               <div className="form-floating mb-3">
                 <Form.Control
                   name="email"
                   type="text"
-                  className="form-control border border-warning"
+                  className="form-control border border-dark"
                   id="email"
                   placeholder="email"
                   value={data}
@@ -97,7 +100,7 @@ function SignIn() {
                 <Form.Control
                   name="password"
                   type="password"
-                  className="form-control border border-warning"
+                  className="form-control border border-dark"
                   id="password"
                   placeholder="Password"
                   value={password}
@@ -111,11 +114,11 @@ function SignIn() {
                 </Form.Label>
               </div>
 
-              <div className="row g-2">
-                <div className="d-grid gap-2 py-5">
+              <div className="row g-2 mt-2">
+                <div className="d-grid gap-2 py-2">
                   <button
                     type="submit"
-                    className="btn fw-bold text-black border border-warning d-grid"
+                    className="btn btn-dark fw-bold rounded d-grid"
                   >
                     Siguiente
                   </button>
@@ -123,11 +126,14 @@ function SignIn() {
               </div>
             </Form>
 
-            <div className="text-center">
-              <a
-                className="btn fw-bold  border border-warning text-black p-0 d-grid "
-                href="/checkin"
-              >
+            <div className="d-flex flex-row justify-content-center align-items-center">
+              <hr className="w-25"></hr>
+              <span className="mx-2">o</span>
+              <hr className="w-25"></hr>
+            </div>
+
+            <div className="text-center mt-2">
+              <a className="d-grid " href="/checkin">
                 <RegisterNavBarIzq />
               </a>
             </div>
