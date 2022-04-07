@@ -77,13 +77,13 @@ function Register(props) {
 
   return (
     <>
-      <button
-        className="btn btn-dark fw-bold rounded"
+      <Nav.Link
+        className="registerButton mx-1 "
         onClick={() => handleShow(true)}
         to="#"
       >
         Registrate{" "}
-      </button>
+      </Nav.Link>
 
       <Modal
         show={show}
@@ -130,7 +130,7 @@ function Register(props) {
                     label="Nombre"
                   >
                     <Form.Control
-                      className=" text-dark border border-warning"
+                      className=" text-dark border border-dark"
                       type="text"
                       placeholder="First Name"
                       value={formFields.firstname}
@@ -149,7 +149,7 @@ function Register(props) {
                     label="Apellido"
                   >
                     <Form.Control
-                      className=" text-dark border border-warning"
+                      className=" text-dark border border-dark"
                       type="text"
                       placeholder="Last Name"
                       value={formFields.lastname}
@@ -171,7 +171,7 @@ function Register(props) {
                     label="Usuario"
                   >
                     <Form.Control
-                      className=" text-dark border border-warning"
+                      className=" text-dark border border-dark"
                       type="text"
                       placeholder="usuario"
                       value={formFields.username}
@@ -190,7 +190,7 @@ function Register(props) {
                     label="Telefono"
                   >
                     <Form.Control
-                      className=" text-dark border border-warning"
+                      className=" text-dark border border-dark"
                       type="text"
                       placeholder="telephone"
                       onChange={(ev) =>
@@ -213,7 +213,7 @@ function Register(props) {
                 label="Direccion"
               >
                 <Form.Control
-                  className=" text-dark border border-warning"
+                  className=" text-dark border border-dark"
                   type="text"
                   placeholder="Direcion"
                   onChange={(ev) =>
@@ -230,7 +230,7 @@ function Register(props) {
                 label="Correo"
               >
                 <Form.Control
-                  className=" text-dark border border-warning"
+                  className=" text-dark border border-dark"
                   placeholder="Email"
                   value={formFields.email}
                   onChange={(ev) =>
@@ -246,7 +246,7 @@ function Register(props) {
                 label="Contraseña"
               >
                 <Form.Control
-                  className=" text-dark border border-warning"
+                  className=" text-dark border border-dark"
                   type="password"
                   placeholder="Password"
                   value={formFields.password}
@@ -265,7 +265,7 @@ function Register(props) {
                 <div className=" d-grid gap-2 py-5">
                   <Button
                     type="submit"
-                    className="btn btn-white bg-white fw-bold text-black border border-warning"
+                    className="btn btn-white bg-white fw-bold text-black border border-dark"
                   >
                     Siguiente
                   </Button>

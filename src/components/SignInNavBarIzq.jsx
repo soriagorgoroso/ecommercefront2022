@@ -83,7 +83,7 @@ function SignIn() {
                 <Form.Control
                   name="email"
                   type="email"
-                  className="form-control border border-warning"
+                  className="form-control border border-dark"
                   id="email"
                   placeholder="email"
                   value={data}
@@ -97,7 +97,7 @@ function SignIn() {
                 <Form.Control
                   name="password"
                   type="password"
-                  className="form-control border border-warning"
+                  className="form-control border border-dark"
                   id="password"
                   placeholder="Password"
                   value={password}
@@ -115,7 +115,7 @@ function SignIn() {
                 <div className="d-grid gap-2 py-5">
                   <button
                     type="submit"
-                    className="btn fw-bold  text-black border border-warning"
+                    className="btn fw-bold  text-black border border-dark"
                   >
                     Siguiente
                   </button>
@@ -124,7 +124,7 @@ function SignIn() {
             </Form>
             <div className="text-center">
               <a
-                className="btn fw-bold  border border-warning text-black p-0 d-grid "
+                className="btn fw-bold  border border-dark text-black p-0 d-grid "
                 href="/checkin"
               >
                 <RegisterNavBarIzq />
