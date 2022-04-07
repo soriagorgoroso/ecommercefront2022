@@ -276,7 +276,7 @@ function ThisProject() {
         </Row>
         <Row className="mt-5">
           <h2 className="mt-5">El proyecto Hack Bier</h2>
-          <p className="fs-3 mt-3">
+          <p className="fs-5 mt-3">
             Este proyecto nace como el trabajo final del bootcamp de desarrollo
             web full stack que realizamos entre enero y abril de 2022, en este
             curso dedicamos más de 600 horas prácticas de desarrollo tanto en
@@ -285,25 +285,25 @@ function ThisProject() {
             y abril de 2022, en este curso dedicamos más de 600 horas prácticas
             de desarrollo tanto en front-end como en back-end.
           </p>
-          <p className="fs-3 mt-3">
+          <p className="fs-5 mt-3">
             El mismo consistía en realizar un sitio de e-commerce, con su sitio
             de administrador, y su base de datos en un periodo de tres semanas,
             en el cual invertimos 200 horas de trabajo cada uno.
           </p>
-          <p className="fs-3 mt-3">
+          <p className="fs-5 mt-3">
             Para poder cumplir con la consigna en el tiempo disponible
             utilizamos la metodología Scrum, dividiendo nuestro trabajo en tres
             sprints de una semana, realizando daily meetings, y una demo al
             final de cada sprint; manteniendo una lista de tareas actualizada
             mediante Trello y nuestro código en GitHub.
           </p>
-          <p className="fs-3 mt-3">
+          <p className="fs-5 mt-3">
             Para el desarrollo del front-end utilizamos HTML, CSS, JavaScript,
             Bootstrap, y ReactJs. Para el back-end Node.js, y MongoDB para
             nuestra base de datos. Al momento de realizar el deployment
             utilizamos Supabase, Vercel, y MongoDB Atlas.
           </p>
-          <p className="fs-3 mt-3">
+          <p className="fs-5 mt-3">
             Nuestro trabajo está inspirado en el sitio web de la cervecería Mala
             Fama y sus productos, ya que es un tema que a los tres nos apasiona
             y tiene gran posibilidad de desarrollo.
