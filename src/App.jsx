@@ -55,7 +55,6 @@ function App() {
           <Route path="/confirmacion" element={<CheckOut />} />
           <Route path="/editarusuario/:username" element={<EditUser />} />
           <Route path="*" element={<Error />} />
-          <Route path="pruebamodal" element={<ModalMainPage />} />
         </Routes>
       </div>
       <Footer />
