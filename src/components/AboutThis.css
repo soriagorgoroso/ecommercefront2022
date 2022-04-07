@@ -3,7 +3,6 @@
   right: 0;
   bottom: 50%;
   border-radius: 4px;
-  background-color: red;
   border: none;
   color: #ffffff;
   text-align: center;
@@ -24,9 +23,11 @@
   /* text-orientation: upright;
   writing-mode: vertical-rl; */
 }
+/* .buttonUs span i {
+  width: 30px;
+} */
 .buttonUs:hover {
-  background-color: black;
-  color: red;
+  background-color: white;
 }
 .buttonUs span:after {
   content: "\00bb";

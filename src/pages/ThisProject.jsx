@@ -1,6 +1,6 @@
 import React from "react";
 import "./AboutUs.css";
-import { Container, Row, Col, Nav } from "react-bootstrap";
+import { Container, Row, Col, Nav, Card, CardGroup } from "react-bootstrap";
 import NavBar from "../components/NavBar";
 
 function ThisProject() {
@@ -10,6 +10,84 @@ function ThisProject() {
       <Row></Row>
       <Container>
         <h1 className="mt-5">SOBRE ESTE PROYECTO</h1>
+
+        <Row className="mt-5">
+          <CardGroup>
+            <Card className="mx-3 rounded shadow cardAboutUs  ">
+              <Card.Body className="text-center">
+                <Card.Title className="fw-bold">Desafíos</Card.Title>
+                <hr />
+                <Card.Text>
+                  Tuvimos 3 semanas para realizar el e-commerce por lo que el
+                  tiempo fue un factor determinante, en la cual la forma en la
+                  que nos organizamos marco la diferencia a la hora de
+                  enfrentarnos a situaciones determinantes.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+            <Card className="mx-3 rounded shadow cardAboutUs ">
+              <Card.Body className="text-center">
+                <Card.Title className="fw-bold">Organización</Card.Title>
+                <hr />
+                <Card.Text>
+                  Decidimos utilizar Trello para organizarnos y dividir tareas.
+                  La metodlogia adoptada para el desarrollo del proyecto fue
+                  Scrum, donde se intento llevar el proyecto sobre los
+                  estándares de MVP, presentando una demo al final de cada
+                  semana.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+            <Card className="mx-3 rounded shadow cardAboutUs">
+              <Card.Body className="text-center">
+                <Card.Title className="fw-bold">Tecnologías</Card.Title>
+                <hr />
+                <Card.Text>
+                  <p>
+                    <i class="m-2 fa-brands fa-react"></i> ReactJs
+                  </p>
+                  <p>
+                    <i class="m-2 fa-brands fa-node-js"></i> NodeJs
+                  </p>
+                  <p>
+                    <i class="m-2 fa-brands fa-mdb"></i>MongoDB
+                  </p>
+                  <p>
+                    <i class="m-2 fa-brands fa-html5"></i>HTML
+                  </p>
+                  <p>
+                    <i class="m-2 fa-brands fa-css3-alt"></i>CSS
+                  </p>
+                  <p>
+                    <i class="m-2 fa-solid fa-bolt"></i>Supabase
+                  </p>
+                  <p>
+                    <i class="m-2 fa-solid fa-atom"></i>Redux
+                  </p>
+                  <p>
+                    <svg
+                      className="m-2"
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      role="img"
+                      viewBox="0 0 24 24"
+                      height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M24 22.525H0l12-21.05 12 21.05z"></path>
+                    </svg>
+                    Vercel
+                  </p>
+                  <p>
+                    <i class="m-2 fa-brands fa-bootstrap"></i>Bootstrap
+                  </p>
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </CardGroup>
+        </Row>
         <Row className="mt-3 d-flex justify-content-between ">
           <h2 className="mt-5">Los desarrolladores</h2>
           <Col
