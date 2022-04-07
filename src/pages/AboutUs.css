@@ -21,7 +21,7 @@ ul {
   list-style-type: none;
 }
 
-.cardAboutUs {
+/* .cardAboutUs {
   opacity: 0.5;
   transition: opacity 1s ease 0s;
 }
@@ -29,4 +29,4 @@ ul {
   opacity: 2;
   transform: translate(0px, -20px);
   transition: transform 1s;
-}
+} */

@@ -17,7 +17,7 @@ function ThisProject() {
               <Card.Body className="text-center">
                 <Card.Title className="fw-bold">Desafíos</Card.Title>
                 <hr />
-                <Card.Text>
+                <Card.Text className="fs-4">
                   Tuvimos 3 semanas para realizar el e-commerce por lo que el
                   tiempo fue un factor determinante, en la cual la forma en la
                   que nos organizamos marco la diferencia a la hora de
@@ -29,7 +29,7 @@ function ThisProject() {
               <Card.Body className="text-center">
                 <Card.Title className="fw-bold">Organización</Card.Title>
                 <hr />
-                <Card.Text>
+                <Card.Text className="fs-4">
                   Decidimos utilizar Trello para organizarnos y dividir tareas.
                   La metodlogia adoptada para el desarrollo del proyecto fue
                   Scrum, donde se intento llevar el proyecto sobre los
@@ -42,27 +42,27 @@ function ThisProject() {
               <Card.Body className="text-center">
                 <Card.Title className="fw-bold">Tecnologías</Card.Title>
                 <hr />
-                <Card.Text>
+                <Card.Text className="fs-4">
                   <p>
-                    <i class="m-2 fa-brands fa-react"></i> ReactJs
+                    <i className="m-2 fa-brands fa-react"></i> ReactJs
                   </p>
                   <p>
-                    <i class="m-2 fa-brands fa-node-js"></i> NodeJs
+                    <i className="m-2 fa-brands fa-node-js"></i> NodeJs
                   </p>
                   <p>
-                    <i class="m-2 fa-brands fa-mdb"></i>MongoDB
+                    <i className="m-2 fa-brands fa-mdb"></i>MongoDB
                   </p>
                   <p>
-                    <i class="m-2 fa-brands fa-html5"></i>HTML
+                    <i className="m-2 fa-brands fa-html5"></i>HTML
                   </p>
                   <p>
-                    <i class="m-2 fa-brands fa-css3-alt"></i>CSS
+                    <i className="m-2 fa-brands fa-css3-alt"></i>CSS
                   </p>
                   <p>
-                    <i class="m-2 fa-solid fa-bolt"></i>Supabase
+                    <i className="m-2 fa-solid fa-bolt"></i>Supabase
                   </p>
                   <p>
-                    <i class="m-2 fa-solid fa-atom"></i>Redux
+                    <i className="m-2 fa-solid fa-atom"></i>Redux
                   </p>
                   <p>
                     <svg
@@ -81,7 +81,7 @@ function ThisProject() {
                     Vercel
                   </p>
                   <p>
-                    <i class="m-2 fa-brands fa-bootstrap"></i>Bootstrap
+                    <i className="m-2 fa-brands fa-bootstrap"></i>Bootstrap
                   </p>
                 </Card.Text>
               </Card.Body>
@@ -276,7 +276,7 @@ function ThisProject() {
         </Row>
         <Row className="mt-5">
           <h2 className="mt-5">El proyecto Hack Bier</h2>
-          <p className="fs-5 mt-3">
+          <p className="fs-5 mt-3 ">
             Este proyecto nace como el trabajo final del bootcamp de desarrollo
             web full stack que realizamos entre enero y abril de 2022, en este
             curso dedicamos más de 600 horas prácticas de desarrollo tanto en
@@ -285,25 +285,25 @@ function ThisProject() {
             y abril de 2022, en este curso dedicamos más de 600 horas prácticas
             de desarrollo tanto en front-end como en back-end.
           </p>
-          <p className="fs-5 mt-3">
+          <p className="fs-5 mt-3 ">
             El mismo consistía en realizar un sitio de e-commerce, con su sitio
             de administrador, y su base de datos en un periodo de tres semanas,
             en el cual invertimos 200 horas de trabajo cada uno.
           </p>
-          <p className="fs-5 mt-3">
+          <p className="fs-5 mt-3 ">
             Para poder cumplir con la consigna en el tiempo disponible
             utilizamos la metodología Scrum, dividiendo nuestro trabajo en tres
             sprints de una semana, realizando daily meetings, y una demo al
             final de cada sprint; manteniendo una lista de tareas actualizada
             mediante Trello y nuestro código en GitHub.
           </p>
-          <p className="fs-5 mt-3">
+          <p className="fs-5 mt-3 ">
             Para el desarrollo del front-end utilizamos HTML, CSS, JavaScript,
             Bootstrap, y ReactJs. Para el back-end Node.js, y MongoDB para
             nuestra base de datos. Al momento de realizar el deployment
             utilizamos Supabase, Vercel, y MongoDB Atlas.
           </p>
-          <p className="fs-5 mt-3">
+          <p className="fs-5 mt-3 ">
             Nuestro trabajo está inspirado en el sitio web de la cervecería Mala
             Fama y sus productos, ya que es un tema que a los tres nos apasiona
             y tiene gran posibilidad de desarrollo.
