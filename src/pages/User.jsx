@@ -10,9 +10,6 @@ function User() {
     <>
       <NavBar />
       <UserProfile />
-      <Container>
-        <TopSeller />
-      </Container>
     </>
   );
 }

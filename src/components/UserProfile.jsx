@@ -45,38 +45,81 @@ function UserProfile() {
     orders &&
     userdata && (
       <>
-        <Container className="mt-4 border border-1">
-          <h1 className="text-center my-3">MI PERFIL</h1>
-          <Row className="px-5">
-            <Col md={12} lg={6} className="p-3 border border-1">
-              <h2 className="text-center mb-1">MIS DATOS</h2>
-              <p className="p-2 fs-3 text">Usuario: {userdata.username}</p>
-              <p className="p-2 fs-3 text">Nombre: {userdata.firstname}</p>
-              <p className="p-2 fs-3 text">Apellido: {userdata.lastname}</p>
-              <p className="p-2 fs-3 text mb-1">Correo: {userdata.email}</p>
-              <a
-                className="btn btn-white border border-warning"
-                href={`/editarusuario/${userdata.username}`}
-              >
-                Editar mis datos
-              </a>
+        <div className="container mt-5">
+          <Row className="profile-row">
+            <Col
+              sm={10}
+              lg={6}
+              className="me-4 p-4 bg-light border border-1 shadow rounded"
+            >
+              <div className="user-info card-title pb-4 ">
+                <h2>Mis datos</h2>
+                <i class="fa-solid fa-circle-user fa-3x"></i>
+              </div>
+              <div className="p-2 user-info card-title">
+                <p className="text fs-5">Usuario: </p>
+                <span className="fs-4">{userdata.username}</span>
+              </div>
+              <div className="p-2 user-info card-title">
+                <p className="text  fs-5">Nombre: </p>
+                <span className="fs-4">{userdata.firstname}</span>
+              </div>
+              <div className="p-2 user-info card-title">
+                <p className="fs-5 text">Apellido: </p>
+                <span className="fs-4">{userdata.lastname}</span>
+              </div>
+              <div className="p-2 user-info card-title">
+                <p className="fs-5 text">Correo: </p>
+                <span className="fs-4">{userdata.email}</span>
+              </div>
+
+              <div className="mt-4">
+                <a
+                  className="btn btn-dark rounded float-end"
+                  href={`/editarusuario/${userdata.username}`}
+                >
+                  Editar mis datos
+                </a>
+              </div>
             </Col>
-            {/* <Col md={12} lg={6} className="p-3 border border-1">
-              <h2 className="text-center mb-1">CAMBIAR CONTRASEÑA</h2>
-              <p className="p-2 fs-3 text">Usuario: {userdata.username}</p>
-              <p className="p-2 fs-3 text">Nombre: {userdata.firstname}</p>
-              <p className="p-2 fs-3 text">Apellido: {userdata.lastname}</p>
-              <p className="p-2 fs-3 text mb-1">Correo: {userdata.email}</p>
-              <a className="btn btn-outline-warning" href="/editar">
-                Editar mis datos
-              </a>
-            </Col> */}
-          </Row>
-          <Row className="p-3 border border-1">
-            <h2>Ordenes:</h2>
-            {orders.map((order) => (
-              <Col key={order.id}>
-                <Card border="" className="m-2 p-0" style={{ width: "18rem" }}>
+            <Col
+              sm={10}
+              lg={6}
+              className="orders-history-card p-4 bg-light border border-1 shadow rounded"
+            >
+              <div className="user-info card-title pb-4">
+                <h2>Mis órdenes</h2>
+                <i class="fa-solid fa-list fa-3x"></i>
+              </div>
+              {orders.map((order) => (
+                <>
+                  {console.log(order)}
+                  <div
+                    key={order.id}
+                    className="order-history d-flex align-items-center justify-content-between card-title py-3"
+                  >
+                    <p className="m-1">
+                      Orden
+                      <span className="fw-bold ms-1">
+                        #{order.id.slice(-10)}
+                      </span>
+                    </p>
+                    <span className="text-secondary fs-6 ms-1">
+                      Creada el {order.createdAt.slice(0, 10)}
+                    </span>
+
+                    <a className="btn btn-dark rounded">Ver más</a>
+                  </div>
+                </>
+              ))}
+
+              {/* {orders.map((order) => (
+                <Card
+                  key={order.id}
+                  border=""
+                  className="m-2 p-0"
+                  style={{ width: "18rem" }}
+                >
                   <Card.Header className="cardHeader" as="h5">
                     Fecha: {order.createdAt.slice(0, 10)}
                     <br />
@@ -98,10 +141,10 @@ function UserProfile() {
                     </ul>
                   </Card.Body>
                 </Card>
-              </Col>
-            ))}
+              ))} */}
+            </Col>
           </Row>
-        </Container>
+        </div>
       </>
     )
   );

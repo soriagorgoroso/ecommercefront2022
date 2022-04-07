@@ -11,3 +11,35 @@
   color: antiquewhite;
   background-color: rgb(109, 107, 107);
 }
+
+.profile-row {
+  display: flex;
+  flex-direction: row;
+  flex-flow: row;
+  justify-content: space-between;
+}
+
+.card-title {
+  border-bottom: 1px solid gainsboro;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: row;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 780px) {
+  .profile-row {
+    display: flex;
+    flex-direction: column;
+    flex-flow: column;
+    justify-content: space-between;
+  }
+
+  .orders-history-card {
+    margin-top: 2rem;
+  }
+}

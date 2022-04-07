@@ -59,7 +59,7 @@ function NavBar() {
           aria-labelledby="offcanvasNavbarLabel"
           placement="start"
         >
-          <Offcanvas.Header closeButton className="navContainer">
+          <Navbar.Brand closeButton className="navContainer">
             <div className="p-0 d-flex justify-content-center modal-body">
               <div>
                 <div className="containerLogo">
@@ -71,9 +71,33 @@ function NavBar() {
                 </div>
               </div>
             </div>
-
+          </Navbar.Brand>
+          <Nav.Link className=" ms-1 linkMenu" href="/">
+            CERVEZAS
+          </Nav.Link>
+          <Nav.Link className=" mx-2 linkMenu" href="/locales">
+            LOCALES
+          </Nav.Link>
+          <Nav.Link className=" mx-2 linkMenu" href="/nosotros">
+            NOSOTROS
+          </Nav.Link>
+          <Nav.Link className=" mx-2 linkMenu" href="/reservas">
+            RESERVAS
+          </Nav.Link>
+          <div className="d-flex align-items-center">
+            <Dropdown>
+              <Dropdown.Toggle
+                style={{
+                  backgroundColor: "#ECEBEA",
+                  color: "black",
+                  border: "none",
+                }}
+              >
+                <i className="fa-solid fa-user text-black"></i>
+              </Dropdown.Toggle>
+            </Dropdown>
             <Offcanvas.Title id="offcanvasNavbarLabel "></Offcanvas.Title>
-          </Offcanvas.Header>
+          </div>
           <Offcanvas.Body className="navContainer">
             <Nav className="justify-content-end  flex-grow-1  ">
               <Button className="btn btn-dark rounded my-2 " href="/carrito">
@@ -124,7 +148,7 @@ function NavBar() {
               className="navBarImg"
             />
           </div>
-        </Navbar.Brand>{" "}
+        </Navbar.Brand>
         <Nav.Link className=" ms-1 linkMenu" href="/">
           CERVEZAS
         </Nav.Link>
