@@ -1,0 +1,14 @@
+.header {
+   background-image: url("https://henwnrtctxolowuvgjly.supabase.co/storage/v1/object/public/hackbeer/ImagenDelLocal3.jpg");
+   background-size: cover;
+   background-position: center center;
+}
+
+.hero {
+   height: 75vh;
+   background-color: rgba(0,0,0,0.5);
+}
+
+.hero a {
+   color: white;
+}

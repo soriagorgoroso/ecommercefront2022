@@ -31,7 +31,7 @@ function ArticleList() {
   return (
     categories &&
     articles && (
-      <Container className="containerArticleList">
+      <Container id="tienda" className="containerArticleList">
         <h1 className="mt-5 mb-3">TIENDA</h1>
         <div className="d-flex align-items-center fs-4 mb-5">
           <label htmlFor="category">Filtrar por tipo:</label>
