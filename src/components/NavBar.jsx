@@ -152,8 +152,10 @@ function NavBar() {
             <Dropdown.Menu>
               {!user ? (
                 <>
-                  <SignInNav className="" />
-                  <RegisterNav className="" />
+                  <div className="linkMenuDropDown">
+                    <SignInNav className="linkMenuDropDown" />
+                    <RegisterNav className="linkMenuDropDown" />
+                  </div>
                 </>
               ) : (
                 <>

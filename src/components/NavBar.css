@@ -47,3 +47,6 @@
 .cartHover:hover {
   color: black;
 }
+.linkMenuDropDown:focus {
+  background-color: white;
+}
