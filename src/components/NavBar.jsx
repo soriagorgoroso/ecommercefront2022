@@ -159,7 +159,7 @@ function NavBar() {
                 )}
               </Dropdown.Menu>
             </Dropdown>
-            <Nav.Link className="carrito mx-1 " href="/carrito">
+            <Nav.Link className="carrito mx-1 p-1" href="/carrito">
               <i className="fa-solid fa-cart-shopping"></i> ({cart.length})
             </Nav.Link>
           </div>
