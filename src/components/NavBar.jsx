@@ -51,119 +51,116 @@ function NavBar() {
     <>
       {/* <Container fluid className="navBarContiainer"> */}
       <ToastContainer />
-      <Navbar expand={false} className="navContainer sticky-top">
-        <Container className="p-0">
-          <Navbar.Toggle
-            aria-controls="offcanvasNavbar"
-            className="ButtonMenu"
-          />
-          <Navbar.Offcanvas
-            id="offcanvasNavbar"
-            aria-labelledby="offcanvasNavbarLabel"
-            placement="start"
-          >
-            <Offcanvas.Header closeButton className="navContainer">
-              <div className="p-0 d-flex justify-content-center modal-body">
-                <div>
-                  <div className="containerLogo">
-                    <img
-                      src="img/logos/logosinfondo2.png"
-                      alt="LogoHackBier"
-                      className="navBarImg"
-                    />
-                  </div>
+      <Navbar expand={false} className="navContainer sticky-top shadow-lg px-5">
+        {/* <Container className="p-0"> */}
+        <Navbar.Toggle aria-controls="offcanvasNavbar" className="ButtonMenu" />
+        <Navbar.Offcanvas
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+          placement="start"
+        >
+          <Offcanvas.Header closeButton className="navContainer">
+            <div className="p-0 d-flex justify-content-center modal-body">
+              <div>
+                <div className="containerLogo">
+                  <img
+                    src="img/logos/logosinfondo2.png"
+                    alt="LogoHackBier"
+                    className="navBarImg"
+                  />
                 </div>
               </div>
-
-              <Offcanvas.Title id="offcanvasNavbarLabel "></Offcanvas.Title>
-            </Offcanvas.Header>
-            <Offcanvas.Body className="navContainer">
-              <Nav className="justify-content-end flex-grow-1  ">
-                <Nav.Link className="linkOffcanvas  mx-1 " href="/carrito">
-                  <i className="fa-solid fa-cart-shopping"></i>
-                  <span className="badge bg-secondary">({cart.length})</span>
-                </Nav.Link>
-                <Nav.Link className="linkOffcanvas  mx-1 " href="/">
-                  CERVEZAS
-                </Nav.Link>
-                <Nav.Link className="linkOffcanvas mx-1 " href="/locales">
-                  LOCALES
-                </Nav.Link>
-                <Nav.Link className="linkOffcanvas mx-1 " href="/nosotros">
-                  NOSOTROS
-                </Nav.Link>
-                <Nav.Link className="linkOffcanvas mx-1 " href="/reservas">
-                  RESERVAS
-                </Nav.Link>
-                <Nav.Link className="linkOffcanvas mx-1 mt-5 " href="/proyecto">
-                  SOBRE ESTE PROYECTO
-                </Nav.Link>
-                <div className="linkOffcanvas mx-1"></div>:
-              </Nav>
-            </Offcanvas.Body>
-          </Navbar.Offcanvas>
-          <Navbar.Brand href="/">
-            <div className="containerLogo ">
-              <img
-                src="/img/logos/logosinfondo2.png"
-                alt="LogoHackBier"
-                className="navBarImg"
-              />
             </div>
-          </Navbar.Brand>{" "}
-          <Nav.Link className=" ms-1 linkMenu" href="/">
-            CERVEZAS
-          </Nav.Link>
-          <Nav.Link className=" mx-2 linkMenu" href="/locales">
-            LOCALES
-          </Nav.Link>
-          <Nav.Link className=" mx-2 linkMenu" href="/nosotros">
-            NOSOTROS
-          </Nav.Link>
-          <Nav.Link className=" mx-2 linkMenu" href="/reservas">
-            RESERVAS
-          </Nav.Link>
-          <div className="d-flex">
-            <Dropdown>
-              <Dropdown.Toggle
-                style={{
-                  backgroundColor: "#ECEBEA",
-                  color: "black",
-                  border: "none",
-                }}
-              >
-                <i className="fa-solid fa-user text-black"></i>
-              </Dropdown.Toggle>
 
-              <Dropdown.Menu>
-                {!user ? (
-                  <>
-                    <SignInNav className="" />
-                    <RegisterNav className="" />
-                  </>
-                ) : (
-                  <>
-                    <Dropdown.Item
-                      className="buttonNavDos mx-1"
-                      href={`/mi_perfil/${user.username}`}
-                    >
-                      MI PERFIL
-                    </Dropdown.Item>
-                    <Dropdown.Item
-                      className="buttonNavDos mx-1"
-                      onClick={handleLogout}
-                    >
-                      CERRAR SESIÓN
-                    </Dropdown.Item>
-                  </>
-                )}
-              </Dropdown.Menu>
-            </Dropdown>
-            <Nav.Link className="carrito mx-1 p-1" href="/carrito">
-              <i className="fa-solid fa-cart-shopping"></i> ({cart.length})
-            </Nav.Link>
+            <Offcanvas.Title id="offcanvasNavbarLabel "></Offcanvas.Title>
+          </Offcanvas.Header>
+          <Offcanvas.Body className="navContainer">
+            <Nav className="justify-content-end flex-grow-1  ">
+              <Nav.Link className="linkOffcanvas  mx-1 " href="/carrito">
+                <i className="fa-solid fa-cart-shopping"></i>
+                <span className="badge bg-secondary">({cart.length})</span>
+              </Nav.Link>
+              <Nav.Link className="linkOffcanvas  mx-1 " href="/">
+                CERVEZAS
+              </Nav.Link>
+              <Nav.Link className="linkOffcanvas mx-1 " href="/locales">
+                LOCALES
+              </Nav.Link>
+              <Nav.Link className="linkOffcanvas mx-1 " href="/nosotros">
+                NOSOTROS
+              </Nav.Link>
+              <Nav.Link className="linkOffcanvas mx-1 " href="/reservas">
+                RESERVAS
+              </Nav.Link>
+              <Nav.Link className="linkOffcanvas mx-1 mt-5 " href="/proyecto">
+                SOBRE ESTE PROYECTO
+              </Nav.Link>
+              <div className="linkOffcanvas mx-1"></div>:
+            </Nav>
+          </Offcanvas.Body>
+        </Navbar.Offcanvas>
+        <Navbar.Brand href="/">
+          <div className="containerLogo ">
+            <img
+              src="/img/logos/logosinfondo2.png"
+              alt="LogoHackBier"
+              className="navBarImg"
+            />
           </div>
-        </Container>
+        </Navbar.Brand>{" "}
+        <Nav.Link className=" ms-1 linkMenu" href="/">
+          CERVEZAS
+        </Nav.Link>
+        <Nav.Link className=" mx-2 linkMenu" href="/locales">
+          LOCALES
+        </Nav.Link>
+        <Nav.Link className=" mx-2 linkMenu" href="/nosotros">
+          NOSOTROS
+        </Nav.Link>
+        <Nav.Link className=" mx-2 linkMenu" href="/reservas">
+          RESERVAS
+        </Nav.Link>
+        <div className="d-flex">
+          <Dropdown>
+            <Dropdown.Toggle
+              style={{
+                backgroundColor: "#ECEBEA",
+                color: "black",
+                border: "none",
+              }}
+            >
+              <i className="fa-solid fa-user text-black"></i>
+            </Dropdown.Toggle>
+
+            <Dropdown.Menu>
+              {!user ? (
+                <>
+                  <SignInNav className="" />
+                  <RegisterNav className="" />
+                </>
+              ) : (
+                <>
+                  <Dropdown.Item
+                    className="buttonNavDos mx-1"
+                    href={`/mi_perfil/${user.username}`}
+                  >
+                    MI PERFIL
+                  </Dropdown.Item>
+                  <Dropdown.Item
+                    className="buttonNavDos mx-1"
+                    onClick={handleLogout}
+                  >
+                    CERRAR SESIÓN
+                  </Dropdown.Item>
+                </>
+              )}
+            </Dropdown.Menu>
+          </Dropdown>
+          <Nav.Link className="carrito mx-1 p-1" href="/carrito">
+            <i className="fa-solid fa-cart-shopping"></i> ({cart.length})
+          </Nav.Link>
+        </div>
+        {/* </Container> */}
       </Navbar>
     </>
   );
