@@ -1,5 +1,5 @@
 import React from "react";
-import { Nav, Modal, Form } from "react-bootstrap";
+import { Nav, Modal, Form, Dropdown } from "react-bootstrap";
 import "./NavBar.css";
 import { useState } from "react";
 import "./SignInNav.css";
@@ -40,13 +40,15 @@ function SignIn() {
   return (
     <>
       {" "}
-      <Nav.Link
-        className="buttonNavDos mx-1 "
-        href="#pricing"
-        onClick={handleShow}
-      >
-        Inicia Sesion
-      </Nav.Link>
+      <Dropdown.Item>
+        <Nav.Link
+          className="buttonNavDos mx-1 "
+          href="#pricing"
+          onClick={handleShow}
+        >
+          INICIAR SESIÓN{" "}
+        </Nav.Link>
+      </Dropdown.Item>
       <Modal
         id="staticBackdrop"
         tabIndex="-1"

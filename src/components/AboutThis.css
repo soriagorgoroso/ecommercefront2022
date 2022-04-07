@@ -49,6 +49,7 @@
   width: 160px;
   padding: 10px;
   object-fit: cover;
+  border-radius: 30px;
 }
 .logoModalAboutUs {
   width: 280px;
@@ -66,14 +67,25 @@
   text-align: center;
   color: black;
   font-size: 30px;
+  border: 1px black solid;
 }
 .linkOffcanvasModal:hover {
-  color: black;
+  color: white;
+  background-color: black;
+
   border: 3px black solid;
 }
 
 .iconAboutUsModal {
-  width: 20px;
+  filter: grayscale();
+
+  width: 40px;
+}
+.iconAboutUsModal:hover {
+  width: 40px;
+  filter: none;
+
+  /* border: black 1px solid; */
 }
 .redesAboutUsModal {
   font-size: 13px;
@@ -90,71 +102,4 @@
 .tituloModal {
   font-weight: 300px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-}
-.tituloModal {
-  opacity: 0;
-  -webkit-transform-origin: center;
-  transform-origin: center;
-  -webkit-animation: letter 5s infinite cubic-bezier(0, 0, 0.1, 1);
-  animation: letter 5s infinite cubic-bezier(0, 0, 0.1, 1); /* Note: Remove the "infinite" prop to make the text disappear, or remplace "infinite" with "" to do the text stay uppon animation*/
-}
-@-webkit-keyframes letter {
-  0% {
-    opacity: 0;
-    -webkit-transform: scale(0.8);
-    transform: scale(0.8);
-  }
-  30%,
-  80% {
-    opacity: 1;
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-  100% {
-    opacity: 0;
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-}
-@keyframes letter {
-  0% {
-    opacity: 0;
-    -webkit-transform: scale(0.8);
-    transform: scale(0.8);
-  }
-  30%,
-  80% {
-    opacity: 1;
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-  100% {
-    opacity: 0;
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-}
-.animated-text-enter:nth-of-type(1) {
-  -webkit-animation-delay: 0.05s;
-  animation-delay: 0.05s;
-}
-.animated-text-enter:nth-of-type(2) {
-  -webkit-animation-delay: 0.15s;
-  animation-delay: 0.15s;
-}
-.animated-text-enter:nth-of-type(3) {
-  -webkit-animation-delay: 0.2s;
-  animation-delay: 0.2s;
-}
-.animated-text-enter:nth-of-type(4) {
-  -webkit-animation-delay: 0.25s;
-  animation-delay: 0.25s;
-}
-.animatedclass:nth-of-type(5) {
-  -webkit-animation-delay: 0.3s;
-  animation-delay: 0.3s;
-}
-.animated-text-enter:nth-of-type(6) {
-  -webkit-animation-delay: 0.35s;
-  animation-delay: 0.35s;
 }

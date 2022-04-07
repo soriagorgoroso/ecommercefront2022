@@ -6,11 +6,11 @@
   border-bottom: 1px solid gainsboro;
 }
 .buttonNavDos:hover {
-  background-color: gainsboro;
+  /* background-color: gainsboro; */
   color: black;
 }
-@media (max-width: 1200px) {
+/* @media (max-width: 1200px) {
   .buttonNavDos {
     display: none;
   }
-}
+} */

@@ -12,7 +12,7 @@ import "./Register.css";
 
 import {
   Modal,
-  Button,
+  Dropdown,
   FloatingLabel,
   Form,
   Nav,
@@ -75,13 +75,15 @@ function Register(props) {
   };
   return (
     <>
-      <Nav.Link
-        className=" mx-1 buttonNavDos"
-        onClick={() => handleShow(true)}
-        to="#"
-      >
-        Registrate
-      </Nav.Link>
+      <Dropdown.Item>
+        <Nav.Link
+          className=" mx-1 buttonNavDos"
+          onClick={() => handleShow(true)}
+          to="#"
+        >
+          REGISTRATE{" "}
+        </Nav.Link>
+      </Dropdown.Item>
 
       <Modal
         show={show}

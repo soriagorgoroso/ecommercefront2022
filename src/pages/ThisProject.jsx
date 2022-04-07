@@ -7,13 +7,7 @@ function ThisProject() {
   return (
     <>
       <NavBar />
-      <Row>
-        <img
-          className="flex-image"
-          src="./img/logos/logosinfondo.png"
-          alt="logo"
-        />
-      </Row>
+      <Row></Row>
       <Container>
         <h1 className="mt-5">SOBRE ESTE PROYECTO</h1>
         <Row className="mt-3 d-flex justify-content-between ">
@@ -207,22 +201,34 @@ function ThisProject() {
           <p className="fs-3 mt-3">
             Este proyecto nace como el trabajo final del bootcamp de desarrollo
             web full stack que realizamos entre enero y abril de 2022, en este
-            curso<b> dedicamos más de 600</b> horas prácticas de desarrollo
-            tanto en front-end como en back-end. El mismo consistía en realizar
-            un sitio de e-commerce, con su sitio de administrador, y su base de
-            datos en un periodo de tres semanas, en el cual invertimos 200 horas
-            de trabajo cada uno. Para poder cumplir con la consigna en el tiempo
-            disponible utilizamos la metodología Scrum, dividiendo nuestro
-            trabajo en tres sprints de una semana, realizando daily meetings, y
-            una demo al final de cada sprint; manteniendo una lista de tareas
-            actualizada mediante Trello y nuestro código en GitHub. Para el
-            desarrollo del front-end utilizamos HTML, CSS, JavaScript,
+            curso dedicamos más de 600 horas prácticas de desarrollo tanto en
+            front-end como en back-end. Este proyecto nace como el trabajo final
+            del bootcamp de desarrollo web full stack que realizamos entre enero
+            y abril de 2022, en este curso dedicamos más de 600 horas prácticas
+            de desarrollo tanto en front-end como en back-end.
+          </p>
+          <p className="fs-3 mt-3">
+            El mismo consistía en realizar un sitio de e-commerce, con su sitio
+            de administrador, y su base de datos en un periodo de tres semanas,
+            en el cual invertimos 200 horas de trabajo cada uno.
+          </p>
+          <p className="fs-3 mt-3">
+            Para poder cumplir con la consigna en el tiempo disponible
+            utilizamos la metodología Scrum, dividiendo nuestro trabajo en tres
+            sprints de una semana, realizando daily meetings, y una demo al
+            final de cada sprint; manteniendo una lista de tareas actualizada
+            mediante Trello y nuestro código en GitHub.
+          </p>
+          <p className="fs-3 mt-3">
+            Para el desarrollo del front-end utilizamos HTML, CSS, JavaScript,
             Bootstrap, y ReactJs. Para el back-end Node.js, y MongoDB para
             nuestra base de datos. Al momento de realizar el deployment
-            utilizamos Supabase, Vercel, y MongoDB Atlas. Nuestro trabajo está
-            inspirado en el sitio web de la cervecería Mala Fama y sus
-            productos, ya que es un tema que a los tres nos apasiona y tiene
-            gran posibilidad de desarrollo.
+            utilizamos Supabase, Vercel, y MongoDB Atlas.
+          </p>
+          <p className="fs-3 mt-3">
+            Nuestro trabajo está inspirado en el sitio web de la cervecería Mala
+            Fama y sus productos, ya que es un tema que a los tres nos apasiona
+            y tiene gran posibilidad de desarrollo.
           </p>
         </Row>
         <Row className="mb-5">

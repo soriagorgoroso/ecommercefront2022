@@ -81,38 +81,6 @@ function NavBar() {
                 <Nav.Link className="linkOffcanvas mx-1 " href="/reservas">
                   RESERVAS
                 </Nav.Link>
-                {!user ? (
-                  <div className="linkOffcanvas mx-1">
-                    <div>
-                      <RegisterNavBarIzq />
-                    </div>
-                  </div>
-                ) : (
-                  <div></div>
-                )}
-                {!user ? (
-                  <div className="linkOffcanvas mx-1">
-                    <div>
-                      <SignInNavBarIzq className="" />
-                    </div>
-                  </div>
-                ) : (
-                  <div>
-                    {" "}
-                    <Nav.Link
-                      className="linkOffcanvas mx-1 "
-                      href={`/mi_perfil/${user.username}`}
-                    >
-                      MI PERFIL
-                    </Nav.Link>
-                    <Nav.Link
-                      className="linkOffcanvas mx-1 "
-                      onClick={handleLogout}
-                    >
-                      Cerrar Sesion{" "}
-                    </Nav.Link>
-                  </div>
-                )}
                 <Nav.Link className="linkOffcanvas mx-1 mt-5 " href="/proyecto">
                   SOBRE ESTE PROYECTO
                 </Nav.Link>
@@ -141,38 +109,46 @@ function NavBar() {
           <Nav.Link className=" mx-2 linkMenu" href="/reservas">
             RESERVAS
           </Nav.Link>
-          <Dropdown>
-            <Dropdown.Toggle
-              style={{
-                backgroundColor: "#ECEBEA",
-                color: "black",
-                border: "none",
-              }}
-            >
-              <i className="fa-solid fa-user text-black"></i>
-            </Dropdown.Toggle>
+          <div className="d-flex">
+            <Dropdown>
+              <Dropdown.Toggle
+                style={{
+                  backgroundColor: "#ECEBEA",
+                  color: "black",
+                  border: "none",
+                }}
+              >
+                <i className="fa-solid fa-user text-black"></i>
+              </Dropdown.Toggle>
 
-            <Dropdown.Menu>
-              {!user ? (
-                <>
-                  <SignInNav className="linkMenu" />
-                  <RegisterNav className="linkMenu" />
-                </>
-              ) : (
-                <>
-                  <Dropdown.Item href={`/mi_perfil/${user.username}`}>
-                    MI PERFIL
-                  </Dropdown.Item>
-                  <Dropdown.Item onClick={handleLogout}>
-                    CERRAR SESIÓN
-                  </Dropdown.Item>
-                </>
-              )}
-            </Dropdown.Menu>
-          </Dropdown>
-          <Nav.Link className="carrito mx-1 " href="/carrito">
-            <i className="fa-solid fa-cart-shopping"></i> ({cart.length})
-          </Nav.Link>
+              <Dropdown.Menu>
+                {!user ? (
+                  <>
+                    <SignInNav className="" />
+                    <RegisterNav className="" />
+                  </>
+                ) : (
+                  <>
+                    <Dropdown.Item
+                      className="buttonNavDos mx-1"
+                      href={`/mi_perfil/${user.username}`}
+                    >
+                      MI PERFIL
+                    </Dropdown.Item>
+                    <Dropdown.Item
+                      className="buttonNavDos mx-1"
+                      onClick={handleLogout}
+                    >
+                      CERRAR SESIÓN
+                    </Dropdown.Item>
+                  </>
+                )}
+              </Dropdown.Menu>
+            </Dropdown>
+            <Nav.Link className="carrito mx-1 " href="/carrito">
+              <i className="fa-solid fa-cart-shopping"></i> ({cart.length})
+            </Nav.Link>
+          </div>
         </Container>
       </Navbar>
     </>
