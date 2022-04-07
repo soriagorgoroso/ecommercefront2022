@@ -1,7 +1,7 @@
 import "./UserForm.css";
 import React from "react";
 import axios from "axios";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { useState } from "react";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
@@ -129,7 +129,7 @@ function Register(props) {
                     label="Nombre"
                   >
                     <Form.Control
-                      className=" text-dark border border-dark"
+                      className=" text-dark border border-secondary"
                       type="text"
                       placeholder="First Name"
                       value={formFields.firstname}
@@ -147,7 +147,7 @@ function Register(props) {
                     label="Apellido"
                   >
                     <Form.Control
-                      className=" text-dark border border-dark"
+                      className=" text-dark border border-secondary"
                       type="text"
                       placeholder="Last Name"
                       value={formFields.lastname}
@@ -168,7 +168,7 @@ function Register(props) {
                     label="Usuario"
                   >
                     <Form.Control
-                      className=" text-dark border border-dark"
+                      className=" text-dark border border-secondary"
                       type="text"
                       placeholder="usuario"
                       value={formFields.username}
@@ -186,7 +186,7 @@ function Register(props) {
                     label="Telefono"
                   >
                     <Form.Control
-                      className=" text-dark border border-dark"
+                      className=" text-dark border border-secondary"
                       type="text"
                       placeholder="telephone"
                       onChange={(ev) =>
@@ -207,7 +207,7 @@ function Register(props) {
                 label="Dirección"
               >
                 <Form.Control
-                  className=" text-dark border border-dark"
+                  className=" text-dark border border-secondary"
                   type="text"
                   placeholder="Dirrecion"
                   onChange={(ev) =>
@@ -222,7 +222,7 @@ function Register(props) {
                 label="Correo"
               >
                 <Form.Control
-                  className=" text-dark border border-dark"
+                  className=" text-dark border border-secondary"
                   placeholder="Email"
                   value={formFields.email}
                   onChange={(ev) =>
@@ -236,7 +236,7 @@ function Register(props) {
                 label="Contraseña"
               >
                 <Form.Control
-                  className=" text-dark border border-dark"
+                  className=" text-dark border border-secondary"
                   type="password"
                   placeholder="Password"
                   value={formFields.password}

@@ -3,7 +3,7 @@ import React from "react";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
-import { toast } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import actions from "../redux/userActions";
 
@@ -36,6 +36,17 @@ function Register(props) {
     telephone: "",
   });
 
+  const registerSuccess = () =>
+    toast.success("Usuario registrado con éxito!", {
+      position: "top-right",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: false,
+      progress: undefined,
+    });
+
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
@@ -59,6 +70,7 @@ function Register(props) {
         },
       }
     );
+
     const response2 = await axios({
       method: "post",
       url: `${process.env.REACT_APP_API_URL}/tokens`,
@@ -266,6 +278,7 @@ function Register(props) {
                   <Button
                     type="submit"
                     className="btn btn-white bg-white fw-bold text-black border border-dark"
+                    onClick={() => registerSuccess()}
                   >
                     Siguiente
                   </Button>

@@ -1,4 +1,5 @@
 import React from "react";
+import { toast, ToastContainer } from "react-toastify";
 import { Nav, Modal, Form } from "react-bootstrap";
 import "./NavBar.css";
 import { useState } from "react";
@@ -13,11 +14,19 @@ function SignIn() {
   const [password, setPassword] = useState("");
   const [data, setData] = useState("");
   const [show, setShow] = useState(false);
-
   const [errorMessage, setErrorMessage] = useState("");
-
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const loginSuccess = () =>
+    toast.success("Ingresaste con éxito!", {
+      position: "top-center",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: false,
+      progress: undefined,
+    });
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -116,11 +125,13 @@ function SignIn() {
                   <button
                     type="submit"
                     className="btn fw-bold  text-black border border-dark"
+                    onClick={() => loginSuccess()}
                   >
                     Siguiente
                   </button>
                 </div>
               </div>
+              <ToastContainer />
             </Form>
             <div className="text-center">
               <a

@@ -98,23 +98,25 @@ function ButtonToCart({ article }) {
             aria-label="Close"
             onClick={handleClose}
           ></button>
-          <div className="p-0 d-flex justify-content-center modal-body">
+          <div className="p-0 d-flex flex-column align-items-center justify-content-center modal-body">
             <img
               src="/img/logos/logosinfondo.png"
               alt="LogoHackBier"
               className="navBarImg"
             />
+            <p>Tu producto ya te espera en el carrito de compras.</p>
           </div>
+
           <div className="d-flex flex-column align-items-center justify-content-center m-4">
             <a
               href="/carrito"
-              className="btn btn-white border border-warning text-center rounded-0 mb-2 fw-bold"
+              className="btn btn-dark text-center rounded mb-2 fw-bold"
             >
               Ir al carrito
             </a>
             <a
               href="/"
-              className="btn btn-white border border-warning text-center rounded-0 mt-2 fw-bold"
+              className="btn btn-dark text-center rounded fw-bold my-2"
             >
               Seguir comprando
             </a>

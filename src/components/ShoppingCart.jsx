@@ -2,11 +2,23 @@ import React from "react";
 import { useDispatch } from "react-redux";
 
 import { addToCart, deleteFromCart } from "../actions/cartActions";
+import { toast, ToastContainer } from "react-toastify";
 
 function ShoppingCart({ articlesInCart }) {
   //const articlesInCart = useSelector((state) => state.cart);
   const dispatch = useDispatch();
   //const [done, setDone] = useState(true);
+
+  const deleteArticleToast = () =>
+    toast.warning("Artículo eliminado", {
+      position: "top-right",
+      autoClose: 2000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: false,
+      progress: undefined,
+    });
 
   return (
     <>
@@ -118,6 +130,7 @@ function ShoppingCart({ articlesInCart }) {
                             image: article.image,
                           })
                         );
+                        deleteArticleToast();
                       }}
                     >
                       <label

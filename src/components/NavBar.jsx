@@ -11,6 +11,7 @@ import SignInNav from "./SignInNavBar";
 import RegisterNavBarIzq from "./RegisterNavBarIzq";
 import SignInNavBarIzq from "./SignInNavBarIzq";
 import { Dropdown, DropdownButton } from "react-bootstrap";
+import { toast, ToastContainer } from "react-toastify";
 
 function NavBar() {
   const user = useSelector((state) => state.user);
@@ -18,6 +19,17 @@ function NavBar() {
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
+  const logoutToast = () =>
+    toast.info("Cerraste sesión", {
+      position: "top-right",
+      autoClose: 2000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: false,
+      progress: undefined,
+    });
 
   const handleLogout = async (ev) => {
     ev.preventDefault();
@@ -28,6 +40,7 @@ function NavBar() {
         headers: { Authorization: `Bearer ${user.token}` },
       });
       dispatch(actions.logout());
+      logoutToast();
       navigate("/");
     } catch (error) {
       console.log(error);
@@ -37,6 +50,7 @@ function NavBar() {
   return (
     <>
       {/* <Container fluid className="navBarContiainer"> */}
+      <ToastContainer />
       <Navbar expand={false} className="navContainer sticky-top">
         <Container className=" ">
           <Navbar.Toggle

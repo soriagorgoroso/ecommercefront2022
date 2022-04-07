@@ -1,5 +1,6 @@
 import React from "react";
 import { Nav, Modal, Form, Dropdown } from "react-bootstrap";
+import { toast, ToastContainer } from "react-toastify";
 import "./NavBar.css";
 import { useState } from "react";
 import "./SignInNav.css";
@@ -18,6 +19,17 @@ function SignIn() {
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
+
+  const loginSuccess = () =>
+    toast.success("Te loggeaste con éxito!", {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: false,
+      progress: undefined,
+    });
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -88,7 +100,7 @@ function SignIn() {
                 <Form.Control
                   name="email"
                   type="text"
-                  className="form-control border border-dark"
+                  className="form-control border border-light"
                   id="email"
                   placeholder="email"
                   value={data}
@@ -102,7 +114,7 @@ function SignIn() {
                 <Form.Control
                   name="password"
                   type="password"
-                  className="form-control border border-dark"
+                  className="form-control border border-light"
                   id="password"
                   placeholder="Password"
                   value={password}
@@ -121,7 +133,9 @@ function SignIn() {
                   <button
                     type="submit"
                     className="btn btn-dark fw-bold rounded d-grid"
+                    onClick={() => loginSuccess()}
                   >
+                    <ToastContainer />
                     Siguiente
                   </button>
                 </div>
