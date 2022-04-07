@@ -51,7 +51,7 @@ function NavBar() {
     <>
       {/* <Container fluid className="navBarContiainer"> */}
       <ToastContainer />
-      <Navbar expand={false} className="navContainer sticky-top shadow-lg px-5">
+      <Navbar expand={false} className="navContainer sticky-top shadow-lg ">
         {/* <Container className="p-0"> */}
         <Navbar.Toggle aria-controls="offcanvasNavbar" className="ButtonMenu" />
         <Navbar.Offcanvas
