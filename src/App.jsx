@@ -15,27 +15,30 @@ import EditUser from "./pages/EditUser";
 import AboutThis from "./components/AboutThis";
 import CheckOut from "./pages/CheckOut";
 import Error from "./pages/Error";
-
+import Footer from "./components/Footer";
 function App() {
   // const loggedUser = useSelector((state) => state.users[0]);
 
   return (
-    <div className="App">
-      <AboutThis />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/mi_perfil/:username" element={<User />} />
-        <Route path="/articulos/:id" element={<Article />} />
-        <Route path="/carrito" element={<Cart />} />
-        <Route path="/locales" element={<Stores />} />
-        <Route path="/nosotros" element={<AboutUs />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/reservas" element={<Reservas />} />
-        <Route path="/proyecto" element={<ThisProject />} />
-        <Route path="/confirmacion" element={<CheckOut />} />
-        <Route path="/editarusuario/:username" element={<EditUser />} />
-        <Route path="*" element={<Error />} />
-      </Routes>
+    <div className="main">
+      <div className="App">
+        <AboutThis />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/mi_perfil/:username" element={<User />} />
+          <Route path="/articulos/:id" element={<Article />} />
+          <Route path="/carrito" element={<Cart />} />
+          <Route path="/locales" element={<Stores />} />
+          <Route path="/nosotros" element={<AboutUs />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/reservas" element={<Reservas />} />
+          <Route path="/proyecto" element={<ThisProject />} />
+          <Route path="/confirmacion" element={<CheckOut />} />
+          <Route path="/editarusuario/:username" element={<EditUser />} />
+          <Route path="*" element={<Error />} />
+        </Routes>
+      </div>
+      <Footer />
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import NavBar from "../components/NavBar";
-import Footer from "../components/Footer";
+
 import { Container, Row, Col, Nav, Card } from "react-bootstrap";
 import "./Reservas.css";
 function Reservas() {
@@ -47,7 +47,6 @@ function Reservas() {
           </Col>
         </Row>
       </Container>
-      <Footer />
     </>
   );
 }

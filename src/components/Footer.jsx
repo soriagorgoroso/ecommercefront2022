@@ -4,9 +4,9 @@ import "./Footer.css";
 
 function Footer() {
   return (
-    <>
+    <div className="mt-auto">
       <div className="container">
-        <footer className="py-3 border-top border-bottom footer mt-auto">
+        <footer className="py-3 border-top border-bottom footer">
           {/* <div className="d-flex justify-items-center flex-wrap">
             <div className="col-md-4">
               <img
@@ -48,7 +48,7 @@ function Footer() {
           </div>
         </footer>
       </div>
-    </>
+    </div>
   );
 }
 

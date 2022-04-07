@@ -1,7 +1,7 @@
 import React from "react";
 import "./AboutUs.css";
 import NavBar from "../components/NavBar";
-import Footer from "../components/Footer";
+
 import { Container, Row, Col } from "react-bootstrap";
 function AboutUs() {
   return (
@@ -59,7 +59,6 @@ function AboutUs() {
           </Col>
         </Row>
       </Container>
-      <Footer />
     </>
   );
 }

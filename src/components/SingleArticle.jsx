@@ -26,12 +26,12 @@ function SingleArticle() {
           <img
             src={`${process.env.REACT_APP_IMG_URL}/${article.image}`}
             alt="Cerveza IPA"
-            className="article-image float-end shadow-sm"
+            className="article-image shadow-sm w-100"
           />
         </Col>
         <Col xs={12} sm={12} lg={6} className="pt-4 ps-4 ">
           <div className="d-flex flex-column justify-content-center">
-            <div className="text-left article-info-container pt-2">
+            <div className="text-left article-info-container pt-2 w-100">
               <div className="product-name-container">
                 <h1 className="product-name fw-bold">{article.name}</h1>
               </div>

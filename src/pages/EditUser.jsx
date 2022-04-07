@@ -5,7 +5,6 @@ import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import NavBar from "../components/NavBar";
-import Footer from "../components/Footer";
 
 function EditUser() {
   const params = useParams();
@@ -159,7 +158,6 @@ function EditUser() {
             </Col>
           </Row>
         </Container>
-        <Footer />
       </>
     )
   );

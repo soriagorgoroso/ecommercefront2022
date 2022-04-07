@@ -39,7 +39,7 @@ function TopSeller() {
 
   return (
     articles && (
-      <div>
+      <div className=" shadow rounded p-3 pt-1 my-5">
         <h2 className="mt-5">También te podría gustar</h2>
         <Carousel
           swipeable={true}

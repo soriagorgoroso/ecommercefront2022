@@ -52,7 +52,7 @@ function NavBar() {
       {/* <Container fluid className="navBarContiainer"> */}
       <ToastContainer />
       <Navbar expand={false} className="navContainer sticky-top">
-        <Container className=" ">
+        <Container className="p-0">
           <Navbar.Toggle
             aria-controls="offcanvasNavbar"
             className="ButtonMenu"
@@ -67,7 +67,7 @@ function NavBar() {
                 <div>
                   <div className="containerLogo">
                     <img
-                      src="/img/logos/logosinfondo.png"
+                      src="img/logos/logosinfondo2.png"
                       alt="LogoHackBier"
                       className="navBarImg"
                     />
@@ -105,7 +105,7 @@ function NavBar() {
           <Navbar.Brand href="/">
             <div className="containerLogo ">
               <img
-                src="/img/logos/logosinfondo.png"
+                src="/img/logos/logosinfondo2.png"
                 alt="LogoHackBier"
                 className="navBarImg"
               />

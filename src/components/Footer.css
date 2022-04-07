@@ -3,8 +3,7 @@ footer {
   background-color: rgb(236, 235, 234);
   height: 70px;
   bottom: 0;
-  position: fixed;
-  width: 100vw;
+
   left: 0;
   right: 0;
 }

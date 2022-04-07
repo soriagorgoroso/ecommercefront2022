@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import NavBar from "../components/NavBar";
-import Footer from "../components/Footer";
+
 import SubtotalCard from "../components/SubtotalCard";
 import Loader from "../components/Loader";
 
@@ -33,8 +33,6 @@ function Cart() {
               </Col>
             </div>
           </Container>
-
-          <Footer />
         </>
       )}
     </>

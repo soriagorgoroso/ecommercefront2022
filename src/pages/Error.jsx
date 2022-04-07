@@ -1,6 +1,6 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import Footer from "../components/Footer";
+
 import NavBar from "../components/NavBar";
 
 function Error() {
@@ -20,7 +20,6 @@ function Error() {
           alt="error"
         />
       </Container>
-      <Footer />
     </>
   );
 }
