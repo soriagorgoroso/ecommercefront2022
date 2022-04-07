@@ -10,8 +10,10 @@ function AboutThis({ name, ...props }) {
 
   return (
     <>
-      <Button className="buttonUs" variant="danger" onClick={handleShow}>
-        <span>PROYECTO</span>
+      <Button className="buttonUs" variant="dark" onClick={handleShow}>
+        <span>
+          <i class="fa-solid fa-circle-chevron-left"></i>
+        </span>
       </Button>
       <Offcanvas show={show} onHide={handleClose} {...props}>
         <Offcanvas.Header closeButton>
@@ -42,12 +44,14 @@ function AboutThis({ name, ...props }) {
                   className="iconAboutUsModal me-2"
                 />
               </Nav.Link>
-              <Nav.Link className="text-decoration-none modalDatos ">
+              <Nav.Link
+                className="text-decoration-none modalDatos "
+                href="https://github.com/gonzabarg/"
+              >
                 <img
                   src={"./img/icon/github.png"}
                   alt="GitHub"
                   className="iconAboutUsModal me-2"
-                  href="https://github.com/gonzabarg/"
                   to
                 />
               </Nav.Link>
@@ -76,12 +80,14 @@ function AboutThis({ name, ...props }) {
                   className="iconAboutUsModal me-2"
                 />
               </Nav.Link>
-              <Nav.Link className="text-decoration-none modalDatos ">
+              <Nav.Link
+                className="text-decoration-none modalDatos "
+                href="https://github.com/fnma88"
+              >
                 <img
                   src={"./img/icon/github.png"}
                   alt="GitHub"
                   className="iconAboutUsModal me-2"
-                  href="https://github.com/fnma88"
                 />
               </Nav.Link>
             </Col>
@@ -109,12 +115,14 @@ function AboutThis({ name, ...props }) {
                   className="iconAboutUsModal me-2"
                 />
               </Nav.Link>
-              <Nav.Link className="text-decoration-none modalDatos ">
+              <Nav.Link
+                className="text-decoration-none modalDatos "
+                href="https://github.com/soriagorgoroso"
+              >
                 <img
                   src={"./img/icon/github.png"}
                   alt="GitHub"
                   className="iconAboutUsModal me-2"
-                  href="https://github.com/soriagorgoroso"
                 />
                 <span className=" redesAboutUsModal "> </span>
               </Nav.Link>
