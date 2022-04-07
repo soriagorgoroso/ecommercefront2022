@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar, Container, Nav, Offcanvas } from "react-bootstrap";
+import { Navbar, Container, Nav, Offcanvas, Button } from "react-bootstrap";
 import "./NavBar.css";
 import "./UserForm.css";
 import { useSelector, useDispatch } from "react-redux";
@@ -51,7 +51,7 @@ function NavBar() {
     <>
       {/* <Container fluid className="navBarContiainer"> */}
       <ToastContainer />
-      <Navbar expand={false} className="navContainer sticky-top shadow-lg ">
+      <Navbar expand={false} className="navContainer sticky-top shadow-lg px-5">
         {/* <Container className="p-0"> */}
         <Navbar.Toggle aria-controls="offcanvasNavbar" className="ButtonMenu" />
         <Navbar.Offcanvas
@@ -75,26 +75,43 @@ function NavBar() {
             <Offcanvas.Title id="offcanvasNavbarLabel "></Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body className="navContainer">
-            <Nav className="justify-content-end flex-grow-1  ">
-              <Nav.Link className="linkOffcanvas  mx-1 " href="/carrito">
+            <Nav className="justify-content-end  flex-grow-1  ">
+              <Button className="btn btn-dark rounded my-2 " href="/carrito">
                 <i className="fa-solid fa-cart-shopping"></i>
-                <span className="badge bg-secondary">({cart.length})</span>
-              </Nav.Link>
-              <Nav.Link className="linkOffcanvas  mx-1 " href="/">
+                <span className="badge bg-white text-dark border ms-1">
+                  ({cart.length})
+                </span>
+              </Button>
+              <Button
+                className="btn btn-dark fw-bold rounded my-2 d-grid"
+                href="/"
+              >
                 CERVEZAS
-              </Nav.Link>
-              <Nav.Link className="linkOffcanvas mx-1 " href="/locales">
+              </Button>
+              <Button
+                className="btn btn-dark fw-bold rounded my-2 d-grid"
+                href="/locales"
+              >
                 LOCALES
-              </Nav.Link>
-              <Nav.Link className="linkOffcanvas mx-1 " href="/nosotros">
+              </Button>
+              <Button
+                className="btn btn-dark fw-bold rounded my-2 d-grid"
+                href="/nosotros"
+              >
                 NOSOTROS
-              </Nav.Link>
-              <Nav.Link className="linkOffcanvas mx-1 " href="/reservas">
+              </Button>
+              <Button
+                className="btn btn-dark fw-bold rounded my-2 d-grid"
+                href="/reservas"
+              >
                 RESERVAS
-              </Nav.Link>
-              <Nav.Link className="linkOffcanvas mx-1 mt-5 " href="/proyecto">
+              </Button>
+              <Button
+                className=" btn btn-dark fw-bold rounded my-2 d-grid  mx-1 mt-5 "
+                href="/proyecto"
+              >
                 SOBRE ESTE PROYECTO
-              </Nav.Link>
+              </Button>
               <div className="linkOffcanvas mx-1"></div>:
             </Nav>
           </Offcanvas.Body>
@@ -156,7 +173,7 @@ function NavBar() {
               )}
             </Dropdown.Menu>
           </Dropdown>
-          <Nav.Link className="carrito mx-1 p-1" href="/carrito">
+          <Nav.Link className="carrito mx-1 p-1 cartHover" href="/carrito">
             <i className="fa-solid fa-cart-shopping"></i> ({cart.length})
           </Nav.Link>
         </div>

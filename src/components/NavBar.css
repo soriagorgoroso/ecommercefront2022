@@ -26,15 +26,14 @@
   padding: 0px;
 }
 .linkOffcanvas {
-  background-color: white;
   margin-top: 5px;
   /* border-radius: 25px; */
   text-align: center;
   color: black;
 }
 .linkOffcanvas:hover {
-  color: black;
-  border: 3px black solid;
+  background-color: white;
+  color: red;
 }
 .linkMenu:hover {
   color: black;
@@ -44,4 +43,7 @@
   .containerLogo {
     margin-left: 40px;
   }
+}
+.cartHover:hover {
+  color: black;
 }
