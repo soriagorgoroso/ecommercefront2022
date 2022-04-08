@@ -27,8 +27,8 @@ function ModalMainPage(props) {
           closeButton
           onClick={handleModalHide}
         >
-          <Modal.Title id="contained-modal-title-vcenter">
-            <h1>Gracias por ingresar!</h1>
+          <Modal.Title id="contained-modal-title-vcenter text-center">
+            <h1 className="ms-5">Gracias por ingresar!</h1>
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
@@ -76,13 +76,13 @@ function ModalMainPage(props) {
               <p>contraseña: admin</p>
               <a
                 href="https://frontadmin-hackbier.vercel.app/"
-                className="badge bg-dark text-wrap"
+                className="badge bg-dark text-wrap mt-3"
               >
                 Click aqui
               </a>
             </Row>
             <Row className="pt-4">
-              <a href="/proyecto" className="badge bg-dark text-wrap">
+              <a href="/proyecto" className="badge bg-dark text-wrap p-2">
                 MAS INFORMACION SOBRE ESTE PROYECTO
               </a>{" "}
               <Col></Col>
