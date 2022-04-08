@@ -316,7 +316,9 @@ function ThisProject() {
           <Col>
             <h3 className="mb-3">Información para ingresar al sitio</h3>
             <a className="mt-5" href="/">
-              <h5>https://front-hackbier.vercel.app/</h5>
+              <h5>
+                <a href="https://front-hackbier.vercel.app/">El E-COMMERCE</a>
+              </h5>
             </a>
             <p>email: user@hackbier.com</p>
             <p>contraseña: user</p>
@@ -324,7 +326,11 @@ function ThisProject() {
           <Col>
             <h3 className="mb-3">Información para ingresar al administrador</h3>
             <a className="mt-5" href="/">
-              <h5>https://frontadmin-hackbier.vercel.app/</h5>
+              <h5>
+                <a href="https://frontadmin-hackbier.vercel.app/">
+                  Panel de Administrador
+                </a>
+              </h5>
             </a>
             <p>email: admin@hackbier.com</p>
             <p>contraseña: admin</p>
