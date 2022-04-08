@@ -8,12 +8,15 @@ function ThisProject() {
     <>
       <NavBar />
       <Container>
-        <h1 className="mt-5">SOBRE ESTE PROYECTO</h1>
+        <h1 className="mt-5 text-center">SOBRE ESTE PROYECTO</h1>
 
-        <Row className="mt-5">
+        <Row className="mt-5  ">
           <CardGroup>
-            <Col sm={12} md={12} lg={4}>
-              <Card className="mx-3 mb-2 rounded shadow cardAboutUs  ">
+            <Col className="d-flex justify-content-center">
+              <Card
+                style={{ width: "35rem" }}
+                className="mx-3 mb-2 rounded shadow cardAboutUs "
+              >
                 <Card.Body className="text-center">
                   <Card.Title className="fw-bold pb-3">Desafíos</Card.Title>
                   <Card.Text className="fs-4">
@@ -23,10 +26,6 @@ function ThisProject() {
                     enfrentarnos a diversas situaciones.
                   </Card.Text>
                 </Card.Body>
-              </Card>
-            </Col>
-            <Col sm={12} md={12} lg={4}>
-              <Card className="mx-3 mb-2 rounded shadow cardAboutUs ">
                 <Card.Body className="text-center">
                   <Card.Title className="fw-bold pb-3">Organización</Card.Title>
                   <Card.Text className="fs-4">
@@ -37,35 +36,26 @@ function ThisProject() {
                     de cada semana.
                   </Card.Text>
                 </Card.Body>
-              </Card>
-            </Col>
-            <Col sm={12} md={12} lg={4}>
-              <Card className="mx-3 mb-2 rounded shadow cardAboutUs">
                 <Card.Body className="text-center">
                   <Card.Title className="fw-bold pb-3">Tecnologías</Card.Title>
                   <Card.Text className="fs-4">
                     <p>
                       <i className="m-2 fa-brands fa-react"></i> ReactJs
-                    </p>
-                    <p>
                       <i className="m-2 fa-brands fa-node-js"></i> NodeJs
-                    </p>
-                    <p>
                       <i className="m-2 fa-brands fa-mdb"></i>MongoDB
                     </p>
+                    <p></p>
+                    <p></p>
                     <p>
                       <i className="m-2 fa-brands fa-html5"></i>HTML
-                    </p>
-                    <p>
                       <i className="m-2 fa-brands fa-css3-alt"></i>CSS
-                    </p>
-                    <p>
                       <i className="m-2 fa-solid fa-bolt"></i>Supabase
                     </p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
                     <p>
                       <i className="m-2 fa-solid fa-atom"></i>Redux
-                    </p>
-                    <p>
                       <svg
                         className="m-2"
                         stroke="currentColor"
@@ -80,10 +70,9 @@ function ThisProject() {
                         <path d="M24 22.525H0l12-21.05 12 21.05z"></path>
                       </svg>
                       Vercel
-                    </p>
-                    <p>
                       <i className="m-2 fa-brands fa-bootstrap"></i>Bootstrap
                     </p>
+                    <p></p>
                   </Card.Text>
                 </Card.Body>
               </Card>
