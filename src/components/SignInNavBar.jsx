@@ -42,7 +42,10 @@ function SignIn() {
         url: `${process.env.REACT_APP_API_URL}/tokens`,
         data: { email: data, password: password },
       });
+      console.log(response.data);
       dispatch(actions.login(response.data));
+
+      loginSuccess();
       navigate("/");
     } catch (error) {
       setErrorMessage("Error!");
@@ -133,7 +136,6 @@ function SignIn() {
                   <button
                     type="submit"
                     className="btn btn-dark fw-bold rounded d-grid"
-                    onClick={() => loginSuccess()}
                   >
                     <ToastContainer />
                     Siguiente

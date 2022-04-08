@@ -53,6 +53,7 @@ function Register(props) {
   const handleSubmit = async (ev) => {
     ev.preventDefault();
     for (const field in formFields) {
+      console.log(field);
       if (field === "") return;
     }
     const response = await axios(
@@ -63,13 +64,14 @@ function Register(props) {
         //   Authorization: "Bearer " + userLogged.token,
         // },
         data: formFields,
-      },
-      {
-        validateStatus: function (status) {
-          return status >= 200;
-        },
       }
+      // {
+      //   validateStatus: function (status) {
+      //     return status >= 200;
+      //   },
+      //}
     );
+    console.log(response.data);
 
     const response2 = await axios({
       method: "post",
@@ -80,6 +82,7 @@ function Register(props) {
       },
     });
     if (response2.status === 200) {
+      console.log(response2.data);
       dispatch(actions.login(response2.data));
       navigate("/");
     } else {

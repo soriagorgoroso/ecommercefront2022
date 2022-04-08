@@ -59,7 +59,7 @@ function ShoppingCart({ articlesInCart }) {
                       </span>
                     </div>
 
-                    <div className="article-quantity-container px-2 input-group mb-3">
+                    <div className="article-quantity-container input-group mb-3 ">
                       {article.quantity === 1 ? (
                         <button
                           className="btn text-center rounded-0 fw-bold input-group-text bg-secondary"

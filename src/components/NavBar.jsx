@@ -34,11 +34,12 @@ function NavBar() {
   const handleLogout = async (ev) => {
     ev.preventDefault();
     try {
-      await axios({
+      const response = await axios({
         url: process.env.REACT_APP_API_URL + `/users/logout`,
         method: "POST",
         headers: { Authorization: `Bearer ${user.token}` },
       });
+      console.log(response);
       dispatch(actions.logout());
       logoutToast();
       navigate("/");
