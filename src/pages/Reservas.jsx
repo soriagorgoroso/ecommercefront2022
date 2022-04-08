@@ -16,6 +16,7 @@ function Reservas() {
           <Col>
             <div className="datosReservas p-3">
               <Nav.Link
+                href="https://malafama.meitre.com/"
                 className="to-cart-btn px-3"
                 variant="outline-dark rounded-0"
                 type="submit"
@@ -35,7 +36,7 @@ function Reservas() {
                 className="to-cart-btn px-3 "
                 variant="outline-dark rounded-0"
                 type="submit"
-                href="https://malafama.meitre.com/"
+                href="https://www.instagram.com/malafama_puntadeleste/"
               >
                 RESERVA MALDONADO{" "}
               </Nav.Link>
