@@ -40,9 +40,9 @@ function NavBar() {
         headers: { Authorization: `Bearer ${user.token}` },
       });
       console.log(response);
+      navigate("/");
       dispatch(actions.logout());
       logoutToast();
-      navigate("/");
     } catch (error) {
       console.log(error);
     }
@@ -52,7 +52,7 @@ function NavBar() {
     <>
       {/* <Container fluid className="navBarContiainer"> */}
       <ToastContainer />
-      <Navbar expand={false} className="navContainer sticky-top shadow-lg px-5">
+      <Navbar expand={false} className="navContainer sticky-top shadow-lg">
         {/* <Container className="p-0"> */}
         <Navbar.Toggle aria-controls="offcanvasNavbar" className="ButtonMenu" />
         <Navbar.Offcanvas
@@ -60,32 +60,30 @@ function NavBar() {
           aria-labelledby="offcanvasNavbarLabel"
           placement="start"
         >
-          <Navbar.Brand closeButton className="navContainer">
-            <div className="p-0 d-flex justify-content-center modal-body">
-              <div>
-                <div className="containerLogo">
-                  <img
-                    src="img/logos/logosinfondo2.png"
-                    alt="LogoHackBier"
-                    className="navBarImg"
-                  />
-                </div>
-              </div>
-            </div>
-          </Navbar.Brand>
-          <Nav.Link className=" ms-1 linkMenu" href="/">
+          <Offcanvas.Header
+            closeButton
+            className="navContainer justify-content-end align-items-start"
+          ></Offcanvas.Header>
+          <div className="p-0 d-flex justify-content-center modal-body  bg-hack-grey">
+            <img
+              src="img/logos/logosinfondo2.png"
+              alt="LogoHackBier"
+              className="navBarImg"
+            />
+          </div>
+          {/* <Nav.Link className=" ms-1 linkMenu" href="/">
             CERVEZAS
           </Nav.Link>
           <Nav.Link className=" mx-2 linkMenu" href="/locales">
+            <Nav.Link className=" mx-2 linkMenu" href="/nosotros">
+              NOSOTROS
+            </Nav.Link>
             LOCALES
-          </Nav.Link>
-          <Nav.Link className=" mx-2 linkMenu" href="/nosotros">
-            NOSOTROS
           </Nav.Link>
           <Nav.Link className=" mx-2 linkMenu" href="/reservas">
             RESERVAS
-          </Nav.Link>
-          <div className="d-flex align-items-center">
+          </Nav.Link> */}
+          {/* <div className="d-flex align-items-center">
             <Dropdown>
               <Dropdown.Toggle
                 style={{
@@ -98,61 +96,52 @@ function NavBar() {
               </Dropdown.Toggle>
             </Dropdown>
             <Offcanvas.Title id="offcanvasNavbarLabel "></Offcanvas.Title>
-          </div>
-          <Offcanvas.Body className="navContainer">
-            <Nav className="justify-content-end  flex-grow-1  ">
-              <Button className="btn btn-dark rounded my-2 " href="/carrito">
-                <i className="fa-solid fa-cart-shopping"></i>
-                <span className="badge bg-white text-dark border ms-1">
-                  ({cart.length})
-                </span>
-              </Button>
-              <Button
-                className="btn btn-dark fw-bold rounded my-2 d-grid"
-                href="/"
-              >
-                CERVEZAS
-              </Button>
-              <Button
-                className="btn btn-dark fw-bold rounded my-2 d-grid"
-                href="/locales"
-              >
-                LOCALES
-              </Button>
-              <Button
-                className="btn btn-dark fw-bold rounded my-2 d-grid"
-                href="/nosotros"
-              >
-                NOSOTROS
-              </Button>
-              <Button
-                className="btn btn-dark fw-bold rounded my-2 d-grid"
-                href="/reservas"
-              >
-                RESERVAS
-              </Button>
-              <Button
-                className=" btn btn-dark fw-bold rounded my-2 d-grid  mx-1 mt-5 "
-                href="/proyecto"
-              >
-                SOBRE ESTE PROYECTO
-              </Button>
+          </div> */}
+          <Offcanvas.Body className="navContainer p-0">
+            <Nav className="justify-content-end  flex-grow-1">
+              <a className="side-menu-btn d-grid" href="/">
+                <div className="border border-top-secondary py-4 px-2 fs-5">
+                  CERVEZAS
+                </div>
+              </a>
+              <a className=" side-menu-btn d-grid" href="/proyecto">
+                <div className="border border-top-secondary py-4 px-2 fs-5">
+                  SOBRE ESTE PROYECTO
+                </div>
+              </a>
+              <a className="side-menu-btn d-grid" href="/nosotros">
+                <div className="border border-top-secondary py-4 px-2 fs-5">
+                  EMPRESA
+                </div>
+              </a>
+              <a className="side-menu-btn d-grid" href="/locales">
+                <div className="border border-top-secondary py-4 px-2 fs-5">
+                  LOCALES
+                </div>
+              </a>
+              <a className="side-menu-btn d-grid" href="/reservas">
+                <div className="border border-top-secondary py-4 px-2 fs-5">
+                  RESERVAS
+                </div>
+              </a>
+              <a className="side-menu-btn d-grid" href="/carrito">
+                <div className="border border-top-secondary py-4 px-2 fs-5">
+                  <i className="fa-solid fa-cart-shopping"></i>
+                  <span className="badge text-dark ms-1">({cart.length})</span>
+                </div>
+              </a>
               <div className="linkOffcanvas mx-1"></div>:
             </Nav>
           </Offcanvas.Body>
         </Navbar.Offcanvas>
-        <Navbar.Brand href="/">
-          <div className="containerLogo ">
-            <img
-              src="/img/logos/logosinfondo2.png"
-              alt="LogoHackBier"
-              className="navBarImg"
-            />
-          </div>
+        <Navbar.Brand href="/" className="ps-5">
+          <img
+            src="/img/logos/logosinfondo2.png"
+            alt="LogoHackBier"
+            className="navBarImg"
+          />
         </Navbar.Brand>
-        <Nav.Link className=" ms-1 linkMenu" href="/">
-          CERVEZAS
-        </Nav.Link>
+
         <Nav.Link className=" mx-2 linkMenu" href="/locales">
           LOCALES
         </Nav.Link>

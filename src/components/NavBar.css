@@ -1,8 +1,6 @@
-.navContainer {
-  background-color: rgb(236, 235, 234);
-}
 .navBarImg {
-  width: 210px;
+  width: 50%;
+  border: none;
 }
 /* 
 @media (min-width: 1200px) {
@@ -18,6 +16,22 @@
 .linkMenu {
   color: black;
   font-size: 20px;
+}
+
+.side-menu-btn {
+  color: black;
+  text-align: center;
+  width: 100%;
+
+  border: none;
+}
+
+.bg-hack-grey {
+  background-color: rgb(236, 235, 234);
+}
+
+.side-menu-btn:hover {
+  background-color: rgb(220, 220, 220);
 }
 
 .carrito {
@@ -41,6 +55,13 @@
 }
 .linkMenu:hover {
   color: black;
+}
+
+.navContainer {
+  flex-direction: row;
+  flex-flow: row;
+  justify-content: space-around;
+  align-items: center;
 }
 
 @media (max-width: 1200px) {
