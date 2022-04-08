@@ -20,7 +20,7 @@ function ThisProject() {
                     Tuvimos 3 semanas para realizar el e-commerce por lo que el
                     tiempo fue un factor determinante, en la cual la forma en la
                     que nos organizamos marco la diferencia a la hora de
-                    enfrentarnos a situaciones determinantes.
+                    enfrentarnos a diversas situaciones.
                   </Card.Text>
                 </Card.Body>
               </Card>

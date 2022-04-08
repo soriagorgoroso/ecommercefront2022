@@ -110,7 +110,7 @@ function SignIn() {
                   onChange={(e) => setData(e.target.value)}
                 />
                 <Form.Label className="text-secondary " htmlFor="floatingInput">
-                  Email
+                  admin@hackbier.com
                 </Form.Label>
               </div>
               <div className="form-floating">
@@ -127,7 +127,7 @@ function SignIn() {
                   className="text-secondary "
                   htmlFor="floatingPassword"
                 >
-                  Constraseña
+                  admin
                 </Form.Label>
               </div>
 

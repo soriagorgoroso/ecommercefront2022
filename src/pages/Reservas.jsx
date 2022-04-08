@@ -10,9 +10,9 @@ function Reservas() {
       <Container className="">
         <Row className="m-4 containerReservas"></Row>
         <Row className="m-4 pt-2 containerReservas">
-          <h1>Reservas</h1>
+          <h1 className="p-3 ms-5">Reservas</h1>
 
-          <p className="pb-2">Contacto mail: hola@cervezamalafama.com</p>
+          <p className="pb-2 ms-5">Contacto mail: hola@cervezamalafama.com</p>
           <Col>
             <div className="datosReservas p-3">
               <Nav.Link
