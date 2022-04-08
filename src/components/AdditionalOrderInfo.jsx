@@ -57,6 +57,14 @@ function AdditionalOrderInfo() {
               <Form.Group className="mb-3" controlId="form-card">
                 <Form.Label>Número de tarjeta</Form.Label>
                 <Form.Control type="text" />
+                <div className="text-center">
+                  <i className="p-2 mx-3 fa-brands fa-cc-visa"></i>
+                  <i className="p-2 mx-3 fa-brands fa-cc-amazon-pay"></i>
+                  <i className="p-2 mx-3 fa-brands fa-cc-amex"></i>
+                  <i className="p-2 mx-3 fa-brands fa-cc-apple-pay"></i>
+                  <i className="p-2 mx-3 fa-brands fa-cc-diners-club"></i>
+                  <i className="p-2 mx-3 fa-brands fa-cc-mastercard"></i>
+                </div>
               </Form.Group>
               <Form.Group className="mb-3" controlId="form-card-name">
                 <Form.Label>Nombre (tal como figura en la tarjeta)</Form.Label>
@@ -69,6 +77,7 @@ function AdditionalOrderInfo() {
                 </Form.Group>
                 <Form.Group as={Col} controlId="form-security-code">
                   <Form.Label>Código de seguridad</Form.Label>
+                  <i className="p-2 mx-3  fa-solid fa-credit-card"></i>
                   <Form.Control type="text" placeholder="xxx" />
                 </Form.Group>
               </Row>
