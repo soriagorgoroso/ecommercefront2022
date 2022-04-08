@@ -13,7 +13,7 @@ function AboutThis({ name, ...props }) {
       <Button className="buttonUs" variant="dark" onClick={handleShow}>
         <span>
           <i className="fa-solid fa-circle-chevron-left pe-2"></i>
-          Click on me!!!
+          LOS DESARROLLADORES
         </span>
       </Button>
       <Offcanvas show={show} onHide={handleClose} {...props}>
@@ -132,7 +132,7 @@ function AboutThis({ name, ...props }) {
           <Row>
             <div className="">
               <Nav.Link className="linkOffcanvasModal mx-1 " href="/proyecto">
-                SOBRE EL PROYECTO
+                MAS INFORMACION AQUI
               </Nav.Link>
             </div>
           </Row>

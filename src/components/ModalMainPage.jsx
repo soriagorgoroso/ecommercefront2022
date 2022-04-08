@@ -33,6 +33,18 @@ function ModalMainPage(props) {
         </Modal.Header>
         <Modal.Body>
           <Container>
+            <Row className="text-center mb-4">
+              <h4>Bienvenido a nuestro e-commerce</h4>
+              <p>
+                Este es un proyecto realizado en el marco educativo del
+                Boot-Camp de Hack Academy basado en la web de la Cerveceria Mala
+                Fama
+              </p>
+              <p>
+                Abajo te comento como ingresar como administrador o tambien
+                podes crearte un usuario{" "}
+              </p>
+            </Row>
             <Row className="border border-dark rounded p-3">
               <Col className="me-1  rounded text-start">
                 <h6 className="text-decoration-underline text-center">
@@ -70,6 +82,9 @@ function ModalMainPage(props) {
               </a>
             </Row>
             <Row className="pt-4">
+              <a href="/proyecto" className="badge bg-dark text-wrap">
+                MAS INFORMACION SOBRE ESTE PROYECTO
+              </a>{" "}
               <Col></Col>
             </Row>
           </Container>
