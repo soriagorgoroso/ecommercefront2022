@@ -39,7 +39,6 @@ function ModalMainPage(props) {
           <Button onClick={handleModalHide}> Cerrar</Button>
         </Modal.Footer>
       </Modal>
-      ;
     </>
   );
 }
