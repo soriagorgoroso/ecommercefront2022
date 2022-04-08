@@ -12,7 +12,7 @@ function AboutThis({ name, ...props }) {
     <>
       <Button className="buttonUs" variant="dark" onClick={handleShow}>
         <span>
-          <i class="fa-solid fa-circle-chevron-left"></i>
+          <i className="fa-solid fa-circle-chevron-left"></i>
         </span>
       </Button>
       <Offcanvas show={show} onHide={handleClose} {...props}>

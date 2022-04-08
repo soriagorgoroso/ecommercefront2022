@@ -54,7 +54,7 @@ function UserProfile() {
             >
               <div className="user-info card-title pb-4 ">
                 <h2>Mis datos</h2>
-                <i class="fa-solid fa-circle-user fa-3x"></i>
+                <i className="fa-solid fa-circle-user fa-3x"></i>
               </div>
               <div className="p-2 user-info card-title">
                 <p className="text fs-5">Usuario: </p>
@@ -89,7 +89,7 @@ function UserProfile() {
             >
               <div className="user-info card-title pb-4">
                 <h2>Mis órdenes</h2>
-                <i class="fa-solid fa-list fa-3x"></i>
+                <i className="fa-solid fa-list fa-3x"></i>
               </div>
               {orders.map((order) => (
                 <>

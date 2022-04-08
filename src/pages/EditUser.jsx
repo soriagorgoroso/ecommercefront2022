@@ -72,7 +72,7 @@ function EditUser() {
               <div className="bg-light my-4 mx-auto">
                 <div className="d-flex flex-row justify-content-around align-items-center shadow rounded p-4">
                   <h3>{userLogged.username}</h3>
-                  <i class="fa-solid fa-circle-user fa-3x"></i>
+                  <i className="fa-solid fa-circle-user fa-3x"></i>
                 </div>
               </div>
               <div className="bg-light my-4 mx-auto shadow rounded p-4">
