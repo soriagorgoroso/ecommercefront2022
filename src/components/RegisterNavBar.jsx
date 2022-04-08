@@ -139,7 +139,6 @@ function Register(props) {
                           firstname: ev.target.value,
                         })
                       }
-                      required
                     />
                   </FloatingLabel>
                   <FloatingLabel
@@ -158,7 +157,6 @@ function Register(props) {
                           lastname: ev.target.value,
                         })
                       }
-                      required
                     />
                   </FloatingLabel>
                 </Col>
@@ -180,7 +178,6 @@ function Register(props) {
                           username: ev.target.value,
                         })
                       }
-                      required
                     />
                   </FloatingLabel>
                   <FloatingLabel
@@ -199,7 +196,6 @@ function Register(props) {
                         })
                       }
                       value={formFields.telephone}
-                      required
                     />
                   </FloatingLabel>
                 </Col>
