@@ -101,6 +101,7 @@ function SignIn() {
             <Form onSubmit={handleSubmit}>
               <div className="form-floating mb-3">
                 <Form.Control
+                  required
                   name="email"
                   type="text"
                   className="form-control border border-light"
@@ -115,6 +116,7 @@ function SignIn() {
               </div>
               <div className="form-floating">
                 <Form.Control
+                  required
                   name="password"
                   type="password"
                   className="form-control border border-light"

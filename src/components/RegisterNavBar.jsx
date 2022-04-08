@@ -139,6 +139,7 @@ function Register(props) {
                           firstname: ev.target.value,
                         })
                       }
+                      required
                     />
                   </FloatingLabel>
                   <FloatingLabel
@@ -157,6 +158,7 @@ function Register(props) {
                           lastname: ev.target.value,
                         })
                       }
+                      required
                     />
                   </FloatingLabel>
                 </Col>
@@ -178,6 +180,7 @@ function Register(props) {
                           username: ev.target.value,
                         })
                       }
+                      required
                     />
                   </FloatingLabel>
                   <FloatingLabel
@@ -196,6 +199,7 @@ function Register(props) {
                         })
                       }
                       value={formFields.telephone}
+                      required
                     />
                   </FloatingLabel>
                 </Col>
@@ -214,6 +218,7 @@ function Register(props) {
                     setFormFields({ ...formFields, address: ev.target.value })
                   }
                   value={formFields.addres}
+                  required
                 />
               </FloatingLabel>
               <FloatingLabel
@@ -228,6 +233,7 @@ function Register(props) {
                   onChange={(ev) =>
                     setFormFields({ ...formFields, email: ev.target.value })
                   }
+                  required
                 />
               </FloatingLabel>
               <FloatingLabel
@@ -243,6 +249,7 @@ function Register(props) {
                   onChange={(ev) =>
                     setFormFields({ ...formFields, password: ev.target.value })
                   }
+                  required
                 />
                 <span className="text-dark ">
                   *Datos protegidos y asegurados
