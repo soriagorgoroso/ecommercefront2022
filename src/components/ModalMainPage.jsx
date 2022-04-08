@@ -28,7 +28,6 @@ function ModalMainPage(props) {
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <h4>Gracias por ingresar!</h4>
           <p>
             Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
             dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
