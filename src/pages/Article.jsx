@@ -8,7 +8,6 @@ import { Container } from "react-bootstrap";
 function Article() {
   return (
     <>
-      {" "}
       <NavBar />
       <Container>
         <SingleArticle />
