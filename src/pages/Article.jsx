@@ -7,11 +7,14 @@ import { Container } from "react-bootstrap";
 
 function Article() {
   return (
-    <Container>
+    <>
+      {" "}
       <NavBar />
-      <SingleArticle />
-      <TopSeller />
-    </Container>
+      <Container>
+        <SingleArticle />
+        <TopSeller />
+      </Container>
+    </>
   );
 }
 
