@@ -136,7 +136,7 @@ function NavBar() {
         </Navbar.Offcanvas>
         <Navbar.Brand href="/" className="ps-5">
           <img
-            src="/img/logos/logosinfondo2.png"
+            src="/img/logos/logosinfondo2v01.png"
             alt="LogoHackBier"
             className="navBarImg"
           />
